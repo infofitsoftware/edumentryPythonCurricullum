@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Module 2: Variables, Data Types, and Type Conversion -->
+<!-- Import: Moodle → Question bank → Import → Moodle XML format -->
+<!-- shuffleanswers=1 randomizes answer order for each attempt -->
+
+<question type="category">
+  <category>
+    <text>$course$/Module2/Variables and Data Types</text>
+  </category>
+</question>
+
+<!-- Question 1 -->
+<question type="multichoice">
+  <name><text>M2-Q01 variable definition</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What is a variable in Python?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>A variable is a name that refers to a value stored in memory. It is created when you assign a value with <code>=</code>.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>A name that refers to a value in memory</text></answer>
+  <answer fraction="0" format="html"><text>A fixed container that cannot change type</text></answer>
+  <answer fraction="0" format="html"><text>A function that prints output</text></answer>
+  <answer fraction="0" format="html"><text>A comment in the code</text></answer>
+</question>
+
+<!-- Question 2 -->
+<question type="multichoice">
+  <name><text>M2-Q02 dynamic typing</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What does <strong>dynamic typing</strong> mean in Python?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Dynamic typing means the type is determined by the assigned value and can change when the variable is reassigned.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>You do not declare types; the type follows the value assigned</text></answer>
+  <answer fraction="0" format="html"><text>All variables must be declared as int or str before use</text></answer>
+  <answer fraction="0" format="html"><text>Types are checked only at compile time</text></answer>
+  <answer fraction="0" format="html"><text>Variables cannot be reassigned</text></answer>
+</question>
+
+<!-- Question 3 -->
+<question type="multichoice">
+  <name><text>M2-Q03 invalid variable name</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Which of the following is an <strong>invalid</strong> variable name in Python?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Variable names cannot start with a digit. <code>2name</code> causes a SyntaxError.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>2name</text></answer>
+  <answer fraction="0" format="html"><text>user_name</text></answer>
+  <answer fraction="0" format="html"><text>_count</text></answer>
+  <answer fraction="0" format="html"><text>age_2024</text></answer>
+</question>
+
+<!-- Question 4 -->
+<question type="multichoice">
+  <name><text>M2-Q04 snake_case</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>According to PEP 8, which naming style is recommended for variables in Python?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>PEP 8 recommends <code>snake_case</code> for variable and function names (e.g. <code>user_name</code>).</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>snake_case</text></answer>
+  <answer fraction="0" format="html"><text>camelCase</text></answer>
+  <answer fraction="0" format="html"><text>PascalCase</text></answer>
+  <answer fraction="0" format="html"><text>kebab-case</text></answer>
+</question>
+
+<!-- Question 5 -->
+<question type="multichoice">
+  <name><text>M2-Q05 constant convention</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>How are constants indicated by convention in Python?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Python has no true constant keyword. ALL_CAPS names like <code>MAX_USERS</code> signal values that should not be changed.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>ALL_CAPS naming (e.g. MAX_SCORE)</text></answer>
+  <answer fraction="0" format="html"><text>Using the const keyword</text></answer>
+  <answer fraction="0" format="html"><text>Wrapping in double quotes</text></answer>
+  <answer fraction="0" format="html"><text>Prefixing with dollar sign $</text></answer>
+</question>
+
+<!-- Question 6 -->
+<question type="multichoice">
+  <name><text>M2-Q06 type of 3.0</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What is the type of <code>3.0</code> in Python?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>A number with a decimal point is a <code>float</code>, even if the fractional part is zero.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>float</text></answer>
+  <answer fraction="0" format="html"><text>int</text></answer>
+  <answer fraction="0" format="html"><text>str</text></answer>
+  <answer fraction="0" format="html"><text>bool</text></answer>
+</question>
+
+<!-- Question 7 -->
+<question type="multichoice">
+  <name><text>M2-Q07 None meaning</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What does <code>None</code> represent in Python?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p><code>None</code> is the sole value of <code>NoneType</code> and represents the absence of a value or an unset optional field.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>Absence of a value / no value assigned</text></answer>
+  <answer fraction="0" format="html"><text>Zero</text></answer>
+  <answer fraction="0" format="html"><text>An empty string</text></answer>
+  <answer fraction="0" format="html"><text>False</text></answer>
+</question>
+
+<!-- Question 8 -->
+<question type="multichoice">
+  <name><text>M2-Q08 bool empty string</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What is the result of <code>bool("")</code>?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>An empty string is <strong>falsy</strong> in Python, so <code>bool("")</code> returns <code>False</code>.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>False</text></answer>
+  <answer fraction="0" format="html"><text>True</text></answer>
+  <answer fraction="0" format="html"><text>None</text></answer>
+  <answer fraction="0" format="html"><text>Error</text></answer>
+</question>
+
+<!-- Question 9 -->
+<question type="multichoice">
+  <name><text>M2-Q09 int truncate</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What is the result of <code>int(7.8)</code>?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p><code>int()</code> truncates toward zero — it does not round. <code>int(7.8)</code> is <code>7</code>.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>7</text></answer>
+  <answer fraction="0" format="html"><text>8</text></answer>
+  <answer fraction="0" format="html"><text>7.8</text></answer>
+  <answer fraction="0" format="html"><text>Error</text></answer>
+</question>
+
+<!-- Question 10 -->
+<question type="multichoice">
+  <name><text>M2-Q10 float from string</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What is the result of <code>float("10.5")</code>?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p><code>float()</code> converts a valid numeric string to a floating-point number: <code>10.5</code>.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>10.5</text></answer>
+  <answer fraction="0" format="html"><text>10</text></answer>
+  <answer fraction="0" format="html"><text>"10.5"</text></answer>
+  <answer fraction="0" format="html"><text>ValueError</text></answer>
+</question>
+
+<!-- Question 11 -->
+<question type="multichoice">
+  <name><text>M2-Q11 str concat numbers</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What is printed by <code>print("10" + "5")</code>?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Adding two strings concatenates them: <code>"10" + "5"</code> produces <code>"105"</code>, not 15.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>105</text></answer>
+  <answer fraction="0" format="html"><text>15</text></answer>
+  <answer fraction="0" format="html"><text>10 5</text></answer>
+  <answer fraction="0" format="html"><text>TypeError</text></answer>
+</question>
+
+<!-- Question 12 -->
+<question type="multichoice">
+  <name><text>M2-Q12 input return type</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>After <code>age = input("Age: ")</code> where the user types <code>25</code>, what is <code>type(age)</code>?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p><code>input()</code> always returns a string. Use <code>int()</code> or <code>float()</code> for numeric operations.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>&lt;class 'str'&gt;</text></answer>
+  <answer fraction="0" format="html"><text>&lt;class 'int'&gt;</text></answer>
+  <answer fraction="0" format="html"><text>&lt;class 'float'&gt;</text></answer>
+  <answer fraction="0" format="html"><text>Depends on the user input</text></answer>
+</question>
+
+<!-- Question 13 -->
+<question type="multichoice">
+  <name><text>M2-Q13 isinstance vs type</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Which function is generally preferred in production code to check if a value is an integer?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p><code>isinstance(x, int)</code> returns True/False and handles inheritance correctly. It is preferred over comparing <code>type(x) == int</code>.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>isinstance(x, int)</text></answer>
+  <answer fraction="0" format="html"><text>type(x)</text></answer>
+  <answer fraction="0" format="html"><text>len(x)</text></answer>
+  <answer fraction="0" format="html"><text>print(x)</text></answer>
+</question>
+
+<!-- Question 14 -->
+<question type="multichoice">
+  <name><text>M2-Q14 int invalid string</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What happens when you run <code>int("hello")</code>?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Python raises <code>ValueError: invalid literal for int()</code> because "hello" is not a valid integer string.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>ValueError is raised</text></answer>
+  <answer fraction="0" format="html"><text>Returns 0</text></answer>
+  <answer fraction="0" format="html"><text>Returns None</text></answer>
+  <answer fraction="0" format="html"><text>Returns "hello"</text></answer>
+</question>
+
+<!-- Question 15 -->
+<question type="multichoice">
+  <name><text>M2-Q15 f-string</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Which line correctly prints <code>Score: 95</code> if <code>score = 95</code>?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>f-strings use an <code>f</code> prefix and curly braces: <code>f"Score: {score}"</code>.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>print(f"Score: {score}")</text></answer>
+  <answer fraction="0" format="html"><text>print("Score: {score}")</text></answer>
+  <answer fraction="0" format="html"><text>print(f"Score: score")</text></answer>
+  <answer fraction="0" format="html"><text>print("Score: " + score)</text></answer>
+</question>
+
+<!-- Question 16 -->
+<question type="truefalse">
+  <name><text>M2-Q16 case sensitive</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Python variable names are case-sensitive, so <code>name</code> and <code>Name</code> are different variables.</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>True. Python treats uppercase and lowercase letters as distinct in identifiers.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>1.0000000</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="moodle_auto_format"><text>true</text></answer>
+  <answer fraction="0" format="moodle_auto_format"><text>false</text></answer>
+</question>
+
+<!-- Question 17 -->
+<question type="truefalse">
+  <name><text>M2-Q17 None check</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>The recommended way to check if a variable is <code>None</code> is: <code>if value is None:</code></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>True. PEP 8 recommends <code>is None</code> / <code>is not None</code> rather than <code>== None</code>.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>1.0000000</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="moodle_auto_format"><text>true</text></answer>
+  <answer fraction="0" format="moodle_auto_format"><text>false</text></answer>
+</question>
+
+<!-- Question 18 -->
+<question type="multichoice">
+  <name><text>M2-Q18 swap variables</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Which code correctly swaps the values of <code>a</code> and <code>b</code> in Python?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Python allows tuple-style swapping: <code>a, b = b, a</code> without a temporary variable.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>a, b = b, a</text></answer>
+  <answer fraction="0" format="html"><text>swap(a, b)</text></answer>
+  <answer fraction="0" format="html"><text>a = b; b = a</text></answer>
+  <answer fraction="0" format="html"><text>exchange(a, b)</text></answer>
+</question>
+
+<!-- Question 19 -->
+<question type="multichoice">
+  <name><text>M2-Q19 data science casting</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>In data science, why might you convert a column of strings like <code>"85"</code> to integers?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Numeric strings must be cast to int/float before mathematical operations like mean, sum, or comparisons can be performed.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>To perform mathematical calculations on the values</text></answer>
+  <answer fraction="0" format="html"><text>Because Python cannot store strings</text></answer>
+  <answer fraction="0" format="html"><text>To make the file smaller on disk</text></answer>
+  <answer fraction="0" format="html"><text>Because integers use more memory than strings</text></answer>
+</question>
+
+<!-- Question 20 -->
+<question type="multichoice">
+  <name><text>M2-Q20 TypeError cause</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What error occurs when you run <code>result = 5 + "3"</code>?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Python cannot add int and str together — this raises <code>TypeError</code>. Cast with <code>int()</code> or <code>str()</code> first.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>TypeError</text></answer>
+  <answer fraction="0" format="html"><text>ValueError</text></answer>
+  <answer fraction="0" format="html"><text>SyntaxError</text></answer>
+  <answer fraction="0" format="html"><text>NameError</text></answer>
+</question>
+
+</quiz>
