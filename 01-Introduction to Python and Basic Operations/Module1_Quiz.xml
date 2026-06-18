@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Module 1: Introduction to Python and Basic Operations -->
+<!-- Import: Moodle → Question bank → Import → Moodle XML format -->
+<!-- shuffleanswers=1 randomizes answer order for each attempt -->
+
+<question type="category">
+  <category>
+    <text>$course$/Module1/Introduction to Python</text>
+  </category>
+</question>
+
+<!-- Question 1 -->
+<question type="multichoice">
+  <name><text>M1-Q01 Python creator</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Who created the Python programming language?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Guido van Rossum created Python; it was first released in 1991.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect. Review Module 1 — What is Python?</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>Guido van Rossum</text></answer>
+  <answer fraction="0" format="html"><text>James Gosling</text></answer>
+  <answer fraction="0" format="html"><text>Brendan Eich</text></answer>
+  <answer fraction="0" format="html"><text>Dennis Ritchie</text></answer>
+</question>
+
+<!-- Question 2 -->
+<question type="multichoice">
+  <name><text>M1-Q02 Python type</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Python is primarily described as which type of language?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Python is high-level and interpreted — it runs line by line without a separate compile step.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>High-level and interpreted</text></answer>
+  <answer fraction="0" format="html"><text>Low-level and compiled only</text></answer>
+  <answer fraction="0" format="html"><text>Markup language</text></answer>
+  <answer fraction="0" format="html"><text>Database query language</text></answer>
+</question>
+
+<!-- Question 3 -->
+<question type="multichoice">
+  <name><text>M1-Q03 Python version</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Which Python version should you use for new projects in 2024 and beyond?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Python 2 reached end-of-life in 2020. All industry work uses Python 3.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>Python 3</text></answer>
+  <answer fraction="0" format="html"><text>Python 2</text></answer>
+  <answer fraction="0" format="html"><text>Either 2 or 3</text></answer>
+  <answer fraction="0" format="html"><text>Python 1</text></answer>
+</question>
+
+<!-- Question 4 -->
+<question type="multichoice">
+  <name><text>M1-Q04 Django Flask use</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Django and Flask are commonly used for which career path?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Django and Flask are web frameworks used for backend and full-stack web development.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>Backend / Web development</text></answer>
+  <answer fraction="0" format="html"><text>3D game graphics only</text></answer>
+  <answer fraction="0" format="html"><text>Hardware firmware only</text></answer>
+  <answer fraction="0" format="html"><text>Spreadsheet formulas only</text></answer>
+</question>
+
+<!-- Question 5 -->
+<question type="multichoice">
+  <name><text>M1-Q05 REPL meaning</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What does the Python REPL allow you to do?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>REPL = Read-Eval-Print Loop. You type one line, Python runs it immediately — great for quick tests.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>Run Python code interactively, line by line</text></answer>
+  <answer fraction="0" format="html"><text>Compile Python to machine code permanently</text></answer>
+  <answer fraction="0" format="html"><text>Design database schemas only</text></answer>
+  <answer fraction="0" format="html"><text>Host websites in production</text></answer>
+</question>
+
+<!-- Question 6 -->
+<question type="multichoice">
+  <name><text>M1-Q06 Run script command</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>How do you run a Python file named <code>hello.py</code> from the terminal?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Use <code>python hello.py</code> or <code>python3 hello.py</code> depending on your system.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>python hello.py</text></answer>
+  <answer fraction="0" format="html"><text>run hello.py</text></answer>
+  <answer fraction="0" format="html"><text>execute python hello</text></answer>
+  <answer fraction="0" format="html"><text>python run hello.py</text></answer>
+</question>
+
+<!-- Question 7 -->
+<question type="multichoice">
+  <name><text>M1-Q07 pip purpose</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What is <code>pip</code> used for in Python?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>pip is the package installer for Python — e.g. <code>pip install pandas</code>.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>Installing third-party Python packages</text></answer>
+  <answer fraction="0" format="html"><text>Editing Python source code</text></answer>
+  <answer fraction="0" format="html"><text>Converting Python to Java</text></answer>
+  <answer fraction="0" format="html"><text>Running unit tests only</text></answer>
+</question>
+
+<!-- Question 8 -->
+<question type="multichoice">
+  <name><text>M1-Q08 single line comment</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Which symbol starts a single-line comment in Python?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>The hash <code>#</code> starts a single-line comment. Python ignores everything after it on that line.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>#</text></answer>
+  <answer fraction="0" format="html"><text>//</text></answer>
+  <answer fraction="0" format="html"><text>/*</text></answer>
+  <answer fraction="0" format="html"><text>--</text></answer>
+</question>
+
+<!-- Question 9 -->
+<question type="multichoice">
+  <name><text>M1-Q09 floor division</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What is the result of <code>17 // 5</code> in Python?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Floor division <code>//</code> divides and drops the decimal part. 17 ÷ 5 = 3.4 → floor is 3.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>3</text></answer>
+  <answer fraction="0" format="html"><text>3.4</text></answer>
+  <answer fraction="0" format="html"><text>4</text></answer>
+  <answer fraction="0" format="html"><text>2</text></answer>
+</question>
+
+<!-- Question 10 -->
+<question type="multichoice">
+  <name><text>M1-Q10 modulus result</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What is the result of <code>17 % 5</code>?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Modulus returns the remainder. 17 = 5×3 + 2, so the remainder is 2.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>2</text></answer>
+  <answer fraction="0" format="html"><text>3</text></answer>
+  <answer fraction="0" format="html"><text>3.4</text></answer>
+  <answer fraction="0" format="html"><text>5</text></answer>
+</question>
+
+<!-- Question 11 -->
+<question type="multichoice">
+  <name><text>M1-Q11 exponent</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What is the value of <code>2 ** 4</code>?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p><code>**</code> is exponentiation: 2⁴ = 2×2×2×2 = 16.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>16</text></answer>
+  <answer fraction="0" format="html"><text>8</text></answer>
+  <answer fraction="0" format="html"><text>6</text></answer>
+  <answer fraction="0" format="html"><text>24</text></answer>
+</question>
+
+<!-- Question 12 -->
+<question type="multichoice">
+  <name><text>M1-Q12 division type</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What is the result of <code>10 / 4</code> in Python 3?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>In Python 3, the <code>/</code> operator always returns a float, even when the result is whole.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>2.5</text></answer>
+  <answer fraction="0" format="html"><text>2</text></answer>
+  <answer fraction="0" format="html"><text>3</text></answer>
+  <answer fraction="0" format="html"><text>2.0 only when using //</text></answer>
+</question>
+
+<!-- Question 13 -->
+<question type="multichoice">
+  <name><text>M1-Q13 print sep</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What does <code>print("A", "B", "C", sep="-")</code> output?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>The <code>sep</code> parameter sets the separator between values. Default is a space.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>A-B-C</text></answer>
+  <answer fraction="0" format="html"><text>A B C</text></answer>
+  <answer fraction="0" format="html"><text>ABC</text></answer>
+  <answer fraction="0" format="html"><text>A,B,C</text></answer>
+</question>
+
+<!-- Question 14 -->
+<question type="multichoice">
+  <name><text>M1-Q14 input return type</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What data type does <code>input()</code> always return?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p><code>input()</code> always returns a string (<code>str</code>), even if the user types numbers.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>str (string)</text></answer>
+  <answer fraction="0" format="html"><text>int (integer)</text></answer>
+  <answer fraction="0" format="html"><text>float</text></answer>
+  <answer fraction="0" format="html"><text>Depends on what the user types</text></answer>
+</question>
+
+<!-- Question 15 -->
+<question type="multichoice">
+  <name><text>M1-Q15 string addition trap</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What is printed by <code>print("5" + "3")</code>?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Adding two strings concatenates them: "5" + "3" = "53". Use <code>int()</code> for math.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>53</text></answer>
+  <answer fraction="0" format="html"><text>8</text></answer>
+  <answer fraction="0" format="html"><text>Error</text></answer>
+  <answer fraction="0" format="html"><text>5 3</text></answer>
+</question>
+
+<!-- Question 16 -->
+<question type="truefalse">
+  <name><text>M1-Q16 dynamically typed</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Python is a dynamically typed language — you do not need to declare variable types before assignment.</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>True. You write <code>x = 10</code> without specifying <code>int x</code> as in Java or C++.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>1.0000000</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="moodle_auto_format"><text>true</text></answer>
+  <answer fraction="0" format="moodle_auto_format"><text>false</text></answer>
+</question>
+
+<!-- Question 17 -->
+<question type="truefalse">
+  <name><text>M1-Q17 TensorFlow career</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>TensorFlow and PyTorch are examples of libraries commonly used in AI and Machine Learning careers.</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>True. These are core deep-learning frameworks used by AI engineers and researchers.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>1.0000000</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="moodle_auto_format"><text>true</text></answer>
+  <answer fraction="0" format="moodle_auto_format"><text>false</text></answer>
+</question>
+
+<!-- Question 18 -->
+<question type="multichoice">
+  <name><text>M1-Q18 indentation error</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What error occurs when Python code has inconsistent indentation?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Python uses indentation to define blocks. Wrong spacing raises <code>IndentationError</code>.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>IndentationError</text></answer>
+  <answer fraction="0" format="html"><text>ImportError</text></answer>
+  <answer fraction="0" format="html"><text>FileNotFoundError</text></answer>
+  <answer fraction="0" format="html"><text>KeyError</text></answer>
+</question>
+
+<!-- Question 19 -->
+<question type="multichoice">
+  <name><text>M1-Q19 venv purpose</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>What is the main purpose of a Python virtual environment (<code>venv</code>)?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Virtual environments isolate project dependencies so different projects can use different package versions.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>Isolate project dependencies and package versions</text></answer>
+  <answer fraction="0" format="html"><text>Make Python run faster</text></answer>
+  <answer fraction="0" format="html"><text>Convert Python code to C++</text></answer>
+  <answer fraction="0" format="html"><text>Replace the need for pip</text></answer>
+</question>
+
+<!-- Question 20 -->
+<question type="multichoice">
+  <name><text>M1-Q20 Pandas career</text></name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Which library is most associated with data analysis and data science in Python?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Pandas is the standard library for tabular data manipulation in data science workflows.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html"><text>Correct!</text></correctfeedback>
+  <incorrectfeedback format="html"><text>Incorrect.</text></incorrectfeedback>
+  <answer fraction="100" format="html"><text>Pandas</text></answer>
+  <answer fraction="0" format="html"><text>Pygame</text></answer>
+  <answer fraction="0" format="html"><text>Flask</text></answer>
+  <answer fraction="0" format="html"><text>Selenium</text></answer>
+</question>
+
+</quiz>
