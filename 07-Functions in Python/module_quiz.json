@@ -1,0 +1,277 @@
+[
+  {
+    "question": "What is the output?",
+    "code": "def greet():\n    print(\"Hi\")\ngreet()",
+    "language": "python",
+    "options": ["Hi", "greet", "None", "Error"],
+    "answer": "Hi"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def add(a, b):\n    return a + b\nprint(add(2, 3))",
+    "language": "python",
+    "options": ["23", "5", "None", "Error"],
+    "answer": "5"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def square(n):\n    return n * n\nprint(square(4))",
+    "language": "python",
+    "options": ["8", "16", "4", "None"],
+    "answer": "16"
+  },
+  {
+    "question": "In def greet(name):, what is name?",
+    "options": ["An argument", "A parameter", "A return value", "A module"],
+    "answer": "A parameter"
+  },
+  {
+    "question": "In greet(\"Ada\"), what is \"Ada\"?",
+    "options": ["A parameter", "An argument", "A keyword-only type", "A docstring"],
+    "answer": "An argument"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def f():\n    print(\"A\")\n    return\n    print(\"B\")\nf()",
+    "language": "python",
+    "options": ["A", "B", "A then B", "Error"],
+    "answer": "A"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def f():\n    pass\nprint(f())",
+    "language": "python",
+    "options": ["pass", "None", "0", "Error"],
+    "answer": "None"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def greet(name=\"Guest\"):\n    print(f\"Hello, {name}!\")\ngreet()",
+    "language": "python",
+    "options": ["Hello, name!", "Hello, Guest!", "Hello, None!", "Error"],
+    "answer": "Hello, Guest!"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def greet(name=\"Guest\"):\n    print(f\"Hello, {name}!\")\ngreet(\"Ada\")",
+    "language": "python",
+    "options": ["Hello, Guest!", "Hello, Ada!", "Hello, name!", "Error"],
+    "answer": "Hello, Ada!"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def power(base, exponent=2):\n    return base ** exponent\nprint(power(5))",
+    "language": "python",
+    "options": ["7", "10", "25", "Error"],
+    "answer": "25"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def describe(animal, name):\n    print(f\"{name}:{animal}\")\ndescribe(name=\"Buddy\", animal=\"dog\")",
+    "language": "python",
+    "options": ["dog:Buddy", "Buddy:dog", "name:animal", "Error"],
+    "answer": "Buddy:dog"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def add_numbers(*args):\n    return sum(args)\nprint(add_numbers(1, 2, 3, 4))",
+    "language": "python",
+    "options": ["10", "1234", "(1, 2, 3, 4)", "Error"],
+    "answer": "10"
+  },
+  {
+    "question": "Inside def f(*args):, what type is args?",
+    "options": ["list", "tuple", "dict", "set"],
+    "answer": "tuple"
+  },
+  {
+    "question": "Inside def f(**kwargs):, what type is kwargs?",
+    "options": ["list", "tuple", "dict", "set"],
+    "answer": "dict"
+  },
+  {
+    "question": "What is the output?",
+    "code": "cube = lambda x: x ** 3\nprint(cube(3))",
+    "language": "python",
+    "options": ["9", "27", "6", "Error"],
+    "answer": "27"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def even_or_odd(n):\n    if n % 2 == 0:\n        return \"Even\"\n    return \"Odd\"\nprint(even_or_odd(7))",
+    "language": "python",
+    "options": ["Even", "Odd", "True", "False"],
+    "answer": "Odd"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def largest(nums):\n    return max(nums)\nprint(largest([4, 9, 1, 7]))",
+    "language": "python",
+    "options": ["4", "9", "1", "7"],
+    "answer": "9"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def min_max(values):\n    return min(values), max(values)\nlo, hi = min_max([3, 9, 1])\nprint(lo)\nprint(hi)",
+    "language": "python",
+    "options": ["3 then 9", "1 then 9", "9 then 1", "1 then 3"],
+    "answer": "1 then 9"
+  },
+  {
+    "question": "Which line correctly calls a function named greet?",
+    "options": ["greet", "greet()", "def greet()", "call greet"],
+    "answer": "greet()"
+  },
+  {
+    "question": "What is wrong with def bad(a=1, b):?",
+    "options": [
+      "Nothing",
+      "Default parameter appears before a non-default parameter",
+      "Functions cannot have defaults",
+      "b must be a string"
+    ],
+    "answer": "Default parameter appears before a non-default parameter"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def even_only(numbers):\n    result = []\n    for n in numbers:\n        if n % 2 == 0:\n            result.append(n)\n    return result\nprint(even_only([1, 2, 3, 4]))",
+    "language": "python",
+    "options": ["[1, 2, 3, 4]", "[2, 4]", "[1, 3]", "None"],
+    "answer": "[2, 4]"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def word_count(sentence):\n    return len(sentence.split())\nprint(word_count(\"Python is fun\"))",
+    "language": "python",
+    "options": ["1", "2", "3", "11"],
+    "answer": "3"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def factorial(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\nprint(factorial(4))",
+    "language": "python",
+    "options": ["10", "24", "120", "4"],
+    "answer": "24"
+  },
+  {
+    "question": "A function uses print(5) but no return. What does x = that_function() store?",
+    "options": ["5", "\"5\"", "None", "Error always"],
+    "answer": "None"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def is_palindrome(text):\n    cleaned = text.lower().replace(\" \", \"\")\n    return cleaned == cleaned[::-1]\nprint(is_palindrome(\"Race car\"))",
+    "language": "python",
+    "options": ["True", "False", "Race car", "Error"],
+    "answer": "True"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\nprint(fibonacci(6))",
+    "language": "python",
+    "options": ["5", "8", "13", "6"],
+    "answer": "8"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def factors(n):\n    result = []\n    for i in range(1, n + 1):\n        if n % i == 0:\n            result.append(i)\n    return result\nprint(factors(6))",
+    "language": "python",
+    "options": ["[1, 2, 3, 6]", "[2, 3]", "[6]", "[1, 6]"],
+    "answer": "[1, 2, 3, 6]"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def convert_temp(value, to_scale):\n    if to_scale == \"F\":\n        return (value * 9 / 5) + 32\n    return (value - 32) * 5 / 9\nprint(convert_temp(25, \"F\"))",
+    "language": "python",
+    "options": ["25", "77.0", "32", "Error"],
+    "answer": "77.0"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def second_highest(numbers):\n    return sorted(set(numbers))[-2]\nprint(second_highest([5, 1, 9, 9, 3, 7]))",
+    "language": "python",
+    "options": ["9", "7", "5", "3"],
+    "answer": "7"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def char_frequency(text):\n    freq = {}\n    for char in text:\n        freq[char] = freq.get(char, 0) + 1\n    return freq\nprint(char_frequency(\"aba\")[\"a\"])",
+    "language": "python",
+    "options": ["1", "2", "3", "Error"],
+    "answer": "2"
+  },
+  {
+    "question": "What is the output?",
+    "code": "counter = 0\ndef increment_local():\n    counter = 10\nincrement_local()\nprint(counter)",
+    "language": "python",
+    "options": ["10", "0", "None", "Error"],
+    "answer": "0"
+  },
+  {
+    "question": "Which is the safest default for a mutable list parameter?",
+    "options": ["bag=[]", "bag={}", "bag=None (then create list inside)", "bag=list"],
+    "answer": "bag=None (then create list inside)"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def keys_sorted_by_value(d):\n    return sorted(d, key=d.get)\nprint(keys_sorted_by_value({\"a\": 3, \"b\": 1, \"c\": 2}))",
+    "language": "python",
+    "options": ["['a', 'b', 'c']", "['b', 'c', 'a']", "['c', 'b', 'a']", "['a', 'c', 'b']"],
+    "answer": "['b', 'c', 'a']"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def describe_person(**kwargs):\n    return kwargs.get(\"city\", \"Unknown\")\nprint(describe_person(name=\"Ada\", city=\"Delhi\"))",
+    "language": "python",
+    "options": ["Ada", "Delhi", "Unknown", "Error"],
+    "answer": "Delhi"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def f(a, b=0):\n    return a + b\nprint(f(2))\nprint(f(2, 3))",
+    "language": "python",
+    "options": ["2 then 5", "0 then 5", "2 then 2", "Error"],
+    "answer": "2 then 5"
+  },
+  {
+    "question": "Which statement about return is correct?",
+    "options": [
+      "A function can never return more than one value",
+      "return immediately ends the function",
+      "return and print are identical",
+      "return is only for strings"
+    ],
+    "answer": "return immediately ends the function"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def is_prime(k):\n    if k <= 1:\n        return False\n    for i in range(2, k):\n        if k % i == 0:\n            return False\n    return True\nprint(is_prime(7))\nprint(is_prime(9))",
+    "language": "python",
+    "options": ["True then True", "False then False", "True then False", "False then True"],
+    "answer": "True then False"
+  },
+  {
+    "question": "What is the output?",
+    "code": "def make_list(n):\n    return list(range(1, n + 1))\nprint(make_list(3))",
+    "language": "python",
+    "options": ["[0, 1, 2]", "[1, 2, 3]", "[1, 2, 3, 4]", "range(1, 4)"],
+    "answer": "[1, 2, 3]"
+  },
+  {
+    "question": "What is the output?",
+    "code": "add = lambda a, b: a + b\nprint(add(10, 5))",
+    "language": "python",
+    "options": ["105", "15", "None", "Error"],
+    "answer": "15"
+  },
+  {
+    "question": "Why are functions useful in real projects?",
+    "options": [
+      "They make Python run only on Windows",
+      "They remove the need for variables",
+      "They package reusable logic and improve structure",
+      "They replace the need for data types"
+    ],
+    "answer": "They package reusable logic and improve structure"
+  }
+]

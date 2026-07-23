@@ -1,0 +1,316 @@
+[
+  {
+    "question": "What is a class in Python?",
+    "options": [
+      "A single running program only",
+      "A blueprint for creating objects",
+      "A type of loop",
+      "A required file extension"
+    ],
+    "answer": "A blueprint for creating objects"
+  },
+  {
+    "question": "What is an object?",
+    "options": [
+      "Another name for a module",
+      "An instance created from a class",
+      "Only a dictionary",
+      "A keyword that deletes classes"
+    ],
+    "answer": "An instance created from a class"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Dog:\n    def bark(self):\n        print(\"Woof\")\nDog().bark()",
+    "language": "python",
+    "options": ["Woof", "bark", "Dog", "Error"],
+    "answer": "Woof"
+  },
+  {
+    "question": "What does self represent in a method?",
+    "options": [
+      "The class only, never an instance",
+      "The current object instance",
+      "A global variable",
+      "The return value"
+    ],
+    "answer": "The current object instance"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Student:\n    def __init__(self, name):\n        self.name = name\nprint(Student(\"Ada\").name)",
+    "language": "python",
+    "options": ["Student", "Ada", "name", "Error"],
+    "answer": "Ada"
+  },
+  {
+    "question": "When does __init__ run?",
+    "options": [
+      "Only when print is called",
+      "Automatically when an object is created",
+      "Only at program exit",
+      "Never unless manually invoked as a free function"
+    ],
+    "answer": "Automatically when an object is created"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Counter:\n    def __init__(self):\n        self.value = 0\n    def increment(self):\n        self.value += 1\nc = Counter()\nc.increment()\nc.increment()\nprint(c.value)",
+    "language": "python",
+    "options": ["0", "1", "2", "Error"],
+    "answer": "2"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Box:\n    def __init__(self, label):\n        self.label = label\na = Box(\"A\")\nb = Box(\"B\")\nprint(a.label, b.label)",
+    "language": "python",
+    "options": ["A A", "B B", "A B", "Error"],
+    "answer": "A B"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Rectangle:\n    def __init__(self, w, h):\n        self.w = w\n        self.h = h\n    def area(self):\n        return self.w * self.h\nprint(Rectangle(3, 4).area())",
+    "language": "python",
+    "options": ["7", "12", "34", "Error"],
+    "answer": "12"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Product:\n    def __init__(self, name):\n        self.name = name\n    def __str__(self):\n        return f\"P:{self.name}\"\nprint(Product(\"Pen\"))",
+    "language": "python",
+    "options": ["Pen", "P:Pen", "Product", "Error"],
+    "answer": "P:Pen"
+  },
+  {
+    "question": "Which is typically an instance attribute?",
+    "options": [
+      "A value shared identically for conceptual constants only and never per object",
+      "Data stored on self inside __init__, unique per object",
+      "Always a function outside the class",
+      "sys.argv"
+    ],
+    "answer": "Data stored on self inside __init__, unique per object"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Vehicle:\n    wheels = 4\nprint(Vehicle.wheels)",
+    "language": "python",
+    "options": ["0", "4", "None", "Error"],
+    "answer": "4"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Account:\n    def __init__(self, balance):\n        self.balance = balance\n    def deposit(self, amount):\n        if amount > 0:\n            self.balance += amount\na = Account(100)\na.deposit(20)\nprint(a.balance)",
+    "language": "python",
+    "options": ["100", "20", "120", "80"],
+    "answer": "120"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Account:\n    def __init__(self, balance):\n        self.balance = balance\n    def withdraw(self, amount):\n        if amount <= self.balance:\n            self.balance -= amount\n            return True\n        return False\na = Account(50)\nprint(a.withdraw(80))\nprint(a.balance)",
+    "language": "python",
+    "options": ["True then 50", "False then 50", "False then -30", "True then -30"],
+    "answer": "False then 50"
+  },
+  {
+    "question": "What is inheritance mainly used for?",
+    "options": [
+      "Deleting parent classes",
+      "Creating a new class that reuses/extends another class",
+      "Converting ints to strings",
+      "Importing modules automatically"
+    ],
+    "answer": "Creating a new class that reuses/extends another class"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Animal:\n    def speak(self):\n        return \"...\"\nclass Cat(Animal):\n    def speak(self):\n        return \"Meow\"\nprint(Cat().speak())",
+    "language": "python",
+    "options": ["...", "Meow", "Cat", "Error"],
+    "answer": "Meow"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Animal:\n    pass\nclass Dog(Animal):\n    pass\nprint(isinstance(Dog(), Animal))",
+    "language": "python",
+    "options": ["True", "False", "None", "Error"],
+    "answer": "True"
+  },
+  {
+    "question": "What does super().__init__(...) do in a child class?",
+    "options": [
+      "Deletes the parent class",
+      "Calls the parent class initializer",
+      "Creates a global variable",
+      "Skips object creation"
+    ],
+    "answer": "Calls the parent class initializer"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Employee:\n    def __init__(self, name, role):\n        self.name = name\n        self.role = role\nclass Manager(Employee):\n    def __init__(self, name, team_size):\n        super().__init__(name, \"Manager\")\n        self.team_size = team_size\nm = Manager(\"Sam\", 2)\nprint(m.role, m.team_size)",
+    "language": "python",
+    "options": ["Sam 2", "Manager 2", "Employee 2", "Error"],
+    "answer": "Manager 2"
+  },
+  {
+    "question": "Composition means:",
+    "options": [
+      "A class contains/uses other objects (has-a)",
+      "A class must inherit from object twice",
+      "Deleting methods",
+      "Using only global functions"
+    ],
+    "answer": "A class contains/uses other objects (has-a)"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Engine:\n    def start(self):\n        return \"on\"\nclass Car:\n    def __init__(self):\n        self.engine = Engine()\n    def start(self):\n        return self.engine.start()\nprint(Car().start())",
+    "language": "python",
+    "options": ["on", "Engine", "Car", "Error"],
+    "answer": "on"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Student:\n    def __init__(self, name):\n        self.name = name\n        self.scores = []\n    def add(self, s):\n        self.scores.append(s)\na = Student(\"A\")\nb = Student(\"B\")\na.add(90)\nprint(len(a.scores), len(b.scores))",
+    "language": "python",
+    "options": ["1 1", "1 0", "0 1", "2 0"],
+    "answer": "1 0"
+  },
+  {
+    "question": "What is the output? (shows a common class-attribute mistake)",
+    "code": "class Bad:\n    items = []\na = Bad()\nb = Bad()\na.items.append(1)\nprint(len(b.items))",
+    "language": "python",
+    "options": ["0", "1", "2", "Error"],
+    "answer": "1"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def move(self, dx, dy):\n        self.x += dx\n        self.y += dy\np = Point(1, 2)\np.move(3, 4)\nprint(p.x, p.y)",
+    "language": "python",
+    "options": ["1 2", "3 4", "4 6", "Error"],
+    "answer": "4 6"
+  },
+  {
+    "question": "What happens if a method is defined without self as first parameter and then called on an instance?",
+    "code": "class Demo:\n    def hello():\n        return \"Hi\"\nprint(Demo().hello())",
+    "language": "python",
+    "options": ["Hi", "None", "TypeError", "Hello"],
+    "answer": "TypeError"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Shape:\n    def area(self):\n        return 0\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return self.side * self.side\nprint(Square(5).area())",
+    "language": "python",
+    "options": ["0", "5", "25", "10"],
+    "answer": "25"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class User:\n    def __init__(self, username, password, is_admin=False):\n        self.username = username\n        self.password = password\n        self.is_admin = is_admin\n    def check_password(self, pw):\n        return self.password == pw\nu = User(\"ada\", \"secret\")\nprint(u.check_password(\"secret\"), u.is_admin)",
+    "language": "python",
+    "options": ["True True", "True False", "False False", "False True"],
+    "answer": "True False"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Book:\n    def __init__(self, copies):\n        self.copies = copies\n    def borrow(self):\n        if self.copies > 0:\n            self.copies -= 1\n            return True\n        return False\nb = Book(1)\nprint(b.borrow())\nprint(b.borrow())",
+    "language": "python",
+    "options": ["True then True", "True then False", "False then False", "False then True"],
+    "answer": "True then False"
+  },
+  {
+    "question": "Which call correctly creates an object of class Student?",
+    "options": ["Student", "Student()", "def Student()", "class Student()"],
+    "answer": "Student()"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Greeter:\n    def hello(self, name):\n        return f\"Hi {name}\"\nprint(Greeter().hello(\"Ada\"))",
+    "language": "python",
+    "options": ["Hi Ada", "Hi self", "Ada", "Error"],
+    "answer": "Hi Ada"
+  },
+  {
+    "question": "What is polymorphism in the beginner sense shown with Animal/Cat?",
+    "options": [
+      "One function name behaving differently depending on the object type",
+      "Converting classes to integers",
+      "Hiding all methods forever",
+      "Using only global variables"
+    ],
+    "answer": "One function name behaving differently depending on the object type"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Student:\n    def __init__(self, name):\n        self.name = name\n        self.scores = []\n    def add(self, s):\n        self.scores.append(s)\n    def average(self):\n        return sum(self.scores) / len(self.scores)\ns = Student(\"Bob\")\ns.add(70)\ns.add(90)\nprint(int(s.average()))",
+    "language": "python",
+    "options": ["70", "80", "90", "160"],
+    "answer": "80"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class A:\n    def f(self):\n        return \"A\"\nclass B(A):\n    def f(self):\n        return \"B\" + super().f()\nprint(B().f())",
+    "language": "python",
+    "options": ["A", "B", "BA", "AB"],
+    "answer": "BA"
+  },
+  {
+    "question": "In backend frameworks, why are classes useful?",
+    "options": [
+      "They remove the need for HTTP",
+      "They model entities like User/Order with data and behavior together",
+      "They make Python slower on purpose",
+      "They replace JSON completely"
+    ],
+    "answer": "They model entities like User/Order with data and behavior together"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Playlist:\n    def __init__(self):\n        self.songs = []\n    def add(self, song):\n        self.songs.append(song)\np = Playlist()\np.add(\"A\")\np.add(\"B\")\nprint(len(p.songs), \"A\" in p.songs)",
+    "language": "python",
+    "options": ["2 True", "2 False", "1 True", "0 True"],
+    "answer": "2 True"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Temperature:\n    def __init__(self, c):\n        self._c = c\n    def to_f(self):\n        return self._c * 9 / 5 + 32\nprint(int(Temperature(0).to_f()))",
+    "language": "python",
+    "options": ["0", "32", "212", "Error"],
+    "answer": "32"
+  },
+  {
+    "question": "Which statement is correct?",
+    "options": [
+      "All objects of a class always share the same instance attribute values",
+      "Each object can store different instance attribute values",
+      "Classes cannot contain methods",
+      "__init__ must be called manually every time after creation"
+    ],
+    "answer": "Each object can store different instance attribute values"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Circle:\n    def __init__(self, r):\n        self.r = r\n    def area(self):\n        return 3.14 * self.r * self.r\nprint(int(Circle(2).area()))",
+    "language": "python",
+    "options": ["6", "12", "14", "16"],
+    "answer": "12"
+  },
+  {
+    "question": "What is the output?",
+    "code": "class Parent:\n    def __init__(self):\n        self.x = 1\nclass Child(Parent):\n    def __init__(self):\n        super().__init__()\n        self.y = 2\nc = Child()\nprint(c.x, c.y)",
+    "language": "python",
+    "options": ["1 2", "0 2", "1 0", "Error"],
+    "answer": "1 2"
+  },
+  {
+    "question": "Which mistake causes AttributeError most often for beginners?",
+    "options": [
+      "Using print()",
+      "Using an attribute that was never set in __init__ or elsewhere",
+      "Importing math",
+      "Creating too many comments"
+    ],
+    "answer": "Using an attribute that was never set in __init__ or elsewhere"
+  }
+]

@@ -1,0 +1,476 @@
+[
+  {
+    "question": "What is the output?",
+    "code": "text = \"Python\"\nprint(text[0])",
+    "language": "python",
+    "options": [
+      "P",
+      "y",
+      "n",
+      "Error"
+    ],
+    "answer": "P"
+  },
+  {
+    "question": "What is the output?",
+    "code": "text = \"Python\"\nprint(text[-1])",
+    "language": "python",
+    "options": [
+      "P",
+      "o",
+      "n",
+      "Error"
+    ],
+    "answer": "n"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(len(\"Hello\"))",
+    "language": "python",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "Error"
+    ],
+    "answer": "5"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"Hello\" + \" \" + \"World\")",
+    "language": "python",
+    "options": [
+      "HelloWorld",
+      "Hello World",
+      "Hello+World",
+      "Error"
+    ],
+    "answer": "Hello World"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"Ha\" * 3)",
+    "language": "python",
+    "options": [
+      "HaHaHa",
+      "Ha3",
+      "Ha Ha Ha",
+      "Error"
+    ],
+    "answer": "HaHaHa"
+  },
+  {
+    "question": "What is the output?",
+    "code": "language = \"python\"\nprint(language.upper())",
+    "language": "python",
+    "options": [
+      "python",
+      "Python",
+      "PYTHON",
+      "Error"
+    ],
+    "answer": "PYTHON"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"12345\".isdigit())",
+    "language": "python",
+    "options": [
+      "True",
+      "False",
+      "12345",
+      "Error"
+    ],
+    "answer": "True"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"  hi  \".strip())",
+    "language": "python",
+    "options": [
+      "  hi  ",
+      "hi",
+      "hi  ",
+      "  hi"
+    ],
+    "answer": "hi"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"@\" in \"a@b.com\")",
+    "language": "python",
+    "options": [
+      "True",
+      "False",
+      "@",
+      "Error"
+    ],
+    "answer": "True"
+  },
+  {
+    "question": "Which statement about Python strings is correct?",
+    "options": [
+      "Strings can be changed in place by assigning to an index",
+      "Strings are immutable; methods return new strings",
+      "Strings cannot be indexed",
+      "String length is always fixed at 10 characters"
+    ],
+    "answer": "Strings are immutable; methods return new strings"
+  },
+  {
+    "question": "What is the output?",
+    "code": "word = \"Programming\"\nprint(word[0:5])",
+    "language": "python",
+    "options": [
+      "Progr",
+      "Progra",
+      "Prog",
+      "Program"
+    ],
+    "answer": "Progr"
+  },
+  {
+    "question": "What is the output?",
+    "code": "word = \"Python\"\nprint(word[0:3])",
+    "language": "python",
+    "options": [
+      "Pyt",
+      "Pyth",
+      "Pytho",
+      "P"
+    ],
+    "answer": "Pyt"
+  },
+  {
+    "question": "What is the output?",
+    "code": "text = \"Learning\"\nprint(text[::-1])",
+    "language": "python",
+    "options": [
+      "Learning",
+      "gninraeL",
+      "Gninrael",
+      "Error"
+    ],
+    "answer": "gninraeL"
+  },
+  {
+    "question": "What is printed (two lines)?",
+    "code": "name = \"alice\"\nprint(name.upper())\nprint(name)",
+    "language": "python",
+    "options": [
+      "ALICE then ALICE",
+      "ALICE then alice",
+      "alice then ALICE",
+      "alice then alice"
+    ],
+    "answer": "ALICE then alice"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"Hello, how are you?\".count(\"o\"))",
+    "language": "python",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "What is the output?",
+    "code": "text = \"I love to code in Python.\"\nprint(text.find(\"code\"))",
+    "language": "python",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "-1"
+    ],
+    "answer": "10"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"abc\".find(\"z\"))",
+    "language": "python",
+    "options": [
+      "0",
+      "3",
+      "-1",
+      "Error"
+    ],
+    "answer": "-1"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"Welcome\".startswith(\"Wel\"))",
+    "language": "python",
+    "options": [
+      "True",
+      "False",
+      "Wel",
+      "Error"
+    ],
+    "answer": "True"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"hello.py\".endswith(\".py\"))",
+    "language": "python",
+    "options": [
+      "True",
+      "False",
+      ".py",
+      "Error"
+    ],
+    "answer": "True"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"This is a bad day\".replace(\"bad\", \"good\"))",
+    "language": "python",
+    "options": [
+      "This is a bad day",
+      "This is a good day",
+      "good",
+      "Error"
+    ],
+    "answer": "This is a good day"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"-\".join([\"I\", \"love\", \"Python\"]))",
+    "language": "python",
+    "options": [
+      "I love Python",
+      "I-love-Python",
+      "I,love,Python",
+      "Error"
+    ],
+    "answer": "I-love-Python"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"Python is fun\".split())",
+    "language": "python",
+    "options": [
+      "['Python', 'is', 'fun']",
+      "Python is fun",
+      "['Python is fun']",
+      "Error"
+    ],
+    "answer": "['Python', 'is', 'fun']"
+  },
+  {
+    "question": "What is the output?",
+    "code": "name = \"John\"\nage = 30\nprint(f\"{name} is {age}\")",
+    "language": "python",
+    "options": [
+      "{name} is {age}",
+      "John is 30",
+      "name is age",
+      "Error"
+    ],
+    "answer": "John is 30"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"5\" + \"3\")",
+    "language": "python",
+    "options": [
+      "8",
+      "53",
+      "5 3",
+      "Error"
+    ],
+    "answer": "53"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"Hello123\".isalnum())",
+    "language": "python",
+    "options": [
+      "True",
+      "False",
+      "Hello123",
+      "Error"
+    ],
+    "answer": "True"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"Hello 123\".isalnum())",
+    "language": "python",
+    "options": [
+      "True",
+      "False",
+      "Hello 123",
+      "Error"
+    ],
+    "answer": "False"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(r\"Line1\\nLine2\")",
+    "language": "python",
+    "options": [
+      "Line1\\nLine2",
+      "Line1\nLine2",
+      "Line1Line2",
+      "Error"
+    ],
+    "answer": "Line1\\nLine2"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"Development\"[::2])",
+    "language": "python",
+    "options": [
+      "Development",
+      "Dvlpet",
+      "eeomn",
+      "Error"
+    ],
+    "answer": "Dvlpet"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"Technology\"[-5:])",
+    "language": "python",
+    "options": [
+      "Techn",
+      "ology",
+      "nology",
+      "Error"
+    ],
+    "answer": "ology"
+  },
+  {
+    "question": "Which code correctly prints the last character of text safely assuming text is non-empty?",
+    "options": [
+      "print(text[len(text)])",
+      "print(text[len(text) - 1])",
+      "print(text[len])",
+      "print(text.last())"
+    ],
+    "answer": "print(text[len(text) - 1])"
+  },
+  {
+    "question": "What is the output?",
+    "code": "raw = \"  Admin  \"\nprint(raw.strip().lower())",
+    "language": "python",
+    "options": [
+      "  admin  ",
+      "Admin",
+      "admin",
+      "ADMIN"
+    ],
+    "answer": "admin"
+  },
+  {
+    "question": "What happens when this code runs?",
+    "code": "text = \"cat\"\ntext[0] = \"b\"\nprint(text)",
+    "language": "python",
+    "options": [
+      "bat",
+      "cat",
+      "TypeError",
+      "b"
+    ],
+    "answer": "TypeError"
+  },
+  {
+    "question": "What is the output?",
+    "code": "text = \"Python\"\nprint(text.find(\"python\"))",
+    "language": "python",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "Error"
+    ],
+    "answer": "-1"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"hello world\"[:5].upper())",
+    "language": "python",
+    "options": [
+      "HELLO WORLD",
+      "HELLO",
+      "hello",
+      "WORLD"
+    ],
+    "answer": "HELLO"
+  },
+  {
+    "question": "Which code produces the output: report.pdf",
+    "options": [
+      "print(\"  Report.PDF  \".lower())",
+      "print(\"  Report.PDF  \".strip().lower())",
+      "print(\"  Report.PDF  \".strip())",
+      "print(\"  Report.PDF  \".upper().strip())"
+    ],
+    "answer": "print(\"  Report.PDF  \".strip().lower())"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"\".isdigit())",
+    "language": "python",
+    "options": [
+      "True",
+      "False",
+      "0",
+      "Error"
+    ],
+    "answer": "False"
+  },
+  {
+    "question": "What is the output?",
+    "code": "msg = \"bad\"\nmsg.replace(\"bad\", \"good\")\nprint(msg)",
+    "language": "python",
+    "options": [
+      "good",
+      "bad",
+      "badgood",
+      "Error"
+    ],
+    "answer": "bad"
+  },
+  {
+    "question": "What error occurs?",
+    "code": "print(\"Age: \" + 25)",
+    "language": "python",
+    "options": [
+      "ValueError",
+      "TypeError",
+      "NameError",
+      "No error; prints Age: 25"
+    ],
+    "answer": "TypeError"
+  },
+  {
+    "question": "What is the output?",
+    "code": "word = \"Programming\"\nprint(word[3:])",
+    "language": "python",
+    "options": [
+      "Pro",
+      "gramming",
+      "Programming",
+      "gram"
+    ],
+    "answer": "gramming"
+  },
+  {
+    "question": "A beginner wrote this to get the last character. Which statement is true?",
+    "code": "text = \"code\"\nprint(text.find(\"x\"))",
+    "language": "python",
+    "options": [
+      "It prints the last character 'e'",
+      "It prints -1 because 'x' is not found",
+      "It prints 3",
+      "It raises IndexError"
+    ],
+    "answer": "It prints -1 because 'x' is not found"
+  }
+]

@@ -1509,6 +1509,29 @@ Use binary mode for images or non-text files.
 
 File handling is crucial for logging, storing data, and working with external files.
 
+---
+
+### 🟢 **Module 10: Classes and Objects (OOP Fundamentals)**
+
+Object-Oriented Programming bundles **data + behavior** into reusable blueprints.
+
+**Core ideas:**
+- Class = blueprint; Object = instance
+- `self`, `__init__`, instance attributes, methods
+- `__str__` for readable printing
+- Class vs instance attributes
+- Inheritance, `super()`, `isinstance`
+- Composition (has-a)
+
+**Learning package files:**
+- `10-Classes and Objects/module_notes.md`
+- `10-Classes and Objects/module.py`
+- `10-Classes and Objects/module_exercises.md`
+- `10-Classes and Objects/module_quiz.json`
+
+**Suggested order:** after Functions (Module 7) and Collections (Module 6); pairs well with later framework learning (Django models, APIs, ML objects).
+
+
 
 
 

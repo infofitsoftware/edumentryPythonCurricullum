@@ -1,0 +1,741 @@
+# MASTER PROMPT — PYTHON MODULE LEARNING PACKAGE GENERATOR
+
+You are an expert Python instructor, curriculum designer, technical trainer, and assessment author.
+
+Your task is to create a complete learning package for the Python module/topic provided below.
+
+The students are beginners learning Python with the long-term objective of becoming capable software/IT professionals. Do not design the material merely to help them pass a quiz. Build conceptual understanding, coding ability, debugging skills, problem-solving ability, and the foundation required for real-world technical work.
+
+---
+
+# MODULE INPUT
+
+Module Name:
+[ENTER MODULE NAME]
+
+Primary Topics:
+[ENTER TOPICS]
+
+Previously Covered Topics:
+[ENTER PREVIOUS TOPICS]
+
+Student Level:
+Beginner
+
+Target Language:
+Python 3
+
+Number of Quiz Questions:
+[ENTER NUMBER — e.g. 40]
+
+Number of Exercises:
+[ENTER NUMBER — e.g. 20]
+
+---
+
+# CORE INSTRUCTION
+
+Before generating any files, internally analyze the module and identify:
+
+1. Fundamental concepts students must understand.
+2. Important subtopics under every parent topic.
+3. Syntax students must know.
+4. Common beginner misconceptions.
+5. Common coding mistakes.
+6. Important edge cases appropriate for beginners.
+7. Concepts that are prerequisites for later Python topics.
+8. Concepts frequently encountered in practical programming.
+9. Connections with previously learned topics.
+10. Skills students should be able to demonstrate after completing the module.
+
+Do not omit an important fundamental merely because it was not explicitly mentioned in the topic list.
+
+However, do not introduce advanced Python concepts that students have not yet learned unless a very brief preview is pedagogically necessary.
+
+Create the following FOUR deliverables.
+
+==================================================
+DOCUMENT 1 — QUIZ QUESTION BANK
+===============================
+
+Create:
+
+`module_quiz.json`
+
+The quiz must test UNDERSTANDING rather than memorization.
+
+Questions should reinforce concepts while simultaneously assessing students.
+
+Use a mixture of:
+
+* Output prediction
+* Program tracing
+* Code completion
+* Debugging
+* Error identification
+* Conceptual understanding
+* Scenario-based questions
+* "Which code is correct?" questions
+* "Which code produces this output?" questions
+* Comparison between similar code snippets
+* Questions involving common beginner mistakes
+* Multiple-concept questions
+* A small number of carefully designed tricky questions
+
+Prefer code-based questions wherever appropriate.
+
+Avoid excessive questions such as:
+
+"What does function X do?"
+
+Instead prefer questions where students must APPLY the concept.
+
+For example, instead of:
+
+"What does upper() do?"
+
+prefer:
+
+What is the output?
+
+```python
+language = "python"
+print(language.upper())
+```
+
+---
+
+## QUIZ DIFFICULTY
+
+Use approximately:
+
+25% Easy
+50% Medium
+25% Challenging
+
+Easy questions should verify fundamentals.
+
+Medium questions should combine concepts.
+
+Challenging questions should require careful tracing, debugging, reasoning, or application.
+
+Challenging does NOT mean using concepts students have never learned.
+
+---
+
+## DISTRACTOR QUALITY
+
+Wrong answers must be meaningful.
+
+Each incorrect option should preferably represent a realistic beginner misconception.
+
+For example, if the correct output is:
+
+`6`
+
+poor distractors would be:
+
+`100`
+`hello`
+`banana`
+
+Good distractors might be:
+
+`5`
+`6`
+`7`
+`Error`
+
+because each could result from a realistic misunderstanding.
+
+---
+
+## JSON FORMAT
+
+Use this exact structure:
+
+[
+{
+"question": "What is the output?",
+"code": "x = 5\ny = 3\nprint(x + y)",
+"language": "python",
+"options": ["8", "53", "Error", "5+3"],
+"answer": "8"
+}
+]
+
+For code questions ALWAYS use:
+
+"code": "...",
+"language": "python"
+
+Do not put Python code directly inside the question field if it can be represented using the code field.
+
+For non-code questions:
+
+{
+"question": "Which statement is correct?",
+"options": ["A", "B", "C", "D"],
+"answer": "A"
+}
+
+For multiple-correct questions:
+
+{
+"question": "Select all correct statements.",
+"options": ["A", "B", "C", "D"],
+"answers": ["A", "C"]
+}
+
+Use multiple-answer questions sparingly.
+
+---
+
+## QUIZ VALIDATION
+
+Before saving the file verify programmatically or manually:
+
+* Exact requested number of questions exists.
+* JSON is syntactically valid.
+* Every Python program is syntactically valid unless the question intentionally tests an error.
+* Every expected output is correct.
+* Every answer exactly matches one option.
+* Multiple-answer questions use `answers`.
+* No duplicate questions.
+* No duplicate programs.
+* No duplicate options inside a question.
+* No logically equivalent repeated questions.
+* Difficulty is appropriately distributed.
+* All requested topics are represented.
+* Important subtopics are represented.
+* Correct answers are not consistently located in the same option position.
+* Questions do not depend on concepts students have not learned.
+
+Think through or execute every output-based program before finalizing its answer.
+
+==================================================
+DOCUMENT 2 — BEGINNER-TO-PROFESSIONAL TEACHING SLIDES
+=====================================================
+
+Create:
+
+`module_notes.md`
+
+Design this document as SLIDE-BASED teaching material.
+
+Use:
+
+# Slide 1 — Title
+
+# Slide 2 — ...
+
+# Slide 3 — ...
+
+The slides will be used by an instructor during a live class.
+
+The objective is NOT to create a textbook full of paragraphs.
+
+Create clear, teachable slides containing:
+
+* concise explanations
+* examples
+* analogies
+* anecdotes
+* diagrams described in text where helpful
+* Python programs
+* expected outputs
+* common mistakes
+* instructor talking points
+* questions to ask students
+* mini challenges
+
+---
+
+## TEACHING SEQUENCE
+
+Follow this instructional progression whenever appropriate:
+
+WHY → WHAT → SYNTAX → SIMPLE EXAMPLE → TRACE → PRACTICAL EXAMPLE → COMMON MISTAKE → CHALLENGE → CONNECTION TO REAL PROGRAMMING
+
+Students should first understand WHY something exists before memorizing syntax.
+
+---
+
+## BEGINNER-FIRST EXPLANATIONS
+
+Assume students are seeing the concept for the first time.
+
+Do not say:
+
+"Iteration simply traverses an iterable."
+
+Explain what iteration means first.
+
+Use familiar situations.
+
+Examples:
+
+Traffic signals → conditional decisions
+
+ATM eligibility → if/else
+
+Exam grades → elif
+
+Attendance list → for loop
+
+Retrying a password → while loop
+
+Shopping cart → accumulators
+
+Do not force analogies where they do not improve understanding.
+
+---
+
+## CONCEPT COVERAGE
+
+For every parent topic:
+
+1. Explain the concept.
+2. Explain why it exists.
+3. Explain syntax.
+4. Explain execution flow.
+5. Give a simple example.
+6. Give another example.
+7. Trace at least one example manually.
+8. Show common mistakes.
+9. Show a practical use.
+10. Connect it to previously learned concepts.
+11. Include a mini challenge where appropriate.
+
+Cover ALL important beginner fundamentals and subtopics.
+
+Do not create superficial slides merely to keep the slide count low.
+
+The number of slides should be determined by the amount of material required to teach the topic properly.
+
+---
+
+## CODE TRACING
+
+Frequently demonstrate execution step-by-step.
+
+Example:
+
+```python
+total = 0
+
+for number in range(1, 4):
+    total = total + number
+
+print(total)
+```
+
+Show a trace:
+
+Iteration 1:
+number = 1
+total = 1
+
+Iteration 2:
+number = 2
+total = 3
+
+Iteration 3:
+number = 3
+total = 6
+
+Output:
+
+6
+
+Students must learn to mentally execute programs.
+
+---
+
+## COMMON MISTAKES
+
+Create explicit slides such as:
+
+"Common Beginner Mistakes"
+
+Examples:
+
+* missing colon
+* incorrect indentation
+* using `=` instead of `==`
+* forgetting type conversion after `input()`
+* incorrect range boundary
+* infinite while loops
+* updating the wrong variable
+* incorrect Boolean condition
+
+Explain WHY each mistake occurs.
+
+---
+
+## PROFESSIONAL CONNECTION
+
+Where appropriate, briefly show where the concept appears in real work.
+
+Examples:
+
+Conditionals:
+
+* authentication
+* authorization
+* validation
+* business rules
+
+Loops:
+
+* processing files
+* processing API results
+* database records
+* automation
+* log processing
+
+Strings:
+
+* cleaning data
+* parsing responses
+* user input validation
+
+Keep professional examples understandable to beginners.
+
+---
+
+## END OF MODULE
+
+Finish the notes with:
+
+1. Concept recap
+2. Syntax cheat sheet
+3. Common mistakes checklist
+4. "Can you explain this?" questions
+5. Mini coding challenges
+6. What students should now be able to do
+7. Connection to the next module
+
+==================================================
+DOCUMENT 3 — PYTHON REFERENCE PROGRAM
+=====================================
+
+Create:
+
+`module.py`
+
+This is NOT an assignment.
+
+It is a REFERENCE FILE students can revisit after class.
+
+The file should contain working examples covering every concept taught in the module.
+
+Structure it using clear section comments.
+
+Example:
+
+# ==================================================
+
+# 1. BASIC IF STATEMENT
+
+# ==================================================
+
+age = 20
+
+if age >= 18:
+print("Eligible")
+
+# ==================================================
+
+# 2. IF-ELSE
+
+# ==================================================
+
+number = 7
+
+if number % 2 == 0:
+print("Even")
+else:
+print("Odd")
+
+Continue this structure throughout the module.
+
+---
+
+## REFERENCE FILE REQUIREMENTS
+
+For every important concept include:
+
+* descriptive section heading
+* simple example
+* comments explaining important lines
+* expected output where useful
+* practical example where appropriate
+
+Progress from:
+
+Basic → Intermediate → Combined Examples
+
+Use meaningful variable names.
+
+Prefer:
+
+student_score
+account_balance
+product_price
+attempt_count
+username
+
+instead of repeatedly using:
+
+x
+y
+a
+b
+
+Short variables such as `i` are acceptable where idiomatic, such as simple loops.
+
+---
+
+## COMBINED EXAMPLES
+
+After individual concepts, include examples combining previously learned concepts.
+
+For example:
+
+input + type conversion + if
+
+strings + conditionals
+
+for + if
+
+while + condition
+
+loops + counters
+
+loops + accumulators
+
+Only combine concepts students have already learned.
+
+---
+
+## IMPORTANT
+
+Every example must execute correctly unless it is explicitly placed inside a commented section demonstrating an error.
+
+Do not leave broken executable code in the file.
+
+The student should be able to run:
+
+python module.py
+
+without the program crashing.
+
+==================================================
+DOCUMENT 4 — PRACTICE EXERCISES
+===============================
+
+Create:
+
+`module_exercises.md`
+
+The exercises must consolidate understanding and develop independent problem-solving.
+
+Do NOT simply repeat quiz questions.
+
+The quiz tests understanding.
+
+Exercises build coding ability.
+
+---
+
+## EXERCISE PROGRESSION
+
+Organize exercises into four levels.
+
+### LEVEL 1 — FUNDAMENTALS
+
+Short exercises testing one concept at a time.
+
+Students should become comfortable with syntax and basic execution.
+
+### LEVEL 2 — APPLY THE CONCEPT
+
+Require students to write small programs using the concept.
+
+### LEVEL 3 — COMBINE CONCEPTS
+
+Combine the current module with previously learned concepts.
+
+Examples:
+
+input + conversion + condition
+
+condition + string methods
+
+for + condition
+
+while + counter
+
+### LEVEL 4 — PROBLEM SOLVING
+
+Create small realistic problems.
+
+Examples:
+
+ATM validation
+
+student grade calculator
+
+login attempts
+
+shopping bill
+
+number analyzer
+
+password checker
+
+attendance processor
+
+simple menu system
+
+Keep problems appropriate to concepts already learned.
+
+---
+
+## EXERCISE FORMAT
+
+Each exercise should contain:
+
+### Exercise X — Descriptive Name
+
+**Difficulty:** Easy / Medium / Challenging
+
+**Concepts:** relevant concepts
+
+**Problem:**
+
+Clear problem statement.
+
+**Example Input:**
+
+...
+
+**Expected Output:**
+
+...
+
+**Hint:**
+
+Provide a useful hint without giving away the complete solution.
+
+---
+
+## IMPORTANT EXERCISE RULE
+
+Do not provide the complete solution immediately below each exercise.
+
+Students should attempt it independently.
+
+At the END of the document create:
+
+# Instructor Solution Guide
+
+Provide clean Python solutions there.
+
+Clearly separate the student exercise section from the instructor solutions.
+
+Solutions should favor beginner-readable Python over unnecessarily clever code.
+
+==================================================
+PEDAGOGICAL QUALITY STANDARD
+============================
+
+Across ALL FOUR documents:
+
+Do not teach students merely to memorize Python syntax.
+
+Train them to:
+
+READ CODE
+↓
+TRACE CODE
+↓
+PREDICT OUTPUT
+↓
+IDENTIFY ERRORS
+↓
+FIX CODE
+↓
+WRITE CODE
+↓
+COMBINE CONCEPTS
+↓
+SOLVE PROBLEMS
+
+Whenever possible, reinforce previously taught concepts while introducing the current topic.
+
+Use repetition of CONCEPTS but avoid repetition of identical QUESTIONS or PROGRAMS.
+
+Students should encounter the same concept from different perspectives.
+
+Example:
+
+Learn `range()` in notes.
+
+See examples in module.py.
+
+Trace `range()` in quiz.
+
+Use `range()` independently in exercises.
+
+That is intentional reinforcement.
+
+==================================================
+FINAL QUALITY CONTROL
+=====================
+
+Before declaring the task complete, review the four files together.
+
+Check:
+
+1. Did the notes teach everything tested by the quiz?
+2. Did `module.py` demonstrate everything taught in the notes?
+3. Do the exercises require students to apply what was taught?
+4. Does the quiz assess understanding rather than obscure trivia?
+5. Are important fundamentals missing?
+6. Are concepts introduced in a logical order?
+7. Are examples understandable to beginners?
+8. Does difficulty increase gradually?
+9. Are Python examples technically correct?
+10. Are there unnecessary advanced concepts?
+11. Are there excessive repetitive questions?
+12. Would completing all four resources leave a beginner substantially more capable of writing Python?
+
+If any answer indicates a weakness, improve the files before finishing.
+
+==================================================
+OUTPUT
+======
+
+Create exactly these four files:
+
+1. `module_notes.md`
+2. `module.py`
+3. `module_exercises.md`
+4. `module_quiz.json`
+
+Do not merely describe what should go into the files.
+
+CREATE THE COMPLETE FILES.
+
+At the end, provide a short summary containing:
+
+* files created
+* topics covered
+* number of exercises
+* number of quiz questions
+* quiz difficulty distribution
+* any important assumptions
+
+Do not stop after generating one file. Complete and validate all four deliverables.

@@ -1,0 +1,297 @@
+[
+  {
+    "question": "What does import math do?",
+    "options": [
+      "Installs math with pip",
+      "Makes the math standard-library module available",
+      "Deletes math functions",
+      "Starts a calculator GUI"
+    ],
+    "answer": "Makes the math standard-library module available"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import math\nprint(math.sqrt(49))",
+    "language": "python",
+    "options": ["7", "7.0", "49", "Error"],
+    "answer": "7.0"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import math\nprint(math.ceil(3.2))",
+    "language": "python",
+    "options": ["3", "3.2", "4", "2"],
+    "answer": "4"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import math\nprint(math.floor(3.8))",
+    "language": "python",
+    "options": ["4", "3", "3.8", "2"],
+    "answer": "3"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import math\nprint(math.factorial(4))",
+    "language": "python",
+    "options": ["10", "24", "16", "4"],
+    "answer": "24"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import random\nrandom.seed(1)\nprint(random.randint(1, 100))",
+    "language": "python",
+    "options": ["1", "18", "100", "Error"],
+    "answer": "18"
+  },
+  {
+    "question": "What does random.choice([\"a\", \"b\", \"c\"]) return?",
+    "options": [
+      "Always \"a\"",
+      "One randomly selected item from the list",
+      "The entire list shuffled",
+      "A random integer"
+    ],
+    "answer": "One randomly selected item from the list"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import statistics\nprint(statistics.mean([80, 90, 100]))",
+    "language": "python",
+    "options": ["80", "90", "100", "270"],
+    "answer": "90"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import statistics\nprint(statistics.median([1, 7, 3]))",
+    "language": "python",
+    "options": ["1", "3", "7", "4"],
+    "answer": "3"
+  },
+  {
+    "question": "Which module is best for formatting the current date as YYYY-MM-DD?",
+    "options": ["random", "math", "datetime", "csv"],
+    "answer": "datetime"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import datetime\nprint(datetime.datetime.strptime(\"2026-12-25\", \"%Y-%m-%d\").month)",
+    "language": "python",
+    "options": ["12", "25", "2026", "1"],
+    "answer": "12"
+  },
+  {
+    "question": "What does time.sleep(1) do?",
+    "options": [
+      "Deletes a file after 1 second",
+      "Pauses program execution for about 1 second",
+      "Sets the system clock",
+      "Creates a timer file"
+    ],
+    "answer": "Pauses program execution for about 1 second"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import os\nprint(os.path.join(\"data\", \"file.txt\").replace(\"\\\\\", \"/\"))",
+    "language": "python",
+    "options": ["data/file.txt", "datafile.txt", "file.txt", "Error"],
+    "answer": "data/file.txt"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import os\nprint(os.environ.get(\"NO_SUCH_ENV_VAR_XYZ\", \"missing\"))",
+    "language": "python",
+    "options": ["None", "missing", "NO_SUCH_ENV_VAR_XYZ", "Error"],
+    "answer": "missing"
+  },
+  {
+    "question": "Which sys value lists command-line arguments?",
+    "options": ["sys.version", "sys.platform", "sys.argv", "sys.path only"],
+    "answer": "sys.argv"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import json\nprint(json.dumps({\"a\": 1}))",
+    "language": "python",
+    "options": ["{'a': 1}", "{\"a\": 1}", "{a:1}", "Error"],
+    "answer": "{\"a\": 1}"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import json\ndata = json.loads('{\"name\": \"Ada\"}')\nprint(data[\"name\"])",
+    "language": "python",
+    "options": ["name", "Ada", "{\"name\": \"Ada\"}", "Error"],
+    "answer": "Ada"
+  },
+  {
+    "question": "Which pair writes/reads JSON to a file object?",
+    "options": ["dumps / loads", "dump / load", "write / read only", "encode / decode only"],
+    "answer": "dump / load"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import json\ntext = json.dumps({\"skills\": [\"python\", \"sql\"]})\nprint(json.loads(text)[\"skills\"][0])",
+    "language": "python",
+    "options": ["skills", "python", "sql", "Error"],
+    "answer": "python"
+  },
+  {
+    "question": "Why use newline=\"\" when opening files for the csv module on Windows?",
+    "options": [
+      "It encrypts the CSV",
+      "It helps avoid extra blank lines in written CSV files",
+      "It is required for JSON",
+      "It disables headers"
+    ],
+    "answer": "It helps avoid extra blank lines in written CSV files"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import csv, io\nbuf = io.StringIO()\nwriter = csv.DictWriter(buf, fieldnames=[\"name\", \"score\"])\nwriter.writeheader()\nwriter.writerow({\"name\": \"Ada\", \"score\": \"90\"})\nbuf.seek(0)\nrows = list(csv.DictReader(buf))\nprint(rows[0][\"name\"], rows[0][\"score\"])",
+    "language": "python",
+    "options": ["Ada 90", "name score", "90 Ada", "Error"],
+    "answer": "Ada 90"
+  },
+  {
+    "question": "What is the output?",
+    "code": "from math import sqrt as square_root\nprint(square_root(36))",
+    "language": "python",
+    "options": ["6", "6.0", "36", "Error"],
+    "answer": "6.0"
+  },
+  {
+    "question": "Which statement about the standard library is correct?",
+    "options": [
+      "It always requires pip install",
+      "It ships with Python and needs no extra install for built-in modules",
+      "It only works online",
+      "It replaces the need for variables"
+    ],
+    "answer": "It ships with Python and needs no extra install for built-in modules"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import random\nprint(len(random.sample([10, 20, 30, 40, 50], 3)))",
+    "language": "python",
+    "options": ["3", "5", "1", "15"],
+    "answer": "3"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import os\nprint(os.path.exists(\"definitely_missing_file_12345.xyz\"))",
+    "language": "python",
+    "options": ["True", "False", "None", "Error"],
+    "answer": "False"
+  },
+  {
+    "question": "Which module is commonly used next for HTTP API calls in backend work?",
+    "options": ["math", "requests (third-party)", "statistics", "csv only"],
+    "answer": "requests (third-party)"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import datetime\nprint(datetime.date(2026, 7, 23).strftime(\"%Y-%m-%d\"))",
+    "language": "python",
+    "options": ["23-07-2026", "2026-07-23", "2026/07/23", "Error"],
+    "answer": "2026-07-23"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import json\nprint(type(json.loads(\"{\\\"a\\\": 1}\")).__name__)",
+    "language": "python",
+    "options": ["str", "dict", "list", "json"],
+    "answer": "dict"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import json\nprint(type(json.dumps({\"a\": 1})).__name__)",
+    "language": "python",
+    "options": ["dict", "str", "bytes", "list"],
+    "answer": "str"
+  },
+  {
+    "question": "CSV values read by DictReader are typically what type before casting?",
+    "options": ["int", "float", "str", "bool"],
+    "answer": "str"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import statistics\nscores = [70, 80, 90]\nprint(int(statistics.mean(scores)))",
+    "language": "python",
+    "options": ["70", "80", "90", "240"],
+    "answer": "80"
+  },
+  {
+    "question": "What is sys.platform used for?",
+    "options": [
+      "Formatting JSON",
+      "Identifying the operating system/platform Python is running on",
+      "Creating directories",
+      "Seeding random numbers"
+    ],
+    "answer": "Identifying the operating system/platform Python is running on"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import random\nrandom.seed(0)\nvals = [1, 2, 3, 4]\nrandom.shuffle(vals)\nprint(sorted(vals))",
+    "language": "python",
+    "options": ["[1, 2, 3, 4]", "[4, 3, 2, 1]", "[1]", "Error"],
+    "answer": "[1, 2, 3, 4]"
+  },
+  {
+    "question": "Which is a good use of environment variables?",
+    "options": [
+      "Storing API keys outside source code",
+      "Replacing all functions",
+      "Compiling Python to C automatically",
+      "Formatting CSV headers"
+    ],
+    "answer": "Storing API keys outside source code"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import json\ncfg = {\"env\": \"dev\", \"debug\": True}\nprint(json.loads(json.dumps(cfg))[\"env\"])",
+    "language": "python",
+    "options": ["debug", "dev", "True", "Error"],
+    "answer": "dev"
+  },
+  {
+    "question": "For data science after this course, which library is a common next step for tables?",
+    "options": ["pandas", "math only", "os.listdir only", "sys.argv only"],
+    "answer": "pandas"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import math\nprint(math.pow(2, 3))",
+    "language": "python",
+    "options": ["6", "8.0", "8", "9"],
+    "answer": "8.0"
+  },
+  {
+    "question": "What is the output?",
+    "code": "import os\nos.environ[\"COURSE\"] = \"Python\"\nprint(os.environ.get(\"COURSE\"))",
+    "language": "python",
+    "options": ["COURSE", "Python", "None", "Error"],
+    "answer": "Python"
+  },
+  {
+    "question": "Which import form renames a function locally?",
+    "options": [
+      "import math as m only for modules, never functions",
+      "from math import sqrt as square_root",
+      "include math.sqrt",
+      "using math.sqrt"
+    ],
+    "answer": "from math import sqrt as square_root"
+  },
+  {
+    "question": "Why learn standard-library json before web frameworks?",
+    "options": [
+      "JSON is unrelated to APIs",
+      "APIs and configs commonly exchange JSON data built from dicts/lists",
+      "json replaces the need for functions",
+      "json works only offline"
+    ],
+    "answer": "APIs and configs commonly exchange JSON data built from dicts/lists"
+  }
+]
