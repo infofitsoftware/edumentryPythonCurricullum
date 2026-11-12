@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Module 11: Exception Handling (Beginner / Small Module) -->
+<!-- App format: <text>, optional <code language="python">, <option correct="true"> -->
+<!-- Correct answers balanced across option positions -->
+
+  <question>
+    <text>What is an exception?</text>
+    <option correct="true">An error that happens while the program is running</option>
+    <option>A comment in code</option>
+    <option>A variable type</option>
+    <option>A folder name</option>
+  </question>
+
+  <question>
+    <text>Why is exception handling important?</text>
+    <option>It makes Python slower always</option>
+    <option correct="true">It helps programs fail gracefully instead of crashing</option>
+    <option>It deletes all bugs forever</option>
+    <option>It replaces variables</option>
+  </question>
+
+  <question>
+    <text>Which keywords start a basic handling block?</text>
+    <option>if / else</option>
+    <option>for / while</option>
+    <option correct="true">try / except</option>
+    <option>def / return</option>
+  </question>
+
+  <question>
+    <text>What error does int("abc") raise?</text>
+    <option>TypeError</option>
+    <option>ZeroDivisionError</option>
+    <option>FileNotFoundError</option>
+    <option correct="true">ValueError</option>
+  </question>
+
+  <question>
+    <text>What error does 10 / 0 raise?</text>
+    <option correct="true">ZeroDivisionError</option>
+    <option>NameError</option>
+    <option>ValueError</option>
+    <option>ImportError</option>
+  </question>
+
+  <question>
+    <text>What error does open("missing.txt") raise if the file is absent?</text>
+    <option>ValueError</option>
+    <option correct="true">FileNotFoundError</option>
+    <option>ZeroDivisionError</option>
+    <option>SyntaxError</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">try:
+    print(10 / 0)
+except ZeroDivisionError:
+    print("Cannot divide")</code>
+    <option>5</option>
+    <option>0</option>
+    <option correct="true">Cannot divide</option>
+    <option>Error (uncaught)</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">try:
+    print(int("twenty"))
+except ValueError:
+    print("Invalid")</code>
+    <option>25</option>
+    <option>Error (uncaught)</option>
+    <option>twenty</option>
+    <option correct="true">Invalid</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">try:
+    print(int("42"))
+except ValueError:
+    print("Not a number")</code>
+    <option correct="true">42</option>
+    <option>Not a number</option>
+    <option>Error (uncaught)</option>
+    <option>None</option>
+  </question>
+
+  <question>
+    <text>When does the else block of try/except/else run?</text>
+    <option>Always</option>
+    <option correct="true">Only if try succeeded with no exception</option>
+    <option>Only if an exception happened</option>
+    <option>Never</option>
+  </question>
+
+  <question>
+    <text>When does finally run?</text>
+    <option>Only on success</option>
+    <option>Only on error</option>
+    <option correct="true">Always after try/except</option>
+    <option>Only for files</option>
+  </question>
+
+  <question>
+    <text>Which is a better beginner habit?</text>
+    <option>Catch every error with a bare except and pass</option>
+    <option>Hide all messages</option>
+    <option>Never use try/except</option>
+    <option correct="true">Catch the specific error you expect</option>
+  </question>
+
+  <question>
+    <text>Why wrap a Postgres connection in try/except?</text>
+    <option correct="true">Connection can fail (DB down, bad password, missing driver)</option>
+    <option>Databases never fail</option>
+    <option>try makes SQL faster</option>
+    <option>except creates tables</option>
+  </question>
+
+  <question>
+    <text>Common localhost Postgres port is usually:</text>
+    <option>80</option>
+    <option correct="true">5432</option>
+    <option>3000</option>
+    <option>22</option>
+  </question>
+
+  <question>
+    <text>If psycopg2 is not installed, importing it typically raises:</text>
+    <option>ValueError</option>
+    <option>ZeroDivisionError</option>
+    <option correct="true">ImportError</option>
+    <option>FileNotFoundError</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">try:
+    open("no_such_file_xyz.txt", "r")
+except FileNotFoundError:
+    print("missing")</code>
+    <option>ok</option>
+    <option>True</option>
+    <option>Error (uncaught)</option>
+    <option correct="true">missing</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def safe_divide(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return "cannot divide"
+print(safe_divide(7, 0))</code>
+    <option correct="true">cannot divide</option>
+    <option>7</option>
+    <option>0</option>
+    <option>Error (uncaught)</option>
+  </question>
+
+  <question>
+    <text>In forms/API input, exception handling often protects against:</text>
+    <option>Font size</option>
+    <option correct="true">Bad casting / invalid user values</option>
+    <option>Monitor brightness</option>
+    <option>Keyboard color</option>
+  </question>
+
+  <question format="python">
+    <text>What does this print?</text>
+    <code language="python">try:
+    int("hi")
+except ValueError as e:
+    print("Something went wrong:", e)</code>
+    <option>0</option>
+    <option>hi</option>
+    <option correct="true">Something went wrong: invalid literal for int() with base 10: 'hi'</option>
+    <option>Error (uncaught)</option>
+  </question>
+
+  <question>
+    <text>After Module 11, a confident beginner should be able to:</text>
+    <option>Design a full distributed database cluster</option>
+    <option>Skip testing failing cases</option>
+    <option>Avoid all errors forever</option>
+    <option correct="true">Write basic try/except and explain why it matters in files/DB/API code</option>
+  </question>
+
+</quiz>

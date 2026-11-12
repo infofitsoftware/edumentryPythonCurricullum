@@ -39,6 +39,7 @@ WHY (career/AI context)
 | 8 | File Handling | Persistence |
 | 9 | Important Modules | stdlib power tools |
 | 10 | Classes & Objects | Model real entities |
+| 11 | Exception Handling | Fail safely (input, files, DB, APIs) |
 
 ## AI / Vibe Coding Policy
 
