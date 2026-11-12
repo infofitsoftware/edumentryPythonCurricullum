@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Module 1: Introduction to Python (AI-Era Track) -->
+<!-- Correct answers balanced across option positions -->
+
+  <question>
+    <text>Why is Python widely used in AI and backend careers?</text>
+    <option correct="true">It has readable syntax and a huge ecosystem for APIs, data, and AI</option>
+    <option>It only works offline</option>
+    <option>It replaced all other languages in browsers</option>
+    <option>It cannot run scripts</option>
+  </question>
+
+  <question>
+    <text>In the AI era, what is the safest way to use AI-generated Python?</text>
+    <option>Only use AI for comments</option>
+    <option correct="true">Trace, predict output, run, and verify before trusting it</option>
+    <option>Copy and ship immediately</option>
+    <option>Never run AI code</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("Hello, World!")</code>
+    <option>Error</option>
+    <option>print</option>
+    <option correct="true">Hello, World!</option>
+    <option>None</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("A", "B", sep="-")</code>
+    <option>A,B</option>
+    <option>AB</option>
+    <option>A B</option>
+    <option correct="true">A-B</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("X", end="")
+print("Y")</code>
+    <option correct="true">XY</option>
+    <option>Error</option>
+    <option>X Y</option>
+    <option>X\nY</option>
+  </question>
+
+  <question>
+    <text>Which command runs a Python script file named app.py?</text>
+    <option>start python app</option>
+    <option correct="true">python app.py</option>
+    <option>run app.py</option>
+    <option>exec app</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(17 // 5)</code>
+    <option>2</option>
+    <option>4</option>
+    <option correct="true">3</option>
+    <option>3.4</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(17 % 5)</code>
+    <option>3</option>
+    <option>0</option>
+    <option>5</option>
+    <option correct="true">2</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(2 ** 4)</code>
+    <option correct="true">16</option>
+    <option>24</option>
+    <option>8</option>
+    <option>6</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(10 / 4)</code>
+    <option>3</option>
+    <option correct="true">2.5</option>
+    <option>Error</option>
+    <option>2</option>
+  </question>
+
+  <question>
+    <text>In API pagination, offset for page=3 and page_size=20 is usually computed as:</text>
+    <option>20 - 3</option>
+    <option>3 * 20</option>
+    <option correct="true">(3 - 1) * 20</option>
+    <option>3 + 20</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">items = 50
+batch = 16
+print(items // batch)
+print(items % batch)</code>
+    <option>4 then 2</option>
+    <option>2 then 3</option>
+    <option>3 then 0</option>
+    <option correct="true">3 then 2</option>
+  </question>
+
+  <question>
+    <text>What does input() always return?</text>
+    <option correct="true">str</option>
+    <option>bool</option>
+    <option>float</option>
+    <option>int</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("5" + "3")</code>
+    <option>Error</option>
+    <option correct="true">53</option>
+    <option>5 3</option>
+    <option>8</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(int("5") + int("3"))</code>
+    <option>53</option>
+    <option>Error</option>
+    <option correct="true">8</option>
+    <option>5+3</option>
+  </question>
+
+  <question>
+    <text>A FastAPI-style mental model of a simple program is:</text>
+    <option>only print forever</option>
+    <option>shuffle → encrypt → exit</option>
+    <option>compile → ignore → delete</option>
+    <option correct="true">receive → process → respond</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">tokens = 1000
+price = 0.000002
+print(tokens * price)</code>
+    <option correct="true">0.002</option>
+    <option>2</option>
+    <option>1000</option>
+    <option>0.000002</option>
+  </question>
+
+  <question>
+    <text>Which statement about comments is best?</text>
+    <option>AI-generated code never needs review if commented</option>
+    <option correct="true">Comments should explain why when it helps understanding</option>
+    <option>Comments make code run faster</option>
+    <option>Comments should restate every line literally</option>
+  </question>
+
+  <question>
+    <text>What error is raised by print(5 + "3")?</text>
+    <option>SyntaxError</option>
+    <option>IndentationError</option>
+    <option correct="true">TypeError</option>
+    <option>NameError</option>
+  </question>
+
+  <question>
+    <text>What error is raised by print(unknown_name) if unknown_name was never created?</text>
+    <option>ValueError</option>
+    <option>TypeError</option>
+    <option>KeyError</option>
+    <option correct="true">NameError</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("2026", "11", "12", sep="-")</code>
+    <option correct="true">2026-11-12</option>
+    <option>2026 11 12</option>
+    <option>Error</option>
+    <option>20261112</option>
+  </question>
+
+  <question>
+    <text>REPL is best used for:</text>
+    <option>Installing operating systems</option>
+    <option correct="true">Quick experiments and checking small expressions</option>
+    <option>Shipping production FastAPI servers only</option>
+    <option>Replacing all script files</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print((4 - 1) * 25)</code>
+    <option>24</option>
+    <option>100</option>
+    <option correct="true">75</option>
+    <option>29</option>
+  </question>
+
+  <question>
+    <text>Which print best resembles a backend log line?</text>
+    <option>print(sep=".")</option>
+    <option>print(1/0)</option>
+    <option>print()</option>
+    <option correct="true">print("[INFO] server starting")</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(23 // 4)
+print(23 % 4)</code>
+    <option correct="true">5 then 3</option>
+    <option>5 then 2</option>
+    <option>6 then 1</option>
+    <option>4 then 3</option>
+  </question>
+
+  <question>
+    <text>Why can AI-generated code still fail interviews?</text>
+    <option>Python is banned in interviews</option>
+    <option correct="true">Candidates must explain, trace, and debug code themselves</option>
+    <option>AI always produces perfect code</option>
+    <option>Interviewers only accept handwritten HTML</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("Loading", end="...")
+print("Done")</code>
+    <option>Loading Done</option>
+    <option>Loading\nDone</option>
+    <option correct="true">Loading...Done</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Which operator gives the remainder after division?</text>
+    <option>/</option>
+    <option>**</option>
+    <option>//</option>
+    <option correct="true">%</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">requests = 200
+errors = 10
+print(errors / requests * 100)</code>
+    <option correct="true">5.0</option>
+    <option>0.05</option>
+    <option>20</option>
+    <option>10</option>
+  </question>
+
+  <question>
+    <text>Indentation in Python is used to:</text>
+    <option>Ignore syntax errors</option>
+    <option correct="true">Define code blocks belonging to if/loops/functions</option>
+    <option>Make files larger</option>
+    <option>Encrypt variables</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">if True:
+    print("in")
+print("out")</code>
+    <option>Error</option>
+    <option>in</option>
+    <option correct="true">in then out</option>
+    <option>out</option>
+  </question>
+
+  <question>
+    <text>Which Python version should new projects use?</text>
+    <option>Python 1</option>
+    <option>Python 2 only</option>
+    <option>Any randomly</option>
+    <option correct="true">Python 3</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("status:", "ok")
+print("message:", "welcome", "Ada")</code>
+    <option correct="true">status: ok then message: welcome Ada</option>
+    <option>ok welcome</option>
+    <option>status:ok message:welcomeAda</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>A common real-world use of // and % together is:</text>
+    <option>Installing pip</option>
+    <option correct="true">Batching / packing items into fixed-size groups</option>
+    <option>Coloring HTML</option>
+    <option>Naming classes</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(9 % 2 == 0)</code>
+    <option>Error</option>
+    <option>1</option>
+    <option correct="true">False</option>
+    <option>True</option>
+  </question>
+
+  <question>
+    <text>When reading a Python traceback, start with:</text>
+    <option>Random middle frames only</option>
+    <option>The first decorative banner</option>
+    <option>Ignoring it and regenerating all code</option>
+    <option correct="true">The last error line describing the exception</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">a = "7"
+b = "2"
+print(a + b)
+print(int(a) * int(b))</code>
+    <option correct="true">72 then 14</option>
+    <option>72 then 9</option>
+    <option>9 then 14</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Which skill from Module 1 transfers directly to debugging FastAPI/AI scripts?</text>
+    <option>Never checking types</option>
+    <option correct="true">Using print/logging style output to inspect values</option>
+    <option>Avoiding the terminal forever</option>
+    <option>Memorizing every library name on day 1</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(3 + 2 * 4)</code>
+    <option>14</option>
+    <option>9</option>
+    <option correct="true">11</option>
+    <option>20</option>
+  </question>
+
+  <question>
+    <text>What should a confident Module 1 student be able to do?</text>
+    <option>Deploy Kubernetes clusters</option>
+    <option>Skip all future modules</option>
+    <option>Train a GPT model from scratch</option>
+    <option correct="true">Run scripts, predict simple outputs, and verify AI-drafted basics</option>
+  </question>
+
+</quiz>

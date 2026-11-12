@@ -1,0 +1,309 @@
+[
+  {
+    "question": "Why is Python widely used in AI and backend careers?",
+    "options": [
+      "It cannot run scripts",
+      "It has readable syntax and a huge ecosystem for APIs, data, and AI",
+      "It only works offline",
+      "It replaced all other languages in browsers"
+    ],
+    "answer": "It has readable syntax and a huge ecosystem for APIs, data, and AI"
+  },
+  {
+    "question": "In the AI era, what is the safest way to use AI-generated Python?",
+    "options": [
+      "Copy and ship immediately",
+      "Trace, predict output, run, and verify before trusting it",
+      "Never run AI code",
+      "Only use AI for comments"
+    ],
+    "answer": "Trace, predict output, run, and verify before trusting it"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"Hello, World!\")",
+    "language": "python",
+    "options": ["Hello, World!", "print", "Error", "None"],
+    "answer": "Hello, World!"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"A\", \"B\", sep=\"-\")",
+    "language": "python",
+    "options": ["A B", "A-B", "AB", "A,B"],
+    "answer": "A-B"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"X\", end=\"\")\nprint(\"Y\")",
+    "language": "python",
+    "options": ["X Y", "XY", "X\\nY", "Error"],
+    "answer": "XY"
+  },
+  {
+    "question": "Which command runs a Python script file named app.py?",
+    "options": ["run app.py", "python app.py", "exec app", "start python app"],
+    "answer": "python app.py"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(17 // 5)",
+    "language": "python",
+    "options": ["3.4", "3", "4", "2"],
+    "answer": "3"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(17 % 5)",
+    "language": "python",
+    "options": ["3", "2", "5", "0"],
+    "answer": "2"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(2 ** 4)",
+    "language": "python",
+    "options": ["6", "8", "16", "24"],
+    "answer": "16"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(10 / 4)",
+    "language": "python",
+    "options": ["2", "2.5", "3", "Error"],
+    "answer": "2.5"
+  },
+  {
+    "question": "In API pagination, offset for page=3 and page_size=20 is usually computed as:",
+    "options": ["3 * 20", "(3 - 1) * 20", "20 - 3", "3 + 20"],
+    "answer": "(3 - 1) * 20"
+  },
+  {
+    "question": "What is the output?",
+    "code": "items = 50\nbatch = 16\nprint(items // batch)\nprint(items % batch)",
+    "language": "python",
+    "options": ["3 then 2", "2 then 3", "3 then 0", "4 then 2"],
+    "answer": "3 then 2"
+  },
+  {
+    "question": "What does input() always return?",
+    "options": ["int", "float", "str", "bool"],
+    "answer": "str"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"5\" + \"3\")",
+    "language": "python",
+    "options": ["8", "53", "5 3", "Error"],
+    "answer": "53"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(int(\"5\") + int(\"3\"))",
+    "language": "python",
+    "options": ["53", "8", "5+3", "Error"],
+    "answer": "8"
+  },
+  {
+    "question": "A FastAPI-style mental model of a simple program is:",
+    "options": [
+      "compile → ignore → delete",
+      "receive → process → respond",
+      "only print forever",
+      "shuffle → encrypt → exit"
+    ],
+    "answer": "receive → process → respond"
+  },
+  {
+    "question": "What is the output?",
+    "code": "tokens = 1000\nprice = 0.000002\nprint(tokens * price)",
+    "language": "python",
+    "options": ["0.002", "2", "0.000002", "1000"],
+    "answer": "0.002"
+  },
+  {
+    "question": "Which statement about comments is best?",
+    "options": [
+      "Comments should restate every line literally",
+      "Comments should explain why when it helps understanding",
+      "Comments make code run faster",
+      "AI-generated code never needs review if commented"
+    ],
+    "answer": "Comments should explain why when it helps understanding"
+  },
+  {
+    "question": "What error is raised by print(5 + \"3\")?",
+    "options": ["NameError", "TypeError", "SyntaxError", "IndentationError"],
+    "answer": "TypeError"
+  },
+  {
+    "question": "What error is raised by print(unknown_name) if unknown_name was never created?",
+    "options": ["TypeError", "NameError", "ValueError", "KeyError"],
+    "answer": "NameError"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"2026\", \"11\", \"12\", sep=\"-\")",
+    "language": "python",
+    "options": ["2026 11 12", "2026-11-12", "20261112", "Error"],
+    "answer": "2026-11-12"
+  },
+  {
+    "question": "REPL is best used for:",
+    "options": [
+      "Shipping production FastAPI servers only",
+      "Quick experiments and checking small expressions",
+      "Replacing all script files",
+      "Installing operating systems"
+    ],
+    "answer": "Quick experiments and checking small expressions"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print((4 - 1) * 25)",
+    "language": "python",
+    "options": ["75", "100", "29", "24"],
+    "answer": "75"
+  },
+  {
+    "question": "Which print best resembles a backend log line?",
+    "options": [
+      "print(1/0)",
+      "print(\"[INFO] server starting\")",
+      "print(sep=\".\")",
+      "print()"
+    ],
+    "answer": "print(\"[INFO] server starting\")"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(23 // 4)\nprint(23 % 4)",
+    "language": "python",
+    "options": ["5 then 3", "6 then 1", "5 then 2", "4 then 3"],
+    "answer": "5 then 3"
+  },
+  {
+    "question": "Why can AI-generated code still fail interviews?",
+    "options": [
+      "Interviewers only accept handwritten HTML",
+      "Candidates must explain, trace, and debug code themselves",
+      "Python is banned in interviews",
+      "AI always produces perfect code"
+    ],
+    "answer": "Candidates must explain, trace, and debug code themselves"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"Loading\", end=\"...\")\nprint(\"Done\")",
+    "language": "python",
+    "options": ["Loading Done", "Loading...Done", "Loading\\nDone", "Error"],
+    "answer": "Loading...Done"
+  },
+  {
+    "question": "Which operator gives the remainder after division?",
+    "options": ["/", "//", "%", "**"],
+    "answer": "%"
+  },
+  {
+    "question": "What is the output?",
+    "code": "requests = 200\nerrors = 10\nprint(errors / requests * 100)",
+    "language": "python",
+    "options": ["5.0", "20", "0.05", "10"],
+    "answer": "5.0"
+  },
+  {
+    "question": "Indentation in Python is used to:",
+    "options": [
+      "Make files larger",
+      "Define code blocks belonging to if/loops/functions",
+      "Encrypt variables",
+      "Ignore syntax errors"
+    ],
+    "answer": "Define code blocks belonging to if/loops/functions"
+  },
+  {
+    "question": "What is the output?",
+    "code": "if True:\n    print(\"in\")\nprint(\"out\")",
+    "language": "python",
+    "options": ["in", "out", "in then out", "Error"],
+    "answer": "in then out"
+  },
+  {
+    "question": "Which Python version should new projects use?",
+    "options": ["Python 2 only", "Python 3", "Python 1", "Any randomly"],
+    "answer": "Python 3"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(\"status:\", \"ok\")\nprint(\"message:\", \"welcome\", \"Ada\")",
+    "language": "python",
+    "options": [
+      "status: ok then message: welcome Ada",
+      "status:ok message:welcomeAda",
+      "Error",
+      "ok welcome"
+    ],
+    "answer": "status: ok then message: welcome Ada"
+  },
+  {
+    "question": "A common real-world use of // and % together is:",
+    "options": [
+      "Coloring HTML",
+      "Batching / packing items into fixed-size groups",
+      "Naming classes",
+      "Installing pip"
+    ],
+    "answer": "Batching / packing items into fixed-size groups"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(9 % 2 == 0)",
+    "language": "python",
+    "options": ["True", "False", "1", "Error"],
+    "answer": "False"
+  },
+  {
+    "question": "When reading a Python traceback, start with:",
+    "options": [
+      "The first decorative banner",
+      "The last error line describing the exception",
+      "Random middle frames only",
+      "Ignoring it and regenerating all code"
+    ],
+    "answer": "The last error line describing the exception"
+  },
+  {
+    "question": "What is the output?",
+    "code": "a = \"7\"\nb = \"2\"\nprint(a + b)\nprint(int(a) * int(b))",
+    "language": "python",
+    "options": ["72 then 14", "9 then 14", "72 then 9", "Error"],
+    "answer": "72 then 14"
+  },
+  {
+    "question": "Which skill from Module 1 transfers directly to debugging FastAPI/AI scripts?",
+    "options": [
+      "Using print/logging style output to inspect values",
+      "Avoiding the terminal forever",
+      "Never checking types",
+      "Memorizing every library name on day 1"
+    ],
+    "answer": "Using print/logging style output to inspect values"
+  },
+  {
+    "question": "What is the output?",
+    "code": "print(3 + 2 * 4)",
+    "language": "python",
+    "options": ["20", "11", "14", "9"],
+    "answer": "11"
+  },
+  {
+    "question": "What should a confident Module 1 student be able to do?",
+    "options": [
+      "Train a GPT model from scratch",
+      "Run scripts, predict simple outputs, and verify AI-drafted basics",
+      "Deploy Kubernetes clusters",
+      "Skip all future modules"
+    ],
+    "answer": "Run scripts, predict simple outputs, and verify AI-drafted basics"
+  }
+]
