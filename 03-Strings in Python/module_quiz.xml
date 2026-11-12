@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Module 3: Strings in Python (AI-Era / Beginner) -->
+<!-- App format: <text>, optional <code language="python">, <option correct="true"> -->
+<!-- Correct answers balanced across option positions -->
+
+  <question>
+    <text>What is a string in Python?</text>
+    <option correct="true">A sequence of characters in quotes</option>
+    <option>A whole number only</option>
+    <option>A type of loop</option>
+    <option>A file extension</option>
+  </question>
+
+  <question>
+    <text>What does immutable mean for strings?</text>
+    <option>You can change characters in place with indexing</option>
+    <option correct="true">Methods return new strings; originals stay unless reassigned</option>
+    <option>Strings cannot be printed</option>
+    <option>Strings always have length 10</option>
+  </question>
+
+  <question>
+    <text>What is the difference between "" and " "?</text>
+    <option>They are identical</option>
+    <option>Both have length 0</option>
+    <option correct="true">"" has length 0; " " has length 1</option>
+    <option>Spaces are illegal in strings</option>
+  </question>
+
+  <question>
+    <text>Why do AI/LLM apps care about strings?</text>
+    <option>AI never uses text</option>
+    <option>Python cannot store prompts</option>
+    <option>Strings only exist in Excel</option>
+    <option correct="true">Prompts, replies, and labels are text that must be cleaned carefully</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">text = "Python"
+print(text[0])</code>
+    <option correct="true">P</option>
+    <option>y</option>
+    <option>n</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">text = "Python"
+print(text[-1])</code>
+    <option>P</option>
+    <option correct="true">n</option>
+    <option>o</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(len("Hello"))</code>
+    <option>4</option>
+    <option>6</option>
+    <option correct="true">5</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("Hello" + " " + "World")</code>
+    <option>HelloWorld</option>
+    <option>Error</option>
+    <option>Hello+World</option>
+    <option correct="true">Hello World</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("Ha" * 3)</code>
+    <option correct="true">HaHaHa</option>
+    <option>Ha3</option>
+    <option>Ha Ha Ha</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">language = "python"
+print(language.upper())</code>
+    <option>python</option>
+    <option correct="true">PYTHON</option>
+    <option>Python</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("12345".isdigit())</code>
+    <option>12345</option>
+    <option>False</option>
+    <option correct="true">True</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("  hi  ".strip())</code>
+    <option>  hi  </option>
+    <option>  hi</option>
+    <option>hi  </option>
+    <option correct="true">hi</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("@" in "a@b.com")</code>
+    <option correct="true">True</option>
+    <option>False</option>
+    <option>@</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">word = "Programming"
+print(word[0:5])</code>
+    <option>Progra</option>
+    <option correct="true">Progr</option>
+    <option>Prog</option>
+    <option>Program</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">word = "Python"
+print(word[0:3])</code>
+    <option>Pytho</option>
+    <option>Pyth</option>
+    <option correct="true">Pyt</option>
+    <option>P</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">text = "Learning"
+print(text[::-1])</code>
+    <option>Learning</option>
+    <option>Error</option>
+    <option>Gninrael</option>
+    <option correct="true">gninraeL</option>
+  </question>
+
+  <question format="python">
+    <text>What is printed (two lines)?</text>
+    <code language="python">name = "alice"
+print(name.upper())
+print(name)</code>
+    <option correct="true">ALICE then alice</option>
+    <option>ALICE then ALICE</option>
+    <option>alice then ALICE</option>
+    <option>alice then alice</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("Hello, how are you?".count("o"))</code>
+    <option>2</option>
+    <option correct="true">3</option>
+    <option>4</option>
+    <option>5</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">text = "I love to code in Python"
+print(text.find("code"))</code>
+    <option>9</option>
+    <option>11</option>
+    <option correct="true">10</option>
+    <option>-1</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("abc".find("z"))</code>
+    <option>0</option>
+    <option>3</option>
+    <option>Error</option>
+    <option correct="true">-1</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("Welcome".startswith("Wel"))</code>
+    <option correct="true">True</option>
+    <option>False</option>
+    <option>Wel</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("hello.py".endswith(".py"))</code>
+    <option>False</option>
+    <option correct="true">True</option>
+    <option>.py</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("This is a bad day".replace("bad", "good"))</code>
+    <option>This is a bad day</option>
+    <option>good</option>
+    <option correct="true">This is a good day</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("-".join(["I", "love", "Python"]))</code>
+    <option>I love Python</option>
+    <option>Error</option>
+    <option>I,love,Python</option>
+    <option correct="true">I-love-Python</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("Python is fun".split())</code>
+    <option correct="true">['Python', 'is', 'fun']</option>
+    <option>Python is fun</option>
+    <option>['Python is fun']</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">name = "John"
+age = 30
+print(f"{name} is {age}")</code>
+    <option>{name} is {age}</option>
+    <option correct="true">John is 30</option>
+    <option>name is age</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("5" + "3")</code>
+    <option>8</option>
+    <option>5 3</option>
+    <option correct="true">53</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("Hello123".isalnum())</code>
+    <option>Error</option>
+    <option>False</option>
+    <option>Hello123</option>
+    <option correct="true">True</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("Hello 123".isalnum())</code>
+    <option correct="true">False</option>
+    <option>True</option>
+    <option>Hello 123</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(r"Line1\nLine2")</code>
+    <option>Line1
+Line2</option>
+    <option correct="true">Line1\nLine2</option>
+    <option>Line1Line2</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("Development"[::2])</code>
+    <option>Development</option>
+    <option>eeomn</option>
+    <option correct="true">Dvlpet</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("Technology"[-5:])</code>
+    <option>Techn</option>
+    <option>Error</option>
+    <option>nology</option>
+    <option correct="true">ology</option>
+  </question>
+
+  <question>
+    <text>Which code correctly prints the last character of non-empty text?</text>
+    <option correct="true">print(text[len(text) - 1])</option>
+    <option>print(text[len(text)])</option>
+    <option>print(text[len])</option>
+    <option>print(text.last())</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">raw = "  Admin  "
+print(raw.strip().lower())</code>
+    <option>  admin  </option>
+    <option correct="true">admin</option>
+    <option>Admin</option>
+    <option>ADMIN</option>
+  </question>
+
+  <question format="python">
+    <text>What happens?</text>
+    <code language="python">text = "cat"
+text[0] = "b"
+print(text)</code>
+    <option>bat</option>
+    <option>cat</option>
+    <option correct="true">TypeError</option>
+    <option>b</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">text = "Python"
+print(text.find("python"))</code>
+    <option>0</option>
+    <option>1</option>
+    <option>Error</option>
+    <option correct="true">-1</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("hello world"[:5].upper())</code>
+    <option correct="true">HELLO</option>
+    <option>HELLO WORLD</option>
+    <option>hello</option>
+    <option>WORLD</option>
+  </question>
+
+  <question>
+    <text>Which code produces: report.pdf</text>
+    <option>print("  Report.PDF  ".lower())</option>
+    <option correct="true">print("  Report.PDF  ".strip().lower())</option>
+    <option>print("  Report.PDF  ".strip())</option>
+    <option>print("  Report.PDF  ".upper().strip())</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("".isdigit())</code>
+    <option>True</option>
+    <option>0</option>
+    <option correct="true">False</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">msg = "bad"
+msg.replace("bad", "good")
+print(msg)</code>
+    <option>good</option>
+    <option>Error</option>
+    <option>badgood</option>
+    <option correct="true">bad</option>
+  </question>
+
+</quiz>
