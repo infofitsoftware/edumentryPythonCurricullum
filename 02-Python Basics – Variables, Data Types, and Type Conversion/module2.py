@@ -1,283 +1,187 @@
 """
 ================================================================================
-MODULE 2: Python Basics - Variables, Data Types, and Type Conversion
+MODULE 2 — Variables, Data Types, and Type Conversion
+Student lesson file (beginner-friendly, AI-era examples)
 ================================================================================
-Learning Goals (by the end of this module you will be able to):
-  - Create variables and follow Python naming conventions
-  - Identify and use int, float, str, bool, and None
-  - Check types with type() and isinstance()
-  - Convert between types using int(), float(), str(), and bool()
-  - Fix the classic input() + math bug using type casting
+How to use this file:
+  1. Read one section comment
+  2. Run:  python module2.py
+  3. Change values and rerun
+  4. Then open exercise.py
 
-Career Paths This Module Supports:
-  Backend Web Dev  -> Request params, JSON fields, database values as typed data
-  Data Science     -> Columns are int/float/str; cleaning requires casting
-  AI / ML          -> Feature tensors need correct numeric types
-  Automation       -> Config values from files/env vars are often strings first
-  DevOps           -> Port numbers, flags, thresholds parsed from strings
+Previous: Module 1 (print, input, arithmetic)
+Next:     Module 3 (strings)
 ================================================================================
 """
 
-# =============================================================================
-# 1. VARIABLES — NAMES FOR VALUES IN MEMORY
-# =============================================================================
-"""
-A variable is a name (label) that refers to a value stored in memory.
-In Python you do NOT declare the type — you assign a value and Python
-figures out the type automatically (dynamic typing).
+print("=== Module 2: Variables, Data Types, Type Conversion ===")
 
-Syntax:
-    variable_name = value
-"""
+# --------------------------------------------------
+# 1) Variables = labeled boxes for values
+# --------------------------------------------------
+name = "Alice"         # text  -> str
+age = 25               # whole number -> int
+height = 5.6           # decimal -> float
+is_student = True      # yes/no -> bool
 
-name = "Alice"        # str  — text
-age = 25              # int  — whole number
-height = 5.6          # float — decimal number
-is_student = True     # bool — True or False
+print("Profile:", name, age, height, is_student)
 
-print(name, age, height, is_student)
-
-# Variables can be reassigned — the name can point to a new value (and new type)
+# A variable can be changed later
 score = 90
-print("Before:", score, type(score))
-score = 95.5          # now a float
-print("After:", score, type(score))
+print("score before:", score, type(score))
+score = 95.5
+print("score after:", score, type(score))
 
-# Multiple assignment in one line
+# Multiple assignment and swap
 x, y, z = 1, 2, 3
-print(x, y, z)
+print("x y z:", x, y, z)
 
-# Swap two values (Pythonic — no temporary variable needed)
 a, b = 10, 20
 a, b = b, a
-print("Swapped:", a, b)   # 20 10
+print("swapped:", a, b)
 
-# =============================================================================
-# 2. CONSTANTS (BY CONVENTION)
-# =============================================================================
-"""
-Python has no true "constant" keyword. By convention, ALL_CAPS names
-signal "do not change this value" to other developers.
-
-Used everywhere: API keys labels, math constants, config limits.
-"""
-
-PI = 3.14159
+# --------------------------------------------------
+# 2) Naming style (professional habit)
+# --------------------------------------------------
+user_name = "Sara"
+total_price = 499.5
+is_active = True
 MAX_LOGIN_ATTEMPTS = 3
 DEFAULT_PORT = 8000
 
-print("Pi:", PI, "| Max attempts:", MAX_LOGIN_ATTEMPTS)
+print(user_name, total_price, is_active, MAX_LOGIN_ATTEMPTS, DEFAULT_PORT)
 
-# =============================================================================
-# 3. VARIABLE NAMING RULES (PEP 8)
-# =============================================================================
-"""
-Rules:
-  - Start with a letter (a-z, A-Z) or underscore _
-  - After that: letters, digits, underscores only
-  - Case-sensitive: age and Age are different variables
-  - Cannot use reserved keywords (if, while, class, import, ...)
+# Invalid names (keep commented — they crash the file):
+# 2user = "x"
+# my-name = "x"
+# if = 1
 
-Style guide (PEP 8): use snake_case for variables
-  user_name, total_price, is_active
+# --------------------------------------------------
+# 3) The five core types
+# --------------------------------------------------
+user_id = 101                 # int
+rating = 4.8                  # float
+message = "order created"     # str
+payment_done = False          # bool
+middle_name = None            # None = missing value
 
-Valid examples:
-"""
-my_variable = 10
-_myVar = "Python"
-age_2024 = 30
+print(type(user_id))
+print(type(rating))
+print(type(message))
+print(type(payment_done))
+print(type(middle_name))
 
-# Invalid examples (commented — these would cause SyntaxError):
-# 2name = "John"       # cannot start with a digit
-# my-variable = 50     # hyphens not allowed (minus operator)
-# if = 25             # 'if' is a reserved keyword
+print("float surprise:", 0.1 + 0.2)
 
-# =============================================================================
-# 4. DYNAMIC TYPING
-# =============================================================================
-"""
-Dynamic typing = the type is determined by the value at assignment time,
-and can change when you reassign.
+# --------------------------------------------------
+# 4) Checking types
+# --------------------------------------------------
+print("isinstance 42 int?", isinstance(42, int))
+print("isinstance '42' int?", isinstance("42", int))
+print("3.14 int or float?", isinstance(3.14, (int, float)))
 
-Compare to Java/C++ where you write:  int x = 10;  (type is fixed)
-"""
-dynamic = 10
-print(type(dynamic))    # <class 'int'>
-dynamic = "Python"
-print(type(dynamic))    # <class 'str'>  — same name, different type now
+# --------------------------------------------------
+# 5) Casting (type conversion)
+# --------------------------------------------------
+print(int("42"))
+print(float("3.14"))
+print(str(100))
+print(int(3.9))          # truncates -> 3
+print(bool(0), bool(1))
+print(bool(""), bool("hi"))
+print(bool(None))
 
-# Career note: JSON from a web API arrives as strings; you cast to int/float
-# when building database models or doing calculations.
+# Dangerous surprise for beginners:
+print('bool("false") =>', bool("false"))  # True (!), because string is not empty
 
-# =============================================================================
-# 5. BUILT-IN DATA TYPES
-# =============================================================================
-"""
-| Type     | Description              | Example           | Common use              |
-|----------|--------------------------|-------------------|-------------------------|
-| int      | Whole numbers            | 10, -5, 0         | counts, IDs, ages       |
-| float    | Decimal numbers          | 3.14, 2.0         | prices, scores, metrics |
-| str      | Text (sequence of chars) | "Hello", 'Py'     | names, messages, JSON   |
-| bool     | True or False            | True, False       | flags, conditions       |
-| NoneType | Absence of a value       | None              | optional fields, defaults |
-"""
+# Correct way to parse a text flag (config / JSON-like values):
+flag_text = "true"
+is_debug = flag_text.lower() == "true"
+print("is_debug:", is_debug)
 
-age = 25
-price = 19.99
-message = "Hello, World!"
-is_python_easy = True
-nothing = None          # "no value yet" — common in APIs and databases
+# This would crash (keep commented):
+# print(int("10.5"))
+print("float then int:", int(float("10.5")))
 
-print(type(age))              # <class 'int'>
-print(type(price))            # <class 'float'>
-print(type(message))          # <class 'str'>
-print(type(is_python_easy))   # <class 'bool'>
-print(type(nothing))          # <class 'NoneType'>
+# --------------------------------------------------
+# 6) input() always returns str  (Module 1 trap, fixed here)
+# --------------------------------------------------
+# Non-interactive demo so this file runs without waiting:
+raw_a = "5"
+raw_b = "3"
+print("wrong concat:", raw_a + raw_b)                 # 53
+print("correct sum:", int(raw_a) + int(raw_b))        # 8
 
-# int can be arbitrarily large (unlike some languages with 32-bit limits)
-big_number = 10 ** 20
-print("Big int:", big_number)
+# Try these in terminal during practice:
+# n1 = int(input("First number: "))
+# n2 = int(input("Second number: "))
+# print("Sum:", n1 + n2)
+# price = float(input("Price: "))
+# qty = int(input("Qty: "))
+# print("Total:", price * qty)
 
-# Float gotcha: tiny rounding errors (important in finance/data science)
-print(0.1 + 0.2)   # 0.30000000000000004 — use round() or decimal module later
+# --------------------------------------------------
+# 7) Real-world preview: JSON-like request fields
+# --------------------------------------------------
+# Imagine an API/AI tool sent this data as text fields:
+request_data = {
+    "name": "Ada",
+    "age": "25",          # still text!
+    "temperature": "0.7", # AI model setting as text
+    "active": "true",
+}
 
-# =============================================================================
-# 6. TYPE CHECKING — type() and isinstance()
-# =============================================================================
-"""
-type(x)       -> returns the type object (good for learning/debugging)
-isinstance(x, T) -> True/False — preferred in production code
-"""
+# Convert before using in logic:
+age_number = int(request_data["age"])
+temperature = float(request_data["temperature"])
+active = request_data["active"].lower() == "true"
 
-x = 42
-y = "Python"
-z = 3.14
+print("validated age:", age_number, type(age_number))
+print("validated temperature:", temperature, type(temperature))
+print("validated active:", active, type(active))
 
-print(type(x))                    # <class 'int'>
-print(type(y))                    # <class 'str'>
-print(isinstance(42, int))        # True
-print(isinstance("Python", float))  # False
-print(isinstance(3.14, (int, float)))  # True — matches int OR float
+# FastAPI cousin (read only — you will write this much later):
+# age: int
+# temperature: float
+# The framework helps, but YOU must still understand casting.
 
-# Backend example: validate API input before saving
-user_id = "101"
-if isinstance(user_id, str) and user_id.isdigit():
-    user_id = int(user_id)
-    print("Valid user ID:", user_id)
-
-# =============================================================================
-# 7. TYPE CASTING (TYPE CONVERSION)
-# =============================================================================
-"""
-Casting = converting a value from one type to another.
-
-| Function  | Converts to | Example                    |
-|-----------|-------------|----------------------------|
-| int(x)    | Integer     | int(3.9) -> 3              |
-| float(x)  | Float       | float("10") -> 10.0        |
-| str(x)    | String      | str(123) -> "123"          |
-| bool(x)   | Boolean     | bool(0) -> False           |
-"""
-
-num = 10
-print(type(num))
-
-num_str = str(num)
-print(type(num_str), num_str)   # <class 'str'> '10'
-
-pi = "3.14"
-pi_float = float(pi)
-print(type(pi_float), pi_float)  # <class 'float'> 3.14
-
-# int() truncates decimals (does NOT round)
-print(int(3.9))    # 3
-print(int(-3.9))   # -3
-
-# bool() — truthy and falsy values (critical for if-statements in Module 5)
-print(bool(0))       # False
-print(bool(1))       # True
-print(bool(""))      # False  — empty string
-print(bool("hello"))  # True — non-empty string
-print(bool(None))    # False
-
-# Casting can fail — produces ValueError
-# int("hello")   # ValueError: invalid literal for int()
-# Always validate user input in real applications.
-
-# =============================================================================
-# 8. WHY TYPE CASTING MATTERS WITH input()
-# =============================================================================
-"""
-input() ALWAYS returns str — even when the user types digits.
-
-Wrong (string concatenation):
-    "5" + "3"  ->  "53"
-
-Right (after casting):
-    int("5") + int("3")  ->  8
-"""
-
-# Demo without input (shows the trap):
-num1_str = "5"
-num2_str = "3"
-print("String concat:", num1_str + num2_str)       # 53
-print("Integer math:", int(num1_str) + int(num2_str))  # 8
-
-# Interactive version — uncomment to try:
-# num1 = int(input("Enter first number: "))
-# num2 = int(input("Enter second number: "))
-# print("Sum:", num1 + num2)
+# --------------------------------------------------
+# 8) AI-generated bug hunt (common mistake)
+# --------------------------------------------------
+# Bad AI draft idea:
+# age = input("Age: ")
+# print("Next year:", age + 1)   # TypeError
 #
-# price = float(input("Enter price: "))
-# quantity = int(input("Enter quantity: "))
-# print("Total:", price * quantity)
+# Fixed idea:
+# age = int(input("Age: "))
+# print("Next year:", age + 1)
 
-# =============================================================================
-# 9. DISPLAYING VARIABLES — f-strings (Preview)
-# =============================================================================
-"""
-f-strings embed variables directly in text (Python 3.6+).
-You'll use these in every career path.
-"""
+demo_age = "20"
+print("Next year:", int(demo_age) + 1)
+
+# --------------------------------------------------
+# 9) f-strings for clear output
+# --------------------------------------------------
 student = "Ravi"
 marks = 87.5
 print(f"{student} scored {marks}%")
-print(f"Next year {student} will be {age + 1} years old (using age={age})")
+print(f"Bill total: {19.99 * 2:.2f}")
+print(f"Employee: EMP-{42:05d}")
 
-# =============================================================================
-# 10. None — THE "NO VALUE" PLACEHOLDER
-# =============================================================================
-"""
-None means "nothing here yet" or "optional field not set".
+# --------------------------------------------------
+# 10) None means missing
+# --------------------------------------------------
+email = None
+if email is None:
+    print("Email not provided")
 
-Backend: user.middle_name = None
-Data:    missing sensor reading = None
-AI:      optional hyperparameter not provided = None
-"""
-result = None
-if result is None:
-    print("No result returned yet.")
+# --------------------------------------------------
+# 11) Tiny end-to-end example
+# --------------------------------------------------
+product = "Mouse"
+unit_price = float("499.5")
+quantity = int("2")
+in_stock = True
+print(f"{product} | qty={quantity} | total={unit_price * quantity:.2f} | stock={in_stock}")
 
-# Use 'is None' / 'is not None' — not == None (PEP 8 style)
-
-# =============================================================================
-# 11. COMMON ERRORS IN THIS MODULE
-# =============================================================================
-"""
-| Error        | Cause                              | Fix                        |
-|--------------|------------------------------------|----------------------------|
-| NameError    | Variable used before assignment    | Assign before use            |
-| TypeError    | int + str, wrong operation         | Cast to matching type        |
-| ValueError   | int("abc"), float("text")          | Validate input first         |
-| SyntaxError  | Invalid variable name              | Follow naming rules          |
-"""
-
-# =============================================================================
-# 12. MINI PROJECT PREVIEW
-# =============================================================================
-# See exercise.py — "Student Profile Builder":
-#   - Store name (str), age (int), gpa (float), enrolled (bool)
-#   - Cast input() values correctly
-#   - Print a formatted profile with f-strings
-
-print("\n--- Module 2 demo complete. Open exercise.py for hands-on practice. ---")
+print("\n--- Module 2 complete. Open exercise.py and practice. ---")
