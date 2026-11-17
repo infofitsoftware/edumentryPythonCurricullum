@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Module 10: Classes and Objects (Beginner Fundamentals / AI-Era) -->
+<!-- App format: <text>, optional <code language="python">, <option correct="true"> -->
+<!-- Correct answers balanced across option positions -->
+
+  <question>
+    <text>What is a class?</text>
+    <option>A single running value only</option>
+    <option correct="true">A blueprint for creating objects</option>
+    <option>A type of loop</option>
+    <option>A file extension</option>
+  </question>
+
+  <question>
+    <text>What is an object?</text>
+    <option>Only the class name</option>
+    <option>A Python keyword</option>
+    <option correct="true">An instance created from a class</option>
+    <option>A pip package</option>
+  </question>
+
+  <question>
+    <text>What does self mean in a method?</text>
+    <option>The whole Python program</option>
+    <option>A random global variable</option>
+    <option>The parent class only</option>
+    <option correct="true">The current object the method is running on</option>
+  </question>
+
+  <question>
+    <text>Why do beginners learn classes?</text>
+    <option correct="true">To keep related data and behavior together for real entities</option>
+    <option>To avoid using functions forever</option>
+    <option>Because print is illegal</option>
+    <option>To replace all lists</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Dog:
+    def bark(self):
+        print("Woof!")
+Dog().bark()</code>
+    <option correct="true">Woof!</option>
+    <option>Dog</option>
+    <option>None</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Student:
+    def __init__(self, name):
+        self.name = name
+print(Student("Ada").name)</code>
+    <option>name</option>
+    <option correct="true">Ada</option>
+    <option>Student</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Counter:
+    def __init__(self):
+        self.value = 0
+    def increment(self):
+        self.value += 1
+c = Counter()
+c.increment()
+c.increment()
+print(c.value)</code>
+    <option>0</option>
+    <option>1</option>
+    <option correct="true">2</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What happens?</text>
+    <code language="python">class Greeter:
+    def hello():
+        print("Hello!")
+Greeter().hello()</code>
+    <option>Hello!</option>
+    <option>None</option>
+    <option>Greeter</option>
+    <option correct="true">TypeError (missing self)</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Box:
+    def __init__(self, label):
+        self.label = label
+a = Box("A")
+b = Box("B")
+print(a.label, b.label)</code>
+    <option correct="true">A B</option>
+    <option>A A</option>
+    <option>B B</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Student:
+    def __init__(self, name):
+        self.name = name
+        self.scores = []
+    def add_score(self, score):
+        self.scores.append(score)
+a = Student("Ada")
+b = Student("Bob")
+a.add_score(90)
+print(a.scores)
+print(b.scores)</code>
+    <option>[90] then [90]</option>
+    <option correct="true">[90] then []</option>
+    <option>[] then [90]</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Student:
+    def __init__(self, name):
+        self.name = name
+        self.scores = []
+    def add_score(self, score):
+        self.scores.append(score)
+    def average(self):
+        return sum(self.scores) / len(self.scores)
+s = Student("Ada")
+s.add_score(90)
+s.add_score(80)
+print(s.average())</code>
+    <option>170</option>
+    <option>90</option>
+    <option correct="true">85.0</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Where should a per-object list usually be created?</text>
+    <option>As a class attribute like items = []</option>
+    <option>Only inside print()</option>
+    <option>Never</option>
+    <option correct="true">Inside __init__ as self.items = []</option>
+  </question>
+
+  <question format="python">
+    <text>What is printed (two lines)?</text>
+    <code language="python">class BadBag:
+    items = []
+b1 = BadBag()
+b2 = BadBag()
+b1.items.append("apple")
+print(b1.items)
+print(b2.items)</code>
+    <option>['apple'] then []</option>
+    <option correct="true">['apple'] then ['apple']</option>
+    <option>[] then ['apple']</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class BankAccount:
+    bank_name = "EduBank"
+    def __init__(self, owner):
+        self.owner = owner
+a = BankAccount("Ada")
+print(a.bank_name)</code>
+    <option>Ada</option>
+    <option>Error</option>
+    <option>owner</option>
+    <option correct="true">EduBank</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+    def __str__(self):
+        return f"Product({self.name}, Rs.{self.price})"
+print(Product("Mouse", 499))</code>
+    <option correct="true">Product(Mouse, Rs.499)</option>
+    <option>&lt;Product object&gt;</option>
+    <option>Mouse</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    def area(self):
+        return self.width * self.height
+print(Rectangle(4, 5).area())</code>
+    <option>9</option>
+    <option correct="true">20</option>
+    <option>45</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class BankAccount:
+    def __init__(self, balance):
+        self.balance = balance
+    def deposit(self, amount):
+        if amount &gt; 0:
+            self.balance += amount
+acc = BankAccount(100)
+acc.deposit(50)
+print(acc.balance)</code>
+    <option>100</option>
+    <option>50</option>
+    <option correct="true">150</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class User:
+    def __init__(self, name, role):
+        self.name = name.strip().title()
+        self.role = role.strip().lower()
+    def is_admin(self):
+        return self.role == "admin"
+print(User("  ada  ", "Admin").is_admin())</code>
+    <option>False</option>
+    <option>Error</option>
+    <option>Admin</option>
+    <option correct="true">True</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Prompt:
+    def __init__(self, text):
+        self.text = text.strip()
+    def length(self):
+        return len(self.text)
+print(Prompt("  hi  ").length())</code>
+    <option correct="true">2</option>
+    <option>4</option>
+    <option>6</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>What does inheritance mean at beginner level?</text>
+    <option>An object deletes its class</option>
+    <option correct="true">A child class is-a parent class and can reuse/extend it</option>
+    <option>Two variables share one integer only</option>
+    <option>A function returns None</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Animal:
+    def __init__(self, name):
+        self.name = name
+    def speak(self):
+        return "..."
+class Cat(Animal):
+    def speak(self):
+        return "Meow"
+print(Cat("Misty").speak())</code>
+    <option>...</option>
+    <option>Misty</option>
+    <option correct="true">Meow</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Animal:
+    def __init__(self, name):
+        self.name = name
+class Cat(Animal):
+    pass
+misty = Cat("Misty")
+print(misty.name)
+print(isinstance(misty, Animal))</code>
+    <option>Error then True</option>
+    <option>Misty then False</option>
+    <option>Cat then True</option>
+    <option correct="true">Misty then True</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Employee:
+    def __init__(self, name, role):
+        self.name = name
+        self.role = role
+class Manager(Employee):
+    def __init__(self, name, team_size):
+        super().__init__(name, "Manager")
+        self.team_size = team_size
+m = Manager("Sam", 5)
+print(m.role, m.team_size)</code>
+    <option correct="true">Manager 5</option>
+    <option>Sam 5</option>
+    <option>Employee 5</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>What is composition in one beginner sentence?</text>
+    <option>A child class replaces Python</option>
+    <option correct="true">An object has-another object inside it</option>
+    <option>A method without self</option>
+    <option>A list that cannot grow</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Engine:
+    def start(self):
+        return "engine started"
+class Car:
+    def __init__(self, model):
+        self.model = model
+        self.engine = Engine()
+    def start(self):
+        return f"{self.model}: {self.engine.start()}"
+print(Car("Sedan").start())</code>
+    <option>Sedan</option>
+    <option>engine started</option>
+    <option correct="true">Sedan: engine started</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Which is a common AI-generated class bug?</text>
+    <option>Using snake_case method names</option>
+    <option>Writing a docstring</option>
+    <option correct="true">Putting items = [] on the class so all objects share one list</option>
+    <option>Creating two objects</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Temperature:
+    def __init__(self, celsius):
+        self._celsius = celsius
+    def to_fahrenheit(self):
+        return self._celsius * 9 / 5 + 32
+print(Temperature(0).to_fahrenheit())</code>
+    <option>0</option>
+    <option>100</option>
+    <option>Error</option>
+    <option correct="true">32.0</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    def area(self):
+        return self.width * self.height
+    def describe(self):
+        return f"area={self.area()}"
+print(Rectangle(3, 3).describe())</code>
+    <option correct="true">area=9</option>
+    <option>area=6</option>
+    <option>9</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Do you normally pass self when calling a method?</text>
+    <option>Yes, always as the first argument</option>
+    <option correct="true">No — Python passes the object automatically</option>
+    <option>Only for inheritance</option>
+    <option>Only inside print</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class BankAccount:
+    def __init__(self, balance):
+        self.balance = balance
+    def withdraw(self, amount):
+        if amount &lt;= self.balance:
+            self.balance -= amount
+            return True
+        return False
+acc = BankAccount(100)
+print(acc.withdraw(30))
+print(acc.balance)
+print(acc.withdraw(1000))</code>
+    <option>True then 70 then True</option>
+    <option>False then 100 then False</option>
+    <option correct="true">True then 70 then False</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>What runs automatically when you create an object?</text>
+    <option>__str__ only</option>
+    <option>random.seed</option>
+    <option>os.remove</option>
+    <option correct="true">__init__</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def move(self, dx, dy):
+        self.x += dx
+        self.y += dy
+p = Point(2, 3)
+p.move(1, -1)
+print(p.x, p.y)</code>
+    <option correct="true">3 2</option>
+    <option>2 3</option>
+    <option>1 -1</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Instance attribute vs class attribute — which is correct?</text>
+    <option>Both always shared by every object</option>
+    <option correct="true">Instance belongs to one object; class can be shared by the class</option>
+    <option>Class attributes cannot be read</option>
+    <option>Instance attributes are only for inheritance</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Student:
+    def __init__(self, name):
+        self.name = name
+print(type(Student("Ada")).__name__)</code>
+    <option>Ada</option>
+    <option>object</option>
+    <option correct="true">Student</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Best beginner advice about inheritance?</text>
+    <option>Use it before learning __init__</option>
+    <option>Use it for every variable</option>
+    <option correct="true">Master basic classes first; use inheritance only when IS-A is clear</option>
+    <option>Never create objects</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Greeter:
+    def hello(self):
+        print("Hello!")
+g = Greeter()
+g.hello()</code>
+    <option>Greeter</option>
+    <option>Error</option>
+    <option>None</option>
+    <option correct="true">Hello!</option>
+  </question>
+
+  <question format="python">
+    <text>What is likely wrong here?</text>
+    <code language="python">class Student:
+    def __init__(self, name):
+        name = name
+s = Student("Ada")
+print(s.name)</code>
+    <option>Nothing — it prints Ada</option>
+    <option correct="true">Forgot self.name = name, so AttributeError</option>
+    <option>Ada is an illegal string</option>
+    <option>print cannot show attributes</option>
+  </question>
+
+  <question>
+    <text>Which checklist matters most before trusting AI class code?</text>
+    <option>Whether the class name is fancy</option>
+    <option>Whether comments use emojis</option>
+    <option correct="true">Whether self, __init__ assignments, and per-object lists are correct</option>
+    <option>Whether inheritance is used everywhere</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Student:
+    def __init__(self, name):
+        self.name = name
+        self.scores = []
+    def add_score(self, score):
+        self.scores.append(score)
+s = Student("Ada")
+s.add_score(100)
+print(len(s.scores))</code>
+    <option correct="true">1</option>
+    <option>0</option>
+    <option>100</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">class Animal:
+    def speak(self):
+        return "..."
+class Cat(Animal):
+    def speak(self):
+        return "Meow"
+print(Animal().speak())
+print(Cat().speak())</code>
+    <option>Meow then ...</option>
+    <option>Error</option>
+    <option>Meow then Meow</option>
+    <option correct="true">... then Meow</option>
+  </question>
+
+</quiz>

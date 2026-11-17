@@ -1,36 +1,29 @@
 """
 ================================================================================
-MODULE 10 — CLASSES AND OBJECTS (OOP FUNDAMENTALS)
+MODULE 10 — Classes and Objects
+Student lesson file (beginner fundamentals, stepwise)
 ================================================================================
-Run:  python module.py
+How to use this file:
+  1. Read one section comment
+  2. Run:  python module.py
+  3. Change values and rerun
+  4. Then open module_exercises.md
 
-Prerequisites:
-  Modules 1-7 strongly (especially functions & collections)
-  Modules 8-9 helpful but not required for core OOP ideas
+Previous: Module 9 (important modules)
+Next:     Module 11 (exception handling)
 
-This file is a REFERENCE — not an assignment.
+Stay focused on fundamentals. Inheritance is only a light preview.
 ================================================================================
 """
 
 print("=== Module 10: Classes and Objects ===")
 
-# ==================================================
-# 1. WHY CLASSES AND OBJECTS?
-# ==================================================
-# Functions organize behavior. Classes organize RELATED data + behavior.
-# Example: a Student has name, scores, and can compute average.
-# Real world: User, Order, FileHandler, Model, Request objects in frameworks.
-
-# ==================================================
-# 2. CLASS = BLUEPRINT, OBJECT = INSTANCE
-# ==================================================
-# Class  -> design / template
-# Object -> concrete thing created from the class
+# --------------------------------------------------
+# 1) Class = blueprint, object = instance
+# --------------------------------------------------
 
 
 class Dog:
-    """A simple Dog blueprint."""
-
     def bark(self):
         print("Woof!")
 
@@ -39,14 +32,11 @@ dog1 = Dog()
 dog2 = Dog()
 dog1.bark()
 dog2.bark()
-print("dog1 type:", type(dog1))
-print("same class?", type(dog1) is Dog)
+print("type:", type(dog1).__name__)
 
-# ==================================================
-# 3. self — THE CURRENT OBJECT
-# ==================================================
-# Methods always receive the instance as the first parameter (by convention: self).
-# You do NOT pass self manually when calling: dog1.bark()
+# --------------------------------------------------
+# 2) self + __init__ — this object's data
+# --------------------------------------------------
 
 
 class Counter:
@@ -56,26 +46,25 @@ class Counter:
     def increment(self):
         self.value += 1
 
-    def show(self):
-        print("value:", self.value)
+    def get(self):
+        return self.value
 
 
 c = Counter()
 c.increment()
 c.increment()
-c.show()
+print("counter:", c.get())  # 2
 
-# ==================================================
-# 4. __init__ — CONSTRUCTOR / INITIALIZER
-# ==================================================
-# Runs automatically when you create an object.
+# --------------------------------------------------
+# 3) Student — data + methods together
+# --------------------------------------------------
 
 
 class Student:
     def __init__(self, name, grade):
         self.name = name
         self.grade = grade
-        self.scores = []
+        self.scores = []   # per-object list (created in __init__)
 
     def add_score(self, score):
         self.scores.append(score)
@@ -98,22 +87,20 @@ bob = Student("Bob", "B")
 bob.add_score(70)
 print(bob.name, bob.average())
 
-# Each object has its OWN data:
+# Separate objects → separate data
 print("alice scores:", alice.scores)
 print("bob scores:", bob.scores)
 
-# ==================================================
-# 5. ATTRIBUTES
-# ==================================================
-# Instance attributes: belong to one object (self.name)
-# Class attributes: shared by all objects of the class
+# --------------------------------------------------
+# 4) Instance vs class attributes
+# --------------------------------------------------
 
 
 class BankAccount:
-    bank_name = "EduBank"  # class attribute (shared)
+    bank_name = "EduBank"  # shared class attribute
 
     def __init__(self, owner, balance=0):
-        self.owner = owner          # instance attribute
+        self.owner = owner
         self.balance = balance
 
     def deposit(self, amount):
@@ -132,11 +119,36 @@ a2 = BankAccount("Alan", 50)
 a1.deposit(40)
 print(a1.owner, a1.balance)
 print(a2.owner, a2.balance)
-print("bank:", BankAccount.bank_name, a1.bank_name)
+print("bank:", BankAccount.bank_name)
 
-# ==================================================
-# 6. __str__ — READABLE STRING FOR print()
-# ==================================================
+# --------------------------------------------------
+# 5) BAD vs GOOD: shared mutable class attribute
+# --------------------------------------------------
+
+
+class BadBag:
+    items = []  # shared by ALL BadBag objects — usually wrong
+
+
+b1 = BadBag()
+b2 = BadBag()
+b1.items.append("apple")
+print("BadBag b2 sees:", b2.items)  # ['apple'] surprise!
+
+
+class GoodBag:
+    def __init__(self):
+        self.items = []  # each object gets its own list
+
+
+g1 = GoodBag()
+g2 = GoodBag()
+g1.items.append("apple")
+print("GoodBag g2 sees:", g2.items)  # []
+
+# --------------------------------------------------
+# 6) __str__ and methods calling methods
+# --------------------------------------------------
 
 
 class Product:
@@ -148,12 +160,7 @@ class Product:
         return f"Product({self.name}, Rs.{self.price})"
 
 
-p = Product("Mouse", 499)
-print(p)  # uses __str__
-
-# ==================================================
-# 7. METHODS CALLING OTHER METHODS
-# ==================================================
+print(Product("Mouse", 499))
 
 
 class Rectangle:
@@ -171,33 +178,30 @@ class Rectangle:
         return f"area={self.area()}, perimeter={self.perimeter()}"
 
 
-rect = Rectangle(4, 5)
-print(rect.describe())
+print(Rectangle(4, 5).describe())
 
-# ==================================================
-# 8. ENCAPSULATION (BEGINNER LEVEL)
-# ==================================================
-# Convention: _name means "internal use" (not enforced strictly).
+# --------------------------------------------------
+# 7) Light encapsulation style (underscore convention)
+# --------------------------------------------------
 
 
 class Temperature:
     def __init__(self, celsius):
         self._celsius = celsius
 
-    def to_fahrenheit(self):
-        return self._celsius * 9 / 5 + 32
-
     def get_celsius(self):
         return self._celsius
+
+    def to_fahrenheit(self):
+        return self._celsius * 9 / 5 + 32
 
 
 t = Temperature(25)
 print("C:", t.get_celsius(), "F:", t.to_fahrenheit())
 
-# ==================================================
-# 9. INHERITANCE — REUSE AND EXTEND
-# ==================================================
-# Child class gets features from parent class.
+# --------------------------------------------------
+# 8) Inheritance preview only (IS-A)
+# --------------------------------------------------
 
 
 class Animal:
@@ -213,22 +217,10 @@ class Cat(Animal):
         return "Meow"
 
 
-class Cow(Animal):
-    def speak(self):
-        return "Moo"
-
-
-animals = [Cat("Misty"), Cow("Daisy"), Animal("Generic")]
-for animal in animals:
-    print(animal.name, "->", animal.speak())
-
-# isinstance checks
-print("Misty is Cat?", isinstance(animals[0], Cat))
-print("Misty is Animal?", isinstance(animals[0], Animal))
-
-# ==================================================
-# 10. super() — CALL PARENT VERSION
-# ==================================================
+misty = Cat("Misty")
+print(misty.name, "->", misty.speak())
+print("isinstance Cat?", isinstance(misty, Cat))
+print("isinstance Animal?", isinstance(misty, Animal))
 
 
 class Employee:
@@ -246,16 +238,14 @@ class Manager(Employee):
         self.team_size = team_size
 
     def describe(self):
-        base = super().describe()
-        return f"{base}, team_size={self.team_size}"
+        return f"{super().describe()}, team_size={self.team_size}"
 
 
-mgr = Manager("Sam", 5)
-print(mgr.describe())
+print(Manager("Sam", 5).describe())
 
-# ==================================================
-# 11. COMPOSITION — OBJECTS CONTAINING OBJECTS
-# ==================================================
+# --------------------------------------------------
+# 9) Composition preview only (HAS-A)
+# --------------------------------------------------
 
 
 class Engine:
@@ -274,35 +264,46 @@ class Car:
 
 print(Car("Sedan").start())
 
-# ==================================================
-# 12. DATACLASS-STYLE PATTERN WITHOUT decorator complexity
-# ==================================================
-# Many apps use classes as structured records (like enhanced dicts).
+# --------------------------------------------------
+# 10) Beginner real-world style objects
+# --------------------------------------------------
 
 
-class Point:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
+class User:
+    def __init__(self, name, role):
+        self.name = name.strip().title()
+        self.role = role.strip().lower()
 
-    def move(self, dx, dy):
-        self.x += dx
-        self.y += dy
+    def is_admin(self):
+        return self.role == "admin"
+
+    def __str__(self):
+        return f"User({self.name}, {self.role})"
 
 
-pt = Point(2, 3)
-pt.move(1, -1)
-print("point:", pt.x, pt.y)
+class Prompt:
+    def __init__(self, text):
+        self.text = text.strip()
 
-# ==================================================
-# 13. COMMON MISTAKES (commented)
-# ==================================================
-# 1. Forgetting self in method definitions
-# 2. Writing Student.average() instead of alice.average() without instance
-# 3. Forgetting to call __init__ fields (AttributeError later)
-# 4. Using class attribute mutable list shared across instances:
-#      class Bad:
-#          items = []   # shared! usually wrong for per-object data
-# 5. Confusing class (blueprint) with object (instance)
+    def length(self):
+        return len(self.text)
 
-print("\n--- Module 10 classes and objects reference complete ---")
+    def __str__(self):
+        return f"Prompt({self.text!r})"
+
+
+print(User("  ada  ", "Admin"))
+print(User("ada", "Admin").is_admin())
+print(Prompt("  Summarize this article.  "))
+print("prompt length:", Prompt("  hi  ").length())
+
+# --------------------------------------------------
+# 11) Common mistakes (commented)
+# --------------------------------------------------
+# 1. Missing self in method definitions
+# 2. Forgetting self.name = name in __init__
+# 3. Shared class list: items = []
+# 4. Calling Student.average() instead of alice.average()
+# 5. Jumping to inheritance before basic classes are solid
+
+print("\n--- Module 10 complete. Open module_exercises.md and practice. ---")

@@ -1,71 +1,84 @@
-# Module 10 — Classes and Objects (OOP Fundamentals)
+# Module 10 — Classes and Objects
 
-**Course:** Utrains Python Fundamentals  
-**Prerequisites:** Modules 1–7 (functions & collections essential)  
-**Suggested position:** After Functions / Collections; complements Files & Modules  
+**For students (beginners)**  
+**Prerequisites:** Modules 1–7 strongly (functions + collections). Modules 8–9 help, but are not required for the core ideas.  
+**Next:** Module 11 — Exception Handling  
 
----
+Read this slowly. Run the examples in `module.py`. Then do `module_exercises.md`.
 
-# Slide 1 — Title
-
-## Classes and Objects
-
-**Big idea:** Bundle **data + behavior** into reusable blueprints.
-
-```
-Class  = blueprint
-Object = real instance built from the blueprint
-```
+This lesson stays on **fundamentals**.  
+We will not rush into advanced OOP. Learn one step at a time.
 
 ---
 
-# Slide 2 — Learning Objectives
+## 1. What you will learn today
 
-1. Explain class vs object  
-2. Define classes with methods and `self`  
-3. Use `__init__` to initialize attributes  
-4. Create and use multiple independent objects  
-5. Distinguish instance vs class attributes  
-6. Use `__str__` for readable printing  
-7. Apply beginner **inheritance** and `super()`  
-8. Recognize composition (“has-a”)  
-9. Avoid common OOP beginner mistakes  
+By the end of this lesson you should be able to:
+
+1. Explain **class vs object** in plain English  
+2. Create a simple class and call a method  
+3. Understand **`self`**  
+4. Use **`__init__`** to store data on an object  
+5. Write methods that use and update attributes  
+6. Create **multiple independent objects**  
+7. Tell **instance attributes** from **class attributes**  
+8. Use a simple **`__str__`**  
+9. Read a **beginner inheritance** example (IS-A)  
+10. Spot common beginner/AI mistakes (missing `self`, shared `[]`)  
 
 ---
 
-# Slide 3 — WHY OOP?
+## 2. Why classes matter (AI era) — keep it simple
 
-Without classes (only variables + functions):
+So far you used:
+
+- variables for data  
+- functions for behavior  
+
+That works… until related pieces grow:
 
 ```python
 student_name = "Alice"
 student_scores = [90, 80]
-# easy to mix up data for many students
+# now imagine 50 students — easy to mix up
 ```
 
-With classes:
+A class lets you keep **related data + behavior** together:
 
 ```python
-alice = Student("Alice", "A")
+alice = Student("Alice")
 alice.add_score(90)
 ```
 
-**Career:** Django models, FastAPI schemas, pandas objects, ML estimators, UI widgets — all object-based.
+| Place | Everyday object idea |
+|-------|----------------------|
+| Backend | User, Order |
+| AI apps | Prompt, Message, ModelConfig |
+| Automation | Task, Job |
+| Files/data | Report, Record |
+
+**Golden rule:**  
+If AI writes a class for you, check **`self`**, **`__init__` assignments**, and whether lists/dicts are created **per object** (not shared on the class).
 
 ---
 
-# Slide 4 — WHAT: Class vs Object
+## 3. Class vs object (step 1)
 
-**Analogy:**
+```
+Class  = blueprint
+Object = real thing built from the blueprint
+```
+
+Analogy:
 
 - Class `Dog` = cookie cutter  
 - Objects `dog1`, `dog2` = cookies  
 
-All dogs can `bark()`, but each may have different `name`.
+All dogs can bark. Each dog can have a different name.
 
 ---
 
-# Slide 5 — First Class
+## 4. Your first class (step 2)
 
 ```python
 class Dog:
@@ -76,63 +89,73 @@ dog1 = Dog()
 dog1.bark()
 ```
 
-Steps:
+Do these three moves every time:
 
-1. Define class  
-2. Create object with `Dog()`  
-3. Call method with `dog1.bark()`  
+1. **Define** the class  
+2. **Create** an object with `Dog()`  
+3. **Call** a method with `dog1.bark()`  
+
+Writing `Dog.bark()` without an object is usually the wrong beginner move.
 
 ---
 
-# Slide 6 — Understanding self
+## 5. What is `self`? (step 3)
 
 `self` means **this object**.
 
 ```python
-def increment(self):
-    self.value += 1
+class Counter:
+    def __init__(self):
+        self.value = 0
+
+    def increment(self):
+        self.value += 1
 ```
 
-When you write `c.increment()`, Python calls `Counter.increment(c)`.
+When you write:
 
-**You never pass self manually** in normal calls.
+```python
+c = Counter()
+c.increment()
+```
+
+Python roughly does: “call `increment` on object `c`.”
+
+**You do not pass `self` yourself** in normal calls.  
+But you **must** include `self` as the first parameter in the method definition.
 
 ---
 
-# Slide 7 — __init__ (Initializer)
+## 6. `__init__` — set up the object (step 4)
+
+`__init__` runs automatically when you create an object.
 
 ```python
 class Student:
     def __init__(self, name, grade):
         self.name = name
         self.grade = grade
-```
 
-```python
 alice = Student("Alice", "A")
-print(alice.name)
+print(alice.name)   # Alice
 ```
 
-`__init__` runs automatically on object creation.
-
----
-
-# Slide 8 — Trace Object Creation
+### Trace
 
 ```python
 alice = Student("Alice", "A")
 ```
 
-**Trace:**
-
-1. Create empty Student object  
+1. Create a new Student object  
 2. Call `__init__(alice, "Alice", "A")`  
-3. Set `alice.name`, `alice.grade`  
+3. Store `alice.name` and `alice.grade`  
 4. Name `alice` now refers to that object  
 
+If you forget `self.name = name`, later code will crash with `AttributeError`.
+
 ---
 
-# Slide 9 — Methods Use Attributes
+## 7. Methods that use attributes (step 5)
 
 ```python
 class Student:
@@ -144,14 +167,20 @@ class Student:
         self.scores.append(score)
 
     def average(self):
+        if not self.scores:
+            return 0
         return sum(self.scores) / len(self.scores)
 ```
 
-Objects keep their own `scores` lists.
+Pattern:
+
+1. Store data in `__init__`  
+2. Change/use that data in methods  
+3. Return a result when useful (Module 7 habit)
 
 ---
 
-# Slide 10 — Many Objects, Separate Data
+## 8. Many objects = separate data (step 6)
 
 ```python
 a = Student("Alice")
@@ -160,31 +189,50 @@ a.add_score(90)
 b.add_score(70)
 ```
 
-Changing `a` does **not** change `b`.
+Changing `a` does **not** change `b`.  
+Each object has its own `scores` list.
 
-**Ask:** What if `scores = []` was a class attribute instead of created in `__init__`?
+This is one of the biggest reasons classes exist.
 
 ---
 
-# Slide 11 — Instance vs Class Attributes
+## 9. Instance attributes vs class attributes (step 7)
 
 ```python
 class BankAccount:
-    bank_name = "EduBank"      # shared
+    bank_name = "EduBank"      # class attribute (shared)
 
     def __init__(self, owner):
-        self.owner = owner     # per object
+        self.owner = owner     # instance attribute (per object)
         self.balance = 0
 ```
 
 | Kind | Belongs to | Example |
 |------|------------|---------|
-| Instance | one object | `balance` |
+| Instance | one object | `balance`, `owner` |
 | Class | whole class | `bank_name` |
+
+### Important beginner trap
+
+```python
+# BAD idea for per-object data
+class BadBag:
+    items = []   # shared by ALL bags
+```
+
+If every bag should have its own list, create it in `__init__`:
+
+```python
+class Bag:
+    def __init__(self):
+        self.items = []
+```
+
+AI code often makes this mistake. Check it every time.
 
 ---
 
-# Slide 12 — __str__
+## 10. `__str__` — nicer printing (step 8)
 
 ```python
 class Product:
@@ -198,30 +246,56 @@ class Product:
 print(Product("Mouse", 499))
 ```
 
-Makes debugging and logging readable.
+Useful for debugging and logs. Keep it simple.
 
 ---
 
-# Slide 13 — Encapsulation (Beginner)
-
-Keep internal details tidy:
+## 11. Methods calling other methods (step 9)
 
 ```python
-self._celsius = celsius   # "internal" by convention
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+    def describe(self):
+        return f"area={self.area()}"
 ```
 
-Provide methods like `get_celsius()` / `to_fahrenheit()`.
-
-Python does not strictly privatize; convention guides teamwork.
+Once you can do this, you already know the core of beginner OOP.
 
 ---
 
-# Slide 14 — Inheritance (IS-A)
+## 12. Light encapsulation (step 10 — optional style)
+
+Sometimes we mark a value as “internal”:
+
+```python
+class Temperature:
+    def __init__(self, celsius):
+        self._celsius = celsius
+
+    def to_fahrenheit(self):
+        return self._celsius * 9 / 5 + 32
+```
+
+The underscore `_celsius` is a **convention** (“please treat as internal”).  
+Python does not fully hide it. For beginners, just know the style exists.
+
+---
+
+## 13. Inheritance preview (step 11 — fundamentals only)
+
+Inheritance means: child **is a** parent.
 
 ```python
 class Animal:
     def __init__(self, name):
         self.name = name
+
     def speak(self):
         return "..."
 
@@ -230,23 +304,15 @@ class Cat(Animal):
         return "Meow"
 ```
 
-`Cat` **is an** `Animal` and can override `speak`.
-
----
-
-# Slide 15 — Trace Polymorphism
-
 ```python
-animals = [Cat("Misty"), Animal("Generic")]
-for a in animals:
-    print(a.speak())
+misty = Cat("Misty")
+print(misty.name)     # from Animal
+print(misty.speak())  # overridden in Cat
 ```
 
-Same method name, different behavior per object type.
+### `super()` in one sentence
 
----
-
-# Slide 16 — super()
+Use `super()` when the child needs the parent’s `__init__` setup:
 
 ```python
 class Manager(Employee):
@@ -255,155 +321,111 @@ class Manager(Employee):
         self.team_size = team_size
 ```
 
-`super()` calls the parent version — avoid duplicating setup code.
+**Beginner advice:**  
+Master normal classes first. Use inheritance only when the IS-A relationship is obvious.
 
 ---
 
-# Slide 17 — Composition (HAS-A)
+## 14. Composition preview (HAS-A) — recognition only
 
 ```python
+class Engine:
+    def start(self):
+        return "engine started"
+
 class Car:
     def __init__(self, model):
         self.model = model
         self.engine = Engine()
 ```
 
-A car **has an** engine (object inside object).  
-Often clearer than deep inheritance.
+A car **has an** engine.  
+You do not need deep composition design yet — just recognize the pattern.
 
 ---
 
-# Slide 18 — isinstance
+## 15. Real-world preview (still beginner)
+
+### Simple user profile
 
 ```python
-isinstance(misty, Cat)     # True
-isinstance(misty, Animal)  # True
+class User:
+    def __init__(self, name, role):
+        self.name = name.strip().title()
+        self.role = role.strip().lower()
+
+    def is_admin(self):
+        return self.role == "admin"
 ```
 
-Useful for safe type checks (prefer over fragile string checks).
-
----
-
-# Slide 19 — OOP + Prior Modules
-
-| Earlier skill | Used in classes |
-|---------------|-----------------|
-| Functions | methods |
-| Lists/dicts | attributes |
-| if/loops | method logic |
-| files/json | save object data later |
-
----
-
-# Slide 20 — Common Beginner Mistakes
-
-1. Missing `self` in method signature  
-2. Forgetting `__init__` assignments  
-3. Shared mutable class attributes (`items = []`)  
-4. Calling method on class without instance incorrectly  
-5. Confusing blueprint with instance  
-6. Overusing inheritance where composition fits better  
-
----
-
-# Slide 21 — Professional Connection
-
-| Domain | Objects |
-|--------|---------|
-| Backend | User, Order, Serializer |
-| Data | DataFrame-like pipelines |
-| AI | Model, Dataset, Trainer |
-| Automation | Job, Task, Client |
-| DevOps | Resource, Deployment configs |
-
----
-
-# Slide 22 — Concept Recap
-
-- class / object / `self`  
-- `__init__`, attributes, methods  
-- `__str__`  
-- inheritance / `super()` / `isinstance`  
-- composition  
-
----
-
-# Slide 23 — Syntax Cheat Sheet
+### Prompt record (AI-era idea)
 
 ```python
-class Name:
-    shared = 1
-    def __init__(self, x):
-        self.x = x
-    def method(self):
-        return self.x
-    def __str__(self):
-        return str(self.x)
+class Prompt:
+    def __init__(self, text):
+        self.text = text.strip()
 
-class Child(Name):
-    def __init__(self, x, y):
-        super().__init__(x)
-        self.y = y
+    def length(self):
+        return len(self.text)
 ```
 
----
-
-# Slide 24 — Mistakes Checklist
-
-- [ ] Methods include `self`?  
-- [ ] Per-object data created in `__init__`?  
-- [ ] Avoid shared mutable class lists?  
-- [ ] Create instances with `ClassName(...)`?  
-- [ ] Inheritance only when IS-A is clear?  
+You are not building Django/FastAPI today.  
+You are learning the object fundamentals those tools are built from.
 
 ---
 
-# Slide 25 — “Can You Explain This?”
+## 16. Common mistakes checklist
+
+1. Missing `self` in the method definition  
+2. Forgetting `self.name = name` inside `__init__`  
+3. Shared mutable class attribute (`items = []`)  
+4. Calling a method on the class instead of an instance  
+5. Confusing the blueprint (class) with the instance (object)  
+6. Jumping to inheritance before basic classes are solid  
+7. Shipping AI class code without testing two separate objects  
+
+---
+
+## 17. How to study this lesson
+
+1. Read one section  
+2. Run the matching part in `module.py`  
+3. Predict output before looking  
+4. Do `module_exercises.md` in order (do not skip ahead)  
+5. Take `module_quiz.xml`  
+
+If you use AI for help:
+
+- Ask it to explain `self` and `__init__`  
+- Create **two objects** and prove their data is separate  
+- Re-type the class yourself  
+
+---
+
+## 18. Mini self-check (before the quiz)
+
+Can you answer these out loud?
 
 1. Class vs object?  
 2. What is `self`?  
-3. Why `__init__`?  
-4. Instance vs class attribute?  
-5. Inheritance vs composition?  
+3. Why do we use `__init__`?  
+4. Instance attribute vs class attribute?  
+5. Why is `items = []` on the class usually dangerous?  
+6. What does inheritance mean in one sentence?  
+
+If any answer is unclear, re-read that section and rerun `module.py`.
 
 ---
 
-# Slide 26 — Mini Challenges
+## 19. What “confident” means after Module 10
 
-1. `Book(title, author)` with `__str__`  
-2. `BankAccount` deposit/withdraw  
-3. `Dog(Animal)` override `speak`  
-4. List of students; print averages  
+You can:
 
----
+- model a simple real entity as a class  
+- store per-object data correctly  
+- write methods that update/return values  
+- create multiple independent objects  
+- read basic inheritance code without panic  
+- spot beginner/AI OOP mistakes  
 
-# Slide 27 — What You Can Do Now
-
-- Model real entities as classes  
-- Keep related data/behavior together  
-- Extend classes with inheritance  
-- Read OOP code in libraries/frameworks  
-
----
-
-# Slide 28 — Where This Fits in the Curriculum
-
-Recommended order:
-
-```
-Functions → Collections → Classes/Objects → Files/Modules projects
-```
-
-You can study this module after Module 7 even if you already finished 8–9.
-
----
-
-# Slide 29 — Lab Directions
-
-1. Run `module.py`  
-2. Complete `module_exercises.md`  
-3. Take `module_quiz.json`  
-
----
-
-*End of Module 10 teaching slides*
+Next lesson (Module 11) covers **exception handling** — failing safely when bad input, missing files, or bad object use happens.
