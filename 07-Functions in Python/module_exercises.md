@@ -1,504 +1,211 @@
-# Module 7 — Practice Exercises: Functions
+# Module 7 — Practice Exercises: Functions in Python
 
-**Instructions:** Attempt each exercise before opening the Instructor Solution Guide.
+**For students**
 
----
+1. Read `module_notes.md`  
+2. Run `module.py` and understand each print  
+3. Solve exercises below in order  
+4. Predict output before running  
+5. If you use AI, explain every line yourself  
 
-# LEVEL 1 — FUNDAMENTALS
+**Difficulty:** [E] Easy · [M] Medium · [C] Challenge  
 
-### Exercise 1 — Add Two Numbers
-
-**Difficulty:** Easy  
-**Concepts:** parameters, return  
-
-**Problem:** Write `add(a, b)` that returns the sum of two numbers. Print `add(3, 5)`.
-
-**Expected Output:**
-```
-8
-```
-
-**Hint:** Use `return a + b`.
+Use Modules 1–7. For each function: **define it**, then **call it** and print the result.
 
 ---
 
-### Exercise 2 — String Length Function
+## A. Define, call, return
 
-**Difficulty:** Easy  
-**Concepts:** return, `len`  
+### A1. [E] say_hello
+Write `say_hello()` that prints `Hello, World!`.
 
-**Problem:** Write `string_length(text)` that returns the length of a string. Test with `"Python"`.
+### A2. [E] add
+Write `add(a, b)` that **returns** the sum. Print `add(3, 5)`.
 
-**Expected Output:**
-```
-6
-```
+Expected: `8`
 
-**Hint:** `return len(text)`
+### A3. [E] string_length
+Write `string_length(text)` that returns `len(text)`. Test with `"Python"`.
 
----
+Expected: `6`
 
-### Exercise 3 — Even or Odd
+### A4. [E] even_or_odd
+Write `even_or_odd(n)` that returns `"Even"` or `"Odd"`. Test with `7`.
 
-**Difficulty:** Easy  
-**Concepts:** return, `%`, if  
+Expected: `Odd`
 
-**Problem:** Write `even_or_odd(n)` that returns `"Even"` or `"Odd"`. Test with `7`.
-
-**Expected Output:**
-```
-Odd
-```
-
-**Hint:** Return a string, don’t only print inside.
-
----
-
-### Exercise 4 — Hello World Function
-
-**Difficulty:** Easy  
-**Concepts:** define/call  
-
-**Problem:** Write `say_hello()` that prints `Hello, World!` when called.
-
-**Expected Output:**
-```
-Hello, World!
-```
-
-**Hint:** No parameters needed.
-
----
-
-### Exercise 5 — Largest in List
-
-**Difficulty:** Easy  
-**Concepts:** list, return  
-
-**Problem:** Write `largest(numbers)` that returns the largest element. Test with `[4, 9, 1, 7]`.
-
-**Expected Output:**
-```
-9
-```
-
-**Hint:** `return max(numbers)`
-
----
-
-# LEVEL 2 — APPLY THE CONCEPT
-
-### Exercise 6 — Factorial Function
-
-**Difficulty:** Medium  
-**Concepts:** loop, return  
-
-**Problem:** Write `factorial(n)` returning `n!` (`0! = 1`). Test with `5`.
-
-**Expected Output:**
-```
-120
-```
-
-**Hint:** Accumulate a product from 1 to n.
-
----
-
-### Exercise 7 — Palindrome Check
-
-**Difficulty:** Medium  
-**Concepts:** strings, return bool/string  
-
-**Problem:** Write `is_palindrome(text)` that returns `True` if the text is a palindrome ignoring case and spaces. Test `"Race car"`.
-
-**Expected Output:**
-```
-True
-```
-
-**Hint:** Clean with `.lower().replace(" ", "")`, compare to reverse.
-
----
-
-### Exercise 8 — Greeting with Default
-
-**Difficulty:** Easy  
-**Concepts:** default argument  
-
-**Problem:** Write `greet(name="Guest")` that prints `Hello, <name>!`. Call once with no args and once with `"Ada"`.
-
-**Expected Output:**
-```
-Hello, Guest!
-Hello, Ada!
-```
-
-**Hint:** Default parameter value.
-
----
-
-### Exercise 9 — Square Function
-
-**Difficulty:** Easy  
-**Concepts:** return  
-
-**Problem:** Write `square(n)` returning `n * n`. Print `square(6)`.
-
-**Expected Output:**
-```
-36
-```
-
-**Hint:** Prefer `return`, then print the result outside.
-
----
-
-### Exercise 10 — Concatenate Strings
-
-**Difficulty:** Easy  
-**Concepts:** return, strings  
-
-**Problem:** Write `concat(a, b)` returning `a + b`. Test `"Hello, "` and `"World"`.
-
-**Expected Output:**
-```
-Hello, World
-```
-
-**Hint:** Return the joined string.
-
----
-
-# LEVEL 3 — COMBINE CONCEPTS
-
-### Exercise 11 — Filter Evens
-
-**Difficulty:** Medium  
-**Concepts:** list, loop, return  
-
-**Problem:** Write `even_only(numbers)` returning a new list of even numbers from the input list. Test `[1, 2, 3, 4, 5, 6]`.
-
-**Expected Output:**
-```
-[2, 4, 6]
-```
-
-**Hint:** Build a new list inside the function.
-
----
-
-### Exercise 12 — Character Frequency
-
-**Difficulty:** Medium  
-**Concepts:** dict, function  
-
-**Problem:** Write `char_frequency(text)` returning a dict of character counts. Test `"banana"`.
-
-**Expected Output:**
-```
-{'b': 1, 'a': 3, 'n': 2}
-```
-
-**Hint:** Use `.get(char, 0) + 1`.
-
----
-
-### Exercise 13 — Fibonacci (Recursive or Loop)
-
-**Difficulty:** Challenging  
-**Concepts:** recursion or loop  
-
-**Problem:** Write `fibonacci(n)` returning the nth Fibonacci number where `fib(0)=0`, `fib(1)=1`. Print `fibonacci(6)`.
-
-**Expected Output:**
-```
-8
-```
-
-**Hint:** Recursion with base case, or loop with two variables.
-
----
-
-### Exercise 14 — Word Count
-
-**Difficulty:** Easy  
-**Concepts:** strings, split  
-
-**Problem:** Write `word_count(sentence)` returning the number of words. Test `"Python is fun to learn"`.
-
-**Expected Output:**
-```
-5
-```
-
-**Hint:** `len(sentence.split())`
-
----
-
-### Exercise 15 — Min and Max Tuple
-
-**Difficulty:** Medium  
-**Concepts:** multiple return  
-
-**Problem:** Write `bounds(numbers)` returning `(smallest, largest)`. Unpack and print both for `[5, 1, 9, 3]`.
-
-**Expected Output:**
-```
-1
-9
-```
-
-**Hint:** `return min(numbers), max(numbers)`
-
----
-
-### Exercise 16 — Sort Keys by Values
-
-**Difficulty:** Challenging  
-**Concepts:** dict, sorted, function  
-
-**Problem:** Write `keys_sorted_by_value(d)` returning a list of keys sorted by their values ascending. Test `{"a": 3, "b": 1, "c": 2}`.
-
-**Expected Output:**
-```
-['b', 'c', 'a']
-```
-
-**Hint:** `sorted(d, key=d.get)` or sort items then take keys.
-
----
-
-# LEVEL 4 — PROBLEM SOLVING
-
-### Exercise 17 — Factors List
-
-**Difficulty:** Medium  
-**Concepts:** loop, list return  
-
-**Problem:** Write `factors(n)` returning all positive factors of `n`. Test `12`.
-
-**Expected Output:**
-```
-[1, 2, 3, 4, 6, 12]
-```
-
-**Hint:** Check `n % i == 0` for `i` in `1..n`.
-
----
-
-### Exercise 18 — Temperature Converter
-
-**Difficulty:** Medium  
-**Concepts:** keyword args / branching  
-
-**Problem:** Write `convert_temp(value, to_scale)` where `to_scale` is `"C"` or `"F"`.
-
-- If converting to F: `(C * 9/5) + 32`  
-- If converting to C: `(F - 32) * 5/9`  
-
-Print `convert_temp(25, "F")` and `convert_temp(77, "C")`.
-
-**Expected Output:**
-```
-77.0
-25.0
-```
-
-**Hint:** Use `if to_scale == "F":`.
-
----
-
-### Exercise 19 — Primes Up to n
-
-**Difficulty:** Challenging  
-**Concepts:** nested loops / helper function  
-
-**Problem:** Write `primes_up_to(n)` returning a list of primes `<= n`. Test `20`.
-
-**Expected Output:**
-```
-[2, 3, 5, 7, 11, 13, 17, 19]
-```
-
-**Hint:** Write helper `is_prime(k)`, then collect primes.
-
----
-
-### Exercise 20 — Second Highest
-
-**Difficulty:** Medium  
-**Concepts:** list, set/sort  
-
-**Problem:** Write `second_highest(numbers)` returning the second largest unique value. Test `[5, 1, 9, 9, 3, 7]`.
-
-**Expected Output:**
-```
-7
-```
-
-**Hint:** `sorted(set(numbers))[-2]`
-
----
-
-### Bonus — *args Sum
-
-**Difficulty:** Medium  
-**Concepts:** `*args`  
-
-**Problem:** Write `sum_all(*args)` returning the sum of any number of numeric arguments. Test `sum_all(1, 2, 3, 4)`.
-
-**Expected Output:**
-```
-10
-```
-
----
-
-# Instructor Solution Guide
-
+### A5. [M] print vs return bug
 ```python
-# Exercise 1
-def add(a, b):
-    return a + b
-print(add(3, 5))
-
-# Exercise 2
-def string_length(text):
-    return len(text)
-print(string_length("Python"))
-
-# Exercise 3
-def even_or_odd(n):
-    if n % 2 == 0:
-        return "Even"
-    return "Odd"
-print(even_or_odd(7))
-
-# Exercise 4
-def say_hello():
-    print("Hello, World!")
-say_hello()
-
-# Exercise 5
-def largest(numbers):
-    return max(numbers)
-print(largest([4, 9, 1, 7]))
-
-# Exercise 6
-def factorial(n):
-    result = 1
-    for i in range(1, n + 1):
-        result *= i
-    return result
-print(factorial(5))
-
-# Exercise 7
-def is_palindrome(text):
-    cleaned = text.lower().replace(" ", "")
-    return cleaned == cleaned[::-1]
-print(is_palindrome("Race car"))
-
-# Exercise 8
-def greet(name="Guest"):
-    print(f"Hello, {name}!")
-greet()
-greet("Ada")
-
-# Exercise 9
 def square(n):
-    return n * n
-print(square(6))
+    print(n * n)
 
-# Exercise 10
-def concat(a, b):
-    return a + b
-print(concat("Hello, ", "World"))
-
-# Exercise 11
-def even_only(numbers):
-    result = []
-    for n in numbers:
-        if n % 2 == 0:
-            result.append(n)
-    return result
-print(even_only([1, 2, 3, 4, 5, 6]))
-
-# Exercise 12
-def char_frequency(text):
-    freq = {}
-    for char in text:
-        freq[char] = freq.get(char, 0) + 1
-    return freq
-print(char_frequency("banana"))
-
-# Exercise 13
-def fibonacci(n):
-    if n <= 1:
-        return n
-    return fibonacci(n - 1) + fibonacci(n - 2)
-print(fibonacci(6))
-
-# Exercise 14
-def word_count(sentence):
-    return len(sentence.split())
-print(word_count("Python is fun to learn"))
-
-# Exercise 15
-def bounds(numbers):
-    return min(numbers), max(numbers)
-lo, hi = bounds([5, 1, 9, 3])
-print(lo)
-print(hi)
-
-# Exercise 16
-def keys_sorted_by_value(d):
-    return sorted(d, key=d.get)
-print(keys_sorted_by_value({"a": 3, "b": 1, "c": 2}))
-
-# Exercise 17
-def factors(n):
-    result = []
-    for i in range(1, n + 1):
-        if n % i == 0:
-            result.append(i)
-    return result
-print(factors(12))
-
-# Exercise 18
-def convert_temp(value, to_scale):
-    if to_scale == "F":
-        return (value * 9 / 5) + 32
-    if to_scale == "C":
-        return (value - 32) * 5 / 9
-    return None
-print(convert_temp(25, "F"))
-print(convert_temp(77, "C"))
-
-# Exercise 19
-def is_prime(k):
-    if k <= 1:
-        return False
-    for i in range(2, k):
-        if k % i == 0:
-            return False
-    return True
-
-def primes_up_to(n):
-    result = []
-    for k in range(2, n + 1):
-        if is_prime(k):
-            result.append(k)
-    return result
-print(primes_up_to(20))
-
-# Exercise 20
-def second_highest(numbers):
-    unique_sorted = sorted(set(numbers))
-    return unique_sorted[-2]
-print(second_highest([5, 1, 9, 9, 3, 7]))
-
-# Bonus
-def sum_all(*args):
-    return sum(args)
-print(sum_all(1, 2, 3, 4))
+value = square(4)
+print(value)
 ```
+Predict both lines. Then rewrite `square` so `value` becomes `16`.
+
+### A6. [M] min_max
+Write `min_max(values)` that returns both min and max. Unpack and print for `[4, 9, 1, 7]`.
+
+---
+
+## B. Arguments: positional, default, keyword
+
+### B1. [E] greet with default
+Write `greet(name="Guest")` that prints `Hello, <name>!`.  
+Call it once with no argument and once with `"Ada"`.
+
+### B2. [E] power
+Write `power(base, exponent=2)` that returns `base ** exponent`.  
+Print `power(5)` and `power(5, 3)`.
+
+Expected:
+```
+25
+125
+```
+
+### B3. [M] describe_pet
+Write `describe_pet(animal, name)` that prints `<name> is a <animal>.`  
+Call it with keywords in both orders.
+
+### B4. [M] keyword mix
+Call `describe_pet("fish", name="Nemo")`. Write a comment: why positional must come before keywords.
+
+### B5. [C] AI bug: default before required
+An AI wrote:
+```python
+def bad(a=1, b):
+    return a + b
+```
+What error occurs? Rewrite it correctly.
+
+---
+
+## C. *args, **kwargs, scope
+
+### C1. [E] add_numbers
+Write `add_numbers(*args)` that returns the sum of all arguments.  
+Test with `1, 2, 3, 4`.
+
+### C2. [M] describe_person
+Write `describe_person(**kwargs)` that prints each `key: value`.  
+Call with `name="Alice", age=25`.
+
+### C3. [M] make_profile
+Write a function that accepts `name`, `age`, optional hobbies via `*args`,  
+default `city="Unknown"`, and extra fields via `**kwargs`. Return a dict and print it.
+
+### C4. [M] local vs global
+```python
+counter = 0
+
+def bump():
+    counter = 10
+    print(counter)
+
+bump()
+print(counter)
+```
+Predict both lines. Write a comment explaining why the global stayed `0`.
+
+---
+
+## D. Functions + prior modules
+
+### D1. [E] largest
+Write `largest(numbers)` that returns the largest element. Test with `[4, 9, 1, 7]`.
+
+### D2. [E] is_even
+Write `is_even(n)` returning `True`/`False`. Test with `8` and `7`.
+
+### D3. [M] even_only
+Write `even_only(numbers)` that returns a new list of even numbers only.  
+Test with `[1, 2, 3, 4, 5, 6]`.
+
+### D4. [M] factorial
+Write `factorial(n)` returning `n!` (`0! = 1`). Test with `5`.
+
+Expected: `120`
+
+### D5. [M] char_frequency
+Write `char_frequency(text)` returning a frequency dict. Test with `"banana"`.
+
+### D6. [M] is_palindrome
+Write `is_palindrome(text)` that ignores case and spaces.  
+Test with `"Race car"` → `True`.
+
+### D7. [C] average
+Write `average(numbers)` that returns the mean as a float.  
+If the list is empty, return `None`. Test with `[2, 4, 6]`.
+
+---
+
+## E. Real-world / AI-era helpers
+
+### E1. [M] clean_email
+Write `clean_email(raw)` that returns stripped lowercase email.  
+Test with `"  Student@Example.COM  "`.
+
+### E2. [M] is_admin
+Write `is_admin(role)` that returns whether cleaned role equals `"admin"`.
+
+### E3. [M] build_prompt
+Write `build_prompt(task, text)` that returns:
+```
+Task: <task>
+Text: <stripped text>
+```
+
+### E4. [M] celsius_to_fahrenheit
+Write the conversion function with a docstring. Test with `25`.
+
+### E5. [C] mutable default fix
+Show the bug:
+```python
+def add_item(item, bag=[]):
+    bag.append(item)
+    return bag
+```
+Call it twice with `"a"` then `"b"`. Then rewrite the safe `bag=None` version.
+
+### E6. [C] ready_prompts
+Write `ready_prompts(prompts)` that takes a list of strings,  
+strips each, skips empties, and returns the cleaned list.
+
+---
+
+## F. Lambda / recursion (optional stretch)
+
+### F1. [M] lambda cube
+Create `cube = lambda x: x ** 3` and print `cube(3)`.
+
+### F2. [M] sorted by score
+Given `pairs = [("Ada", 90), ("Bob", 75)]`, print them sorted by score ascending using `lambda`.
+
+### F3. [C] fibonacci
+Write recursive `fibonacci(n)` and print `fibonacci(6)`.
+
+Expected: `8`
+
+---
+
+## G. Short written answers (as comments)
+
+### G1. Parameter vs argument?
+Answer:
+
+### G2. Why prefer return over print inside helper functions?
+Answer:
+
+### G3. Why is a mutable default dangerous?
+Answer:
+
+### G4. When is a lambda a good idea vs a bad idea?
+Answer:
+
+---
+
+## Done?
+
+Re-read any weak section in `module_notes.md`, rerun `module.py`, then take `module_quiz.xml`.

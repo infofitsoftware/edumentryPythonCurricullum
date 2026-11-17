@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Module 5: Control Flow Statements (AI-Era / Beginner) -->
+<!-- App format: <text>, optional <code language="python">, <option correct="true"> -->
+<!-- Correct answers balanced across option positions -->
+
+  <question>
+    <text>What is control flow?</text>
+    <option>Only printing text</option>
+    <option correct="true">The order in which statements run, including decisions and loops</option>
+    <option>A type of string method</option>
+    <option>A file format</option>
+  </question>
+
+  <question>
+    <text>What must come after if, for, and while headers?</text>
+    <option>A semicolon</option>
+    <option>A closing brace</option>
+    <option correct="true">A colon :</option>
+    <option>The word end</option>
+  </question>
+
+  <question>
+    <text>Why do AI/backend apps care about control flow?</text>
+    <option>Programs never need decisions</option>
+    <option>Python cannot repeat code</option>
+    <option>Loops only exist in Excel</option>
+    <option correct="true">Auth, validation, retries, and filtering all need decisions and repetition</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">x = 10
+if x &gt; 5:
+    print("Yes")</code>
+    <option correct="true">Yes</option>
+    <option>No</option>
+    <option>Nothing</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">x = 3
+if x &gt; 5:
+    print("Yes")
+print("Done")</code>
+    <option>Yes</option>
+    <option correct="true">Done</option>
+    <option>Yes then Done</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">n = 7
+if n % 2 == 0:
+    print("Even")
+else:
+    print("Odd")</code>
+    <option>Even</option>
+    <option>7</option>
+    <option correct="true">Odd</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">score = 0
+if score &gt; 0:
+    print("Positive")
+elif score &lt; 0:
+    print("Negative")
+else:
+    print("Zero")</code>
+    <option>Positive</option>
+    <option>Negative</option>
+    <option>Error</option>
+    <option correct="true">Zero</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">marks = 82
+if marks &gt;= 90:
+    print("Excellent")
+elif marks &gt;= 75:
+    print("Good")
+elif marks &gt;= 50:
+    print("Average")
+else:
+    print("Fail")</code>
+    <option correct="true">Good</option>
+    <option>Excellent</option>
+    <option>Average</option>
+    <option>Fail</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output? (wrong elif order)</text>
+    <code language="python">marks = 82
+if marks &gt;= 50:
+    print("Average")
+elif marks &gt;= 75:
+    print("Good")
+elif marks &gt;= 90:
+    print("Excellent")
+else:
+    print("Fail")</code>
+    <option>Good</option>
+    <option correct="true">Average</option>
+    <option>Excellent</option>
+    <option>Fail</option>
+  </question>
+
+  <question>
+    <text>What numbers does range(1, 5) produce?</text>
+    <option>1, 2, 3, 4, 5</option>
+    <option>0, 1, 2, 3, 4</option>
+    <option correct="true">1, 2, 3, 4</option>
+    <option>1, 5</option>
+  </question>
+
+  <question format="python">
+    <text>What is printed?</text>
+    <code language="python">for i in range(1, 4):
+    print(i)</code>
+    <option>1 2 3 4</option>
+    <option correct="true">1 then 2 then 3</option>
+    <option>0 then 1 then 2 then 3</option>
+    <option>1 then 2</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">i = 1
+while i &lt;= 3:
+    print(i)
+    i += 1</code>
+    <option>1 then 2 then 3 then 4</option>
+    <option>0 then 1 then 2 then 3</option>
+    <option correct="true">1 then 2 then 3</option>
+    <option>Infinite loop</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">for i in range(1, 6):
+    if i == 4:
+        break
+    print(i)</code>
+    <option correct="true">1 then 2 then 3</option>
+    <option>1 then 2 then 3 then 4</option>
+    <option>1 then 2 then 3 then 4 then 5</option>
+    <option>4</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)</code>
+    <option>1 then 2 then 3 then 4 then 5</option>
+    <option correct="true">1 then 2 then 4 then 5</option>
+    <option>1 then 2 then 3</option>
+    <option>3</option>
+  </question>
+
+  <question>
+    <text>What does the pass statement do?</text>
+    <option>Stops the program</option>
+    <option>Skips the current loop iteration</option>
+    <option>Raises an error on purpose</option>
+    <option correct="true">Does nothing; acts as a placeholder</option>
+  </question>
+
+  <question>
+    <text>What is the difference between break and continue?</text>
+    <option correct="true">break exits the loop; continue skips to the next iteration</option>
+    <option>They do the same thing</option>
+    <option>continue exits the loop; break skips one line</option>
+    <option>break only works with while</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">total = 0
+for number in range(1, 4):
+    total = total + number
+print(total)</code>
+    <option>3</option>
+    <option correct="true">6</option>
+    <option>10</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">total = 0
+for n in range(1, 6):
+    if n % 2 == 0:
+        total += n
+print(total)</code>
+    <option>15</option>
+    <option>2</option>
+    <option correct="true">6</option>
+    <option>4</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">even_count = 0
+for n in range(1, 11):
+    if n % 2 == 0:
+        even_count += 1
+print(even_count)</code>
+    <option>10</option>
+    <option>4</option>
+    <option>Error</option>
+    <option correct="true">5</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">username = "admin"
+password = "1234"
+if username == "admin" and password == "1234":
+    print("Access granted")
+else:
+    print("Access denied")</code>
+    <option correct="true">Access granted</option>
+    <option>Access denied</option>
+    <option>admin</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">for char in "Hi":
+    print(char)</code>
+    <option>Hi</option>
+    <option correct="true">H then i</option>
+    <option>H i</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">i = 5
+while i &gt;= 1:
+    print(i)
+    i -= 1</code>
+    <option>1 then 2 then 3 then 4 then 5</option>
+    <option>5 then 4 then 3 then 2 then 1 then 0</option>
+    <option correct="true">5 then 4 then 3 then 2 then 1</option>
+    <option>Infinite loop</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">factorial = 1
+for n in range(1, 6):
+    factorial *= n
+print(factorial)</code>
+    <option>15</option>
+    <option>5</option>
+    <option>Error</option>
+    <option correct="true">120</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">text = "Education"
+vowel_count = 0
+for char in text.lower():
+    if char in "aeiou":
+        vowel_count += 1
+print(vowel_count)</code>
+    <option correct="true">5</option>
+    <option>4</option>
+    <option>9</option>
+    <option>0</option>
+  </question>
+
+  <question format="python">
+    <text>What is printed?</text>
+    <code language="python">for i in range(1, 4):
+    print("*" * i)</code>
+    <option>* then ** then *** then ****</option>
+    <option correct="true">* then ** then ***</option>
+    <option>***</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What happens conceptually?</text>
+    <code language="python">i = 1
+while i &lt;= 5:
+    print(i)</code>
+    <option>Prints 1 to 5</option>
+    <option>Prints nothing</option>
+    <option correct="true">Infinite loop (i never updates)</option>
+    <option>SyntaxError</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">prompts = ["hi", "", "go"]
+for raw in prompts:
+    if raw == "":
+        continue
+    print(raw)</code>
+    <option>hi then then go</option>
+    <option correct="true">hi then go</option>
+    <option>hi then go then</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">secret = "ok"
+for attempt in ["no", "ok", "later"]:
+    if attempt == secret:
+        print("Yes")
+        break
+    print("No")</code>
+    <option>No then Yes then No</option>
+    <option>Yes</option>
+    <option correct="true">No then Yes</option>
+    <option>No then No then Yes</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(list(range(0, 10, 2)))</code>
+    <option>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</option>
+    <option>Error</option>
+    <option>[2, 4, 6, 8, 10]</option>
+    <option correct="true">[0, 2, 4, 6, 8]</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">account_active = True
+balance = 80
+if account_active:
+    if balance &gt;= 100:
+        print("Withdrawal allowed")
+    else:
+        print("Insufficient balance")
+else:
+    print("Account inactive")</code>
+    <option correct="true">Insufficient balance</option>
+    <option>Withdrawal allowed</option>
+    <option>Account inactive</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">cpu = 92
+if cpu &gt; 90:
+    print("Alert")
+elif cpu &gt;= 70:
+    print("Warm")
+else:
+    print("Normal")</code>
+    <option>Warm</option>
+    <option correct="true">Alert</option>
+    <option>Normal</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">role = "  Admin  ".strip().lower()
+if role == "admin":
+    print("Admin panel")
+else:
+    print("User panel")</code>
+    <option>User panel</option>
+    <option>Admin</option>
+    <option correct="true">Admin panel</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>When should you prefer for over while?</text>
+    <option>Only when using strings</option>
+    <option>Never; while is always better</option>
+    <option>Only for infinite loops</option>
+    <option correct="true">When you know the count or have a sequence to walk</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">for i in range(1, 11):
+    if i % 3 == 0:
+        continue
+    if i == 8:
+        break
+    print(i)</code>
+    <option correct="true">1 then 2 then 4 then 5 then 7</option>
+    <option>1 then 2 then 4 then 5 then 7 then 8</option>
+    <option>1 then 2 then 3 then 4 then 5 then 7</option>
+    <option>1 then 2 then 4 then 5 then 7 then 10</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">total = 0
+for price in [100, 50, 50]:
+    total += price
+total *= 0.9
+print(total)</code>
+    <option>200</option>
+    <option correct="true">180.0</option>
+    <option>180</option>
+    <option>20</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">n = 8
+if n % 2 == 0:
+    print("Even")
+else:
+    print("Odd")</code>
+    <option>Odd</option>
+    <option>8</option>
+    <option correct="true">Even</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(list(range(5, 0, -1)))</code>
+    <option>[5, 4, 3, 2, 1, 0]</option>
+    <option>Error</option>
+    <option>[1, 2, 3, 4, 5]</option>
+    <option correct="true">[5, 4, 3, 2, 1]</option>
+  </question>
+
+  <question>
+    <text>Which is a common AI-generated control-flow bug?</text>
+    <option correct="true">A while loop that never updates its condition variable</option>
+    <option>Using print() at all</option>
+    <option>Writing comments</option>
+    <option>Using range with two arguments</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">age = 15
+if age &gt;= 18:
+    pass
+else:
+    print("Under 18")</code>
+    <option>Nothing</option>
+    <option correct="true">Under 18</option>
+    <option>pass</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>How many times does this print a factor?</text>
+    <code language="python">sample = 12
+count = 0
+for i in range(1, sample + 1):
+    if sample % i == 0:
+        count += 1
+print(count)</code>
+    <option>5</option>
+    <option>12</option>
+    <option correct="true">6</option>
+    <option>4</option>
+  </question>
+
+</quiz>

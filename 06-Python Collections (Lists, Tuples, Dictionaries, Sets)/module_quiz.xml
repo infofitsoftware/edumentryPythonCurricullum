@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Module 6: Python Collections (AI-Era / Beginner) -->
+<!-- App format: <text>, optional <code language="python">, <option correct="true"> -->
+<!-- Correct answers balanced across option positions -->
+
+  <question>
+    <text>Which collection is ordered and mutable?</text>
+    <option>tuple</option>
+    <option correct="true">list</option>
+    <option>set</option>
+    <option>frozenset only</option>
+  </question>
+
+  <question>
+    <text>Which collection stores key → value pairs?</text>
+    <option>list</option>
+    <option>tuple</option>
+    <option correct="true">dict</option>
+    <option>set</option>
+  </question>
+
+  <question>
+    <text>Why do AI/API apps care about collections?</text>
+    <option>Python cannot store more than one value</option>
+    <option>Sets replace all other types</option>
+    <option>Collections are illegal in backends</option>
+    <option correct="true">Real data arrives as lists of items and labeled dict fields (often JSON)</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">numbers = [10, 20, 30, 40, 50]
+print(numbers[0])</code>
+    <option correct="true">10</option>
+    <option>20</option>
+    <option>50</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">numbers = [10, 20, 30, 40, 50]
+print(numbers[-1])</code>
+    <option>10</option>
+    <option correct="true">50</option>
+    <option>40</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">numbers = [10, 20, 30, 40, 50]
+print(numbers[1:4])</code>
+    <option>[10, 20, 30, 40]</option>
+    <option>[20, 30, 40, 50]</option>
+    <option correct="true">[20, 30, 40]</option>
+    <option>[1, 4]</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">fruits = ["apple", "banana", "cherry"]
+fruits[1] = "blueberry"
+print(fruits)</code>
+    <option>Error</option>
+    <option>["apple", "banana", "cherry"]</option>
+    <option>["blueberry", "banana", "cherry"]</option>
+    <option correct="true">['apple', 'blueberry', 'cherry']</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">a = [1]
+a.append([2, 3])
+print(a)</code>
+    <option correct="true">[1, [2, 3]]</option>
+    <option>[1, 2, 3]</option>
+    <option>[[1, 2, 3]]</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">b = [1]
+b.extend([2, 3])
+print(b)</code>
+    <option>[1, [2, 3]]</option>
+    <option correct="true">[1, 2, 3]</option>
+    <option>[[1], 2, 3]</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is printed (two lines)?</text>
+    <code language="python">a = [1, 2, 3]
+b = a
+c = a.copy()
+b.append(4)
+print(a)
+print(c)</code>
+    <option>[1, 2, 3] then [1, 2, 3, 4]</option>
+    <option>[1, 2, 3, 4] then [1, 2, 3, 4]</option>
+    <option correct="true">[1, 2, 3, 4] then [1, 2, 3]</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(sum([2, 4, 6, 8, 10]))</code>
+    <option>10</option>
+    <option>20</option>
+    <option>Error</option>
+    <option correct="true">30</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">nums = [4, 9, 1, 7, 3]
+print(max(nums))
+print(min(nums))</code>
+    <option correct="true">9 then 1</option>
+    <option>1 then 9</option>
+    <option>4 then 3</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(type((5,)))</code>
+    <option>&lt;class 'int'&gt;</option>
+    <option correct="true">&lt;class 'tuple'&gt;</option>
+    <option>&lt;class 'list'&gt;</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(type((5)))</code>
+    <option>&lt;class 'tuple'&gt;</option>
+    <option>&lt;class 'list'&gt;</option>
+    <option correct="true">&lt;class 'int'&gt;</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What happens?</text>
+    <code language="python">point = (10, 20)
+point[0] = 99</code>
+    <option>point becomes (99, 20)</option>
+    <option>point becomes [99, 20]</option>
+    <option>Nothing</option>
+    <option correct="true">TypeError</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">name, age, job = ("Ada", 36, "Engineer")
+print(name)</code>
+    <option correct="true">Ada</option>
+    <option>36</option>
+    <option>Engineer</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">student = {"name": "Alice", "age": 22}
+print(student["name"])</code>
+    <option>name</option>
+    <option correct="true">Alice</option>
+    <option>22</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">student = {"name": "Alice"}
+print(student.get("email", "N/A"))</code>
+    <option>None</option>
+    <option>email</option>
+    <option correct="true">N/A</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What happens?</text>
+    <code language="python">user = {"name": "Ada"}
+print(user["email"])</code>
+    <option>None</option>
+    <option>""</option>
+    <option>missing</option>
+    <option correct="true">KeyError</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">text = "banana"
+freq = {}
+for char in text:
+    freq[char] = freq.get(char, 0) + 1
+print(freq["a"])</code>
+    <option correct="true">3</option>
+    <option>1</option>
+    <option>2</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">company = {"emp1": {"name": "John", "role": "Manager"}}
+print(company["emp1"]["role"])</code>
+    <option>John</option>
+    <option correct="true">Manager</option>
+    <option>emp1</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is true about this set?</text>
+    <code language="python">tags = {"python", "java", "python"}
+print(len(tags))</code>
+    <option>3</option>
+    <option>1</option>
+    <option correct="true">2</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">A = {1, 2, 3}
+B = {3, 4, 5}
+print(A &amp; B)</code>
+    <option>{1, 2, 3, 4, 5}</option>
+    <option>Error</option>
+    <option>{1, 2}</option>
+    <option correct="true">{3}</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">A = {1, 2, 3}
+B = {3, 4, 5}
+print(A | B)</code>
+    <option correct="true">{1, 2, 3, 4, 5}</option>
+    <option>{3}</option>
+    <option>{1, 2}</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">A = {1, 2, 3}
+B = {3, 4, 5}
+print(A - B)</code>
+    <option>{3, 4, 5}</option>
+    <option correct="true">{1, 2}</option>
+    <option>{4, 5}</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Can you index a set like tags[0]?</text>
+    <option>Yes, always</option>
+    <option>Only if the set is sorted</option>
+    <option correct="true">No — sets do not support indexing</option>
+    <option>Only for strings inside the set</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">pairs = [("Ada", 36), ("Alan", 41)]
+people = {}
+for person_name, person_age in pairs:
+    people[person_name] = person_age
+print(people["Ada"])</code>
+    <option>Alan</option>
+    <option>41</option>
+    <option>Error</option>
+    <option correct="true">36</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">nums = [1, 2, 2, 3, 4, 4, 5, 6]
+unique_evens = {n for n in nums if n % 2 == 0}
+print(unique_evens)</code>
+    <option correct="true">{2, 4, 6}</option>
+    <option>[2, 4, 6]</option>
+    <option>{1, 2, 3, 4, 5, 6}</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">prompts = ["  hi  ", "", "go"]
+ready = []
+for p in prompts:
+    clean = p.strip()
+    if clean != "":
+        ready.append(clean)
+print(ready)</code>
+    <option>['  hi  ', 'go']</option>
+    <option correct="true">['hi', 'go']</option>
+    <option>['hi', '', 'go']</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">squares = [x ** 2 for x in range(1, 4)]
+print(squares)</code>
+    <option>[1, 2, 3]</option>
+    <option>[1, 4, 9, 16]</option>
+    <option correct="true">[1, 4, 9]</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">data = [1, 2, 3]
+print(tuple(data))</code>
+    <option>[1, 2, 3]</option>
+    <option>Error</option>
+    <option>1 2 3</option>
+    <option correct="true">(1, 2, 3)</option>
+  </question>
+
+  <question>
+    <text>Which collection fits unique tags / IDs best?</text>
+    <option correct="true">set</option>
+    <option>list only</option>
+    <option>tuple only</option>
+    <option>int</option>
+  </question>
+
+  <question>
+    <text>Which is a common AI-generated collection bug?</text>
+    <option>Using print on a list</option>
+    <option correct="true">Using append when extend was intended (or the reverse)</option>
+    <option>Writing comments</option>
+    <option>Calling len()</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">d1 = {"a": 1, "b": 2}
+d2 = {"b": 3, "c": 4}
+merged = d1.copy()
+for key, value in d2.items():
+    if key in merged:
+        merged[key] += value
+    else:
+        merged[key] = value
+print(merged["b"])</code>
+    <option>2</option>
+    <option>3</option>
+    <option correct="true">5</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">cart = ["apple"]
+cart.append("milk")
+cart.extend(["eggs"])
+print(len(cart))</code>
+    <option>1</option>
+    <option>Error</option>
+    <option>4</option>
+    <option correct="true">3</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">user = {"id": 7, "role": "Admin"}
+print(user.get("role", "").strip().lower() == "admin")</code>
+    <option correct="true">True</option>
+    <option>False</option>
+    <option>Admin</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">raw = [1, 2, 2, 3]
+ordered_unique = []
+for item in raw:
+    if item not in ordered_unique:
+        ordered_unique.append(item)
+print(ordered_unique)</code>
+    <option>{1, 2, 3}</option>
+    <option correct="true">[1, 2, 3]</option>
+    <option>[1, 2, 2, 3]</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>list vs tuple — which statement is correct?</text>
+    <option>Both are immutable</option>
+    <option>Both forbid duplicates</option>
+    <option correct="true">list is mutable; tuple is immutable</option>
+    <option>tuple supports item assignment</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(25 in [10, 25, 15])</code>
+    <option>25</option>
+    <option>Error</option>
+    <option>False</option>
+    <option correct="true">True</option>
+  </question>
+
+</quiz>

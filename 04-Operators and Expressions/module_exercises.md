@@ -1,26 +1,26 @@
 # Module 4 — Practice Exercises: Operators and Expressions
 
-**Instructions**
+**For students**
 
-- Attempt each exercise before opening the Instructor Solution Guide.
-- Use Modules 1–4 concepts. Minimal `if` / `else` is allowed where a decision must be shown (preview of Module 5).
-- Test your code by running it.
+1. Read `module_notes.md`  
+2. Run `module.py` and understand each print  
+3. Solve exercises below in order  
+4. Predict output before running  
+5. If you use AI, explain every line yourself  
+
+**Difficulty:** [E] Easy · [M] Medium · [C] Challenge  
+
+Use only Modules 1–4. You do **not** need loops.  
+If an exercise asks you to print different messages, a tiny `if` / `else` preview is OK (full control flow is Module 5). Prefer printing the `True`/`False` result when that is enough.
 
 ---
 
-# LEVEL 1 — FUNDAMENTALS
+## A. Arithmetic & precedence
 
-### Exercise 1 — Basic Arithmetic Printout
+### A1. [E] Four calculations
+Print the results of `23 + 19`, `78 - 45`, `7 * 6`, and `144 / 12` on four lines.
 
-**Difficulty:** Easy  
-**Concepts:** arithmetic operators  
-
-**Problem:**  
-Print results of: `23 + 19`, `78 - 45`, `7 * 6`, and `144 / 12` (four lines, numbers only or clearly labeled).
-
-**Example Input:** (none)
-
-**Expected Output:**
+Expected:
 ```
 42
 33
@@ -28,608 +28,292 @@ Print results of: `23 + 19`, `78 - 45`, `7 * 6`, and `144 / 12` (four lines, num
 12.0
 ```
 
-**Hint:** Use `/` for the last one — Python 3 returns a float.
+### A2. [E] Floor, mod, power
+Print `15 // 4`, `20 % 3`, and `2 ** 4` on three lines.
 
----
-
-### Exercise 2 — Floor, Modulus, Power
-
-**Difficulty:** Easy  
-**Concepts:** `//`, `%`, `**`  
-
-**Problem:**  
-Print the results of `15 // 4`, `20 % 3`, and `2 ** 4` on three lines.
-
-**Example Input:** (none)
-
-**Expected Output:**
+Expected:
 ```
 3
 2
 16
 ```
 
-**Hint:** `//` drops the fraction; `%` is remainder.
-
----
-
-### Exercise 3 — Compare Six Ways
-
-**Difficulty:** Easy  
-**Concepts:** comparison operators  
-
-**Problem:**  
-Print the boolean results of:
-
-`10 > 5`, `7 < 3`, `15 == 15`, `20 != 10`, `8 >= 8`, `9 <= 4`
-
-**Example Input:** (none)
-
-**Expected Output:**
-```
-True
-False
-True
-True
-True
-False
-```
-
-**Hint:** Each expression prints `True` or `False`.
-
----
-
-### Exercise 4 — Logic Trio
-
-**Difficulty:** Easy  
-**Concepts:** `and`, `or`, `not`  
-
-**Problem:**  
-Print:
-
-`(10 > 5) and (8 < 12)`  
-`(7 == 3) or (15 > 10)`  
-`not (20 == 20)`
-
-**Example Input:** (none)
-
-**Expected Output:**
-```
-True
-True
-False
-```
-
-**Hint:** Evaluate each side before combining.
-
----
-
-### Exercise 5 — Assignment Trace Warm-up
-
-**Difficulty:** Easy  
-**Concepts:** `+=`, `*=`, `-=`  
-
-**Problem:**  
-Start with `x = 5`. Apply `x += 3`, print `x`. Then `x *= 2`, print `x`. Then `x -= 4`, print `x`.
-
-**Example Input:** (none)
-
-**Expected Output:**
-```
-8
-16
-12
-```
-
-**Hint:** Each update uses the current value of `x`.
-
----
-
-# LEVEL 2 — APPLY THE CONCEPT
-
-### Exercise 6 — Rectangle Area
-
-**Difficulty:** Easy  
-**Concepts:** `input`, casting, `*`  
-
-**Problem:**  
-Ask for length and width (floats). Print the area (`length * width`).
-
-**Example Input:**
-```
-5
-3.5
-```
-
-**Expected Output:**
-```
-17.5
-```
-
-**Hint:** `float(input(...))`.
-
----
-
-### Exercise 7 — Simple Interest
-
-**Difficulty:** Easy  
-**Concepts:** arithmetic expression  
-
-**Problem:**  
-Given `P = 5000`, `R = 5`, `T = 3`, compute `SI = (P * R * T) / 100` and print it.
-
-**Example Input:** (none)
-
-**Expected Output:**
-```
-750.0
-```
-
-**Hint:** Parentheses help readability even when precedence works.
-
----
-
-### Exercise 8 — a and b Trio
-
-**Difficulty:** Medium  
-**Concepts:** `/`, `//`, `%`  
-
-**Problem:**  
+### A3. [E] Division twins
 Given `a = 12` and `b = 5`, print `a / b`, `a // b`, and `a % b` on three lines.
 
-**Example Input:** (none)
-
-**Expected Output:**
+Expected:
 ```
 2.4
 2
 2
 ```
 
-**Hint:** Compare float division vs floor vs remainder.
+### A4. [M] Boxes and leftovers
+Given `items = 17` and `box_size = 5`, print full boxes and leftover.
+
+Expected:
+```
+3
+2
+```
+
+### A5. [M] Precedence
+Predict, then print:
+
+```python
+print(2 + 3 * 4)
+print((2 + 3) * 4)
+```
+
+Write a one-line comment: why the answers differ.
 
 ---
 
-### Exercise 9 — Membership Checks
+## B. Comparisons
 
-**Difficulty:** Easy  
-**Concepts:** `in`, `not in`, strings  
+### B1. [E] Six comparisons
+Print:
 
-**Problem:**  
-For `word = "apple"`, print whether `"a"` is in `word`, and whether `"z"` is not in `word`.
+`10 > 5`, `7 < 3`, `15 == 15`, `20 != 10`, `8 >= 8`, `9 <= 4`
 
-**Example Input:** (none)
-
-**Expected Output:**
+Expected:
 ```
 True
+False
 True
-```
-
-**Hint:** Two print statements.
-
----
-
-### Exercise 10 — None Identity
-
-**Difficulty:** Easy  
-**Concepts:** `is`, `is not`, `None`  
-
-**Problem:**  
-Set `data = None`. Print `data is None` and `data is not None`.
-
-**Example Input:** (none)
-
-**Expected Output:**
-```
+True
 True
 False
 ```
 
-**Hint:** Prefer `is` for `None` checks.
+### B2. [E] Assign vs compare
+```python
+score = 100
+print(score == 100)
+```
+Predict the output. Then write a comment explaining the difference between `=` and `==`.
+
+### B3. [M] Case trap
+Print `"admin" == "Admin"` and explain the result in a comment.
+
+### B4. [M] Cast then compare
+```python
+age_text = "20"
+```
+Convert to `int` and print whether the age is `>= 18`.
+
+### B5. [M] AI bug: comparing text as a number
+```python
+age_text = "9"
+print(age_text > "18")
+print(int(age_text) > 18)
+```
+Predict both lines. Write a comment: which one is the safe check for voting age?
 
 ---
 
-# LEVEL 3 — COMBINE CONCEPTS
+## C. Logical operators
 
-### Exercise 11 — Voting Eligibility
+### C1. [E] Logic trio
+Print:
 
-**Difficulty:** Medium  
-**Concepts:** `input`, `int`, `>=`, minimal `if`  
+`(10 > 5) and (8 < 12)`  
+`(7 == 3) or (15 > 10)`  
+`not (20 == 20)`
 
-**Problem:**  
-Ask for age. If age ≥ 18 print `Eligible to vote`, else print `Not eligible`.
-
-**Example Input:**
-```
-20
-```
-
-**Expected Output:**
-```
-Eligible to vote
-```
-
-**Hint:** `age >= 18`.
-
----
-
-### Exercise 12 — Positive / Negative / Zero
-
-**Difficulty:** Medium  
-**Concepts:** comparisons, `if-elif-else` preview  
-
-**Problem:**  
-Ask for an integer. Print `Positive`, `Negative`, or `Zero`.
-
-**Example Input:**
-```
--4
-```
-
-**Expected Output:**
-```
-Negative
-```
-
-**Hint:** Check `> 0`, then `< 0`, else zero.
-
----
-
-### Exercise 13 — Mini Login
-
-**Difficulty:** Medium  
-**Concepts:** `and`, string compare, `strip` optional  
-
-**Problem:**  
-Ask for username and password. Correct values: `admin` / `1234`.  
-If both match, print `Access granted`, else `Access denied`.
-
-**Example Input:**
-```
-admin
-1234
-```
-
-**Expected Output:**
-```
-Access granted
-```
-
-**Hint:** `(user == "admin") and (password == "1234")`.
-
----
-
-### Exercise 14 — Divisible by 3 and 5
-
-**Difficulty:** Medium  
-**Concepts:** `%`, `and`  
-
-**Problem:**  
-Ask for an integer. Print `Yes` if divisible by both 3 and 5, otherwise `No`.
-
-**Example Input:**
-```
-30
-```
-
-**Expected Output:**
-```
-Yes
-```
-
-**Hint:** `(n % 3 == 0) and (n % 5 == 0)`.
-
----
-
-### Exercise 15 — Normalized Admin Check
-
-**Difficulty:** Medium  
-**Concepts:** string methods + `==`  
-
-**Problem:**  
-Ask for a role string. Clean with `strip().lower()`. Print `True` if it equals `"admin"`, else `False`.
-
-**Example Input:**
-```
-  AdMiN  
-```
-
-**Expected Output:**
+Expected:
 ```
 True
+True
+False
 ```
 
-**Hint:** Normalize before comparing.
+### C2. [E] Ticket gate
+```python
+has_ticket = True
+has_id = False
+```
+Print `has_ticket and has_id`, then `has_ticket or has_id`, then `not has_id`.
+
+### C3. [M] Login expression
+Given:
+```python
+entered_user = "admin"
+entered_pass = "1234"
+```
+Print whether both match `"admin"` and `"1234"` using `and`.
+
+### C4. [M] Divisible by 3 and 5
+For `value = 30` and then `value = 10`, print whether each is divisible by both 3 and 5.
+
+### C5. [C] Parentheses matter
+Predict, then print:
+
+```python
+print(True or False and False)
+print((True or False) and False)
+```
+
+Write a comment about operator order (`and` before `or`).
 
 ---
 
-### Exercise 16 — Email Gate
+## D. Assignment & membership & identity
 
-**Difficulty:** Medium  
-**Concepts:** `in`, `and`, strings  
+### D1. [E] Assignment chain
+Start with `x = 5`. Apply `x += 3`, print `x`. Then `x *= 2`, print `x`. Then `x -= 4`, print `x`.
 
-**Problem:**  
-Ask for an email. After `strip().lower()`, print `Valid format` if it contains `@` **and** `.`, otherwise `Invalid format`.
-
-**Example Input:**
+Expected:
 ```
-student@example.com
-```
-
-**Expected Output:**
-```
-Valid format
+8
+16
+12
 ```
 
-**Hint:** `("@" in email) and ("." in email)`.
+### D2. [E] Cart updater warm-up
+Start `total = 0`. Use `+=` to add `100`, then `50`, then `50`. Print `total`.
+
+Expected: `200`
+
+### D3. [E] Membership
+For `word = "apple"`, print whether `"a"` is in `word`, and whether `"z"` is not in `word`.
+
+### D4. [E] None identity
+Set `data = None`. Print `data is None` and `data is not None`.
+
+### D5. [M] is vs ==
+```python
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+```
+Print `a is b`, `a is c`, and `a == c`. Write a comment explaining the difference.
+
+### D6. [M] Role check
+```python
+roles = ["admin", "editor", "viewer"]
+```
+Print whether `"editor"` is in `roles` and whether `"guest"` is not in `roles`.
 
 ---
 
-# LEVEL 4 — PROBLEM SOLVING
+## E. Cleaning + operators (Modules 3 + 4)
 
-### Exercise 17 — Cart Updater
+### E1. [M] Normalized admin check
+```python
+typed = "  AdMiN  "
+```
+Clean with `strip().lower()` and print whether it equals `"admin"`.
 
-**Difficulty:** Challenging  
-**Concepts:** assignment operators, arithmetic  
+### E2. [M] Email gate expression
+```python
+raw = "  Student@Example.COM  "
+```
+Clean, then print whether it contains both `"@"` and `"."`.
 
-**Problem:**  
-Start `total = 0`.  
+### E3. [M] Profile flag
+```python
+first = "  sara  "
+role = "Admin"
+```
+Clean both. Print whether the cleaned first name equals `"sara"` **and** the cleaned role equals `"admin"`.
+
+### E4. [M] Discount threshold
+```python
+price = 499.5
+qty = 2
+```
+Compute `subtotal = price * qty`. Print the subtotal, the 10% off amount (`* 0.9`), and whether `subtotal > 500`.
+
+### E5. [C] AI draft fix
+An AI wrote:
+```python
+username = "  Admin "
+print(username == "admin")
+```
+Show why this prints `False`, then fix it so it prints `True`.
+
+---
+
+## F. Real-world style (still beginner)
+
+### F1. [M] Simple interest
+Given `P = 5000`, `R = 5`, `T = 3`, compute `SI = (P * R * T) / 100` and print it.
+
+Expected: `750.0`
+
+### F2. [M] Token budget (AI era)
+```python
+tokens_used = 1200
+budget = 1000
+```
+Print whether usage is over budget, and how many tokens over (`tokens_used - budget`).
+
+### F3. [M] CPU alert
+```python
+cpu_percent = 92
+```
+Print `cpu_percent > 90` and `cpu_percent >= 100`.
+
+### F4. [M] Voting eligibility (tiny if preview)
+Ask for age with `input`, cast to `int`.  
+If age ≥ 18 print `Eligible to vote`, else print `Not eligible`.
+
+### F5. [M] Mini login (tiny if preview)
+Ask for username and password. Correct values: `admin` / `1234`.  
+Print `Access granted` or `Access denied`.
+
+### F6. [C] Cart with discount
+Start `total = 0.0`.  
 Ask for three item prices (floats). Use `+=` to add each.  
-Then apply a 10% discount using `total *= 0.9`.  
-Print the final total rounded to 2 decimal places.
+Then apply 10% off with `total *= 0.9`.  
+Print the final total with 2 decimal places (`:.2f`).
 
-**Example Input:**
+Example input:
 ```
 100
 50
 50
 ```
+Expected: `180.00`
 
-**Expected Output:**
-```
-180.00
-```
-
-**Hint:** Sum first (200), then `* 0.9` → 180.
-
----
-
-### Exercise 18 — Grade Band Expression
-
-**Difficulty:** Challenging  
-**Concepts:** comparisons, logical operators  
-
-**Problem:**  
-Ask for marks (0–100 integer). Print:
-
-- `Excellent` if marks ≥ 90  
-- `Good` if 75 ≤ marks < 90  
-- `Average` if 50 ≤ marks < 75  
-- `Fail` otherwise  
-
-**Example Input:**
-```
-82
-```
-
-**Expected Output:**
-```
-Good
-```
-
-**Hint:** Use `if` / `elif` / `else` with `>=` and `<`.
-
----
-
-### Exercise 19 — Even Packed Boxes
-
-**Difficulty:** Challenging  
-**Concepts:** `//`, `%`, `==`  
-
-**Problem:**  
-Ask for `items` and `box_size` (positive integers). Print:
-
-1. Number of full boxes (`//`)  
-2. Leftover (`%`)  
-3. `Even leftover` if leftover is even, else `Odd leftover`
-
-**Example Input:**
-```
-17
-5
-```
-
-**Expected Output:**
-```
-3
-2
-Even leftover
-```
-
-**Hint:** Even leftover means `leftover % 2 == 0`.
-
----
-
-### Exercise 20 — Access Policy
-
-**Difficulty:** Challenging  
-**Concepts:** `and` / `or` / `not`, membership, cleaning  
-
-**Problem:**  
+### F7. [C] Access policy
 Ask for `username` and `role`.  
 Clean both with `strip().lower()`.  
-Allowed roles: treat as check with `role == "admin" or role == "editor"` (or `role in ["admin", "editor"]`).  
-Grant access only if username is not empty **and** role is allowed.  
+Grant access only if username is not empty **and** role is `"admin"` or `"editor"`.  
 Print `Access granted` or `Access denied`.
 
-**Example Input:**
+Example:
 ```
 alice
 Editor
 ```
+→ `Access granted`
 
-**Expected Output:**
-```
-Access granted
-```
-
-**Example Input:**
 ```
 
 viewer
 ```
-
-**Expected Output:**
-```
-Access denied
-```
-
-**Hint:** Empty username → `username == ""` after strip.
+→ `Access denied`
 
 ---
 
-# Instructor Solution Guide
+## G. Short written answers (as comments)
 
-```python
-# Exercise 1
-print(23 + 19)
-print(78 - 45)
-print(7 * 6)
-print(144 / 12)
+### G1. Why does `/` return a float in Python 3?
+Answer:
 
-# Exercise 2
-print(15 // 4)
-print(20 % 3)
-print(2 ** 4)
+### G2. When should you use `is` instead of `==`?
+Answer:
 
-# Exercise 3
-print(10 > 5)
-print(7 < 3)
-print(15 == 15)
-print(20 != 10)
-print(8 >= 8)
-print(9 <= 4)
+### G3. Why can AI-written conditions “look right” but fail?
+Answer:
 
-# Exercise 4
-print((10 > 5) and (8 < 12))
-print((7 == 3) or (15 > 10))
-print(not (20 == 20))
+### G4. What does `17 // 5` and `17 % 5` mean in plain English?
+Answer:
 
-# Exercise 5
-x = 5
-x += 3
-print(x)
-x *= 2
-print(x)
-x -= 4
-print(x)
+---
 
-# Exercise 6
-length = float(input("Length: "))
-width = float(input("Width: "))
-print(length * width)
+## Done?
 
-# Exercise 7
-P, R, T = 5000, 5, 3
-SI = (P * R * T) / 100
-print(SI)
-
-# Exercise 8
-a, b = 12, 5
-print(a / b)
-print(a // b)
-print(a % b)
-
-# Exercise 9
-word = "apple"
-print("a" in word)
-print("z" not in word)
-
-# Exercise 10
-data = None
-print(data is None)
-print(data is not None)
-
-# Exercise 11
-age = int(input("Age: "))
-if age >= 18:
-    print("Eligible to vote")
-else:
-    print("Not eligible")
-
-# Exercise 12
-number = int(input("Number: "))
-if number > 0:
-    print("Positive")
-elif number < 0:
-    print("Negative")
-else:
-    print("Zero")
-
-# Exercise 13
-username = input("Username: ")
-password = input("Password: ")
-if username == "admin" and password == "1234":
-    print("Access granted")
-else:
-    print("Access denied")
-
-# Exercise 14
-n = int(input("Number: "))
-if (n % 3 == 0) and (n % 5 == 0):
-    print("Yes")
-else:
-    print("No")
-
-# Exercise 15
-role = input("Role: ").strip().lower()
-print(role == "admin")
-
-# Exercise 16
-email = input("Email: ").strip().lower()
-if ("@" in email) and ("." in email):
-    print("Valid format")
-else:
-    print("Invalid format")
-
-# Exercise 17
-total = 0.0
-total += float(input("Price 1: "))
-total += float(input("Price 2: "))
-total += float(input("Price 3: "))
-total *= 0.9
-print(f"{total:.2f}")
-
-# Exercise 18
-marks = int(input("Marks: "))
-if marks >= 90:
-    print("Excellent")
-elif marks >= 75:
-    print("Good")
-elif marks >= 50:
-    print("Average")
-else:
-    print("Fail")
-
-# Exercise 19
-items = int(input("Items: "))
-box_size = int(input("Box size: "))
-full_boxes = items // box_size
-leftover = items % box_size
-print(full_boxes)
-print(leftover)
-if leftover % 2 == 0:
-    print("Even leftover")
-else:
-    print("Odd leftover")
-
-# Exercise 20
-username = input("Username: ").strip().lower()
-role = input("Role: ").strip().lower()
-allowed = role == "admin" or role == "editor"
-if username != "" and allowed:
-    print("Access granted")
-else:
-    print("Access denied")
-```
+Re-read any weak section in `module_notes.md`, rerun `module.py`, then take `module_quiz.xml`.

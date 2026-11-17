@@ -1,409 +1,163 @@
 # Module 9 — Practice Exercises: Important Modules
 
-**Instructions:** Attempt before opening the Instructor Solution Guide. Use the standard library only (no pip packages required).
+**For students**
+
+1. Read `module_notes.md`  
+2. Run `module.py` and understand each print  
+3. Solve exercises below in order  
+4. Predict output before running  
+5. If you use AI, explain every line yourself  
+
+**Difficulty:** [E] Easy · [M] Medium · [C] Challenge  
+
+Use the **standard library only** (no pip packages required).
 
 ---
 
-# LEVEL 1 — FUNDAMENTALS
+## A. math / random / statistics
 
-### Exercise 1 — Square Root
+### A1. [E] Square root
+Print `math.sqrt(144)`.
 
-**Difficulty:** Easy  
-**Concepts:** `math`  
+Expected: `12.0`
 
-**Problem:** Print `math.sqrt(144)`.
+### A2. [E] Ceil and floor
+Print `math.ceil(3.2)` and `math.floor(3.8)`.
 
-**Expected Output:**
-```
-12.0
-```
+### A3. [E] Dice roll
+Print a random integer from 1 to 6 inclusive.
 
-**Hint:** `import math`
+### A4. [E] Random choice
+From `["python", "java", "go"]`, print one random language.
 
----
+### A5. [E] Mean score
+For `[80, 90, 100]`, print the mean.
 
-### Exercise 2 — Dice Roll
+Expected: `90`
 
-**Difficulty:** Easy  
-**Concepts:** `random`  
+### A6. [M] Seeded demo
+Set `random.seed(42)`, then print `random.randint(1, 10)` twice in one program  
+after resetting the seed before the second call too. Write a comment about reproducibility.
 
-**Problem:** Print a random integer from 1 to 6 inclusive.
-
-**Hint:** `random.randint(1, 6)` (output varies)
-
----
-
-### Exercise 3 — Random Choice
-
-**Difficulty:** Easy  
-**Concepts:** `random.choice`  
-
-**Problem:** From `["python", "java", "go"]`, print one random language.
-
-**Hint:** Output varies.
+### A7. [M] Sample and shuffle
+Sample 3 numbers from `range(1, 11)`, then shuffle `[1, 2, 3, 4, 5]` and print both.
 
 ---
 
-### Exercise 4 — Today’s Date
+## B. datetime / time / sys
 
-**Difficulty:** Easy  
-**Concepts:** `datetime`  
+### B1. [E] Today’s date
+Print today’s date as `YYYY-MM-DD`.
 
-**Problem:** Print today’s date in `YYYY-MM-DD` format.
+### B2. [E] Formatted now
+Print current datetime as `YYYY-MM-DD HH:MM:SS`.
 
-**Hint:** `datetime.date.today().strftime("%Y-%m-%d")`
+### B3. [M] Parse a date
+Parse `"2026-07-23"` with `strptime` and print `.date()`.
 
----
+### B4. [M] Tiny timer
+Record `time.time()` before and after `time.sleep(0.1)`. Print elapsed seconds rounded to 2 decimals.
 
-### Exercise 5 — Mean Score
+### B5. [M] sys info
+Print `sys.version.split()[0]` and `sys.platform`.
 
-**Difficulty:** Easy  
-**Concepts:** `statistics`  
-
-**Problem:** For `[80, 90, 100]`, print the mean.
-
-**Expected Output:**
-```
-90
-```
-
-**Hint:** `statistics.mean(...)`
+### B6. [C] argv awareness
+Print `sys.argv`. Write a comment explaining what `argv[0]` is.
 
 ---
 
-# LEVEL 2 — APPLY THE CONCEPT
+## C. os + files
 
-### Exercise 6 — Ceil and Floor
+### C1. [E] cwd and join
+Print current working directory. Build a path with `os.path.join("data", "file.txt")` and print it.
 
-**Difficulty:** Easy  
-**Concepts:** `math`  
+### C2. [M] Make folder + file
+Create a folder `_practice9` (or similar), write `hello.txt` inside it, print whether the file exists, then delete the folder with `shutil.rmtree`.
 
-**Problem:** Print `math.ceil(3.2)` and `math.floor(3.2)` on two lines.
+### C3. [M] Environment variable
+Set `os.environ["COURSE_NAME"] = "PythonFundamentals"`, then print it with `.get`.  
+Also print a missing key with default `"missing"`.
 
-**Expected Output:**
-```
-4
-3
-```
-
----
-
-### Exercise 7 — Seeded Random
-
-**Difficulty:** Medium  
-**Concepts:** `random.seed`  
-
-**Problem:** Call `random.seed(1)` then print `random.randint(1, 100)` twice in a fresh mental model: with seed reset before each program run, first value is reproducible.  
-Print one value after `seed(1)`.
-
-**Expected Output:**
-```
-18
-```
-(Using Python’s RNG after `seed(1)` → first `randint(1,100)` is 18 in current CPython; if your version differs, print your value and note it.)
-
-**Hint:** Instructor solution uses `seed(1)` then one `randint`.
-
----
-
-### Exercise 8 — Format Now
-
-**Difficulty:** Easy  
-**Concepts:** `strftime`  
-
-**Problem:** Print current datetime formatted as `YYYY-MM-DD HH:MM` (minute precision is fine).
-
-**Hint:** `"%Y-%m-%d %H:%M"`
-
----
-
-### Exercise 9 — Join Path
-
-**Difficulty:** Easy  
-**Concepts:** `os.path.join`  
-
-**Problem:** Print `os.path.join("data", "raw", "input.csv")`.
-
-**Hint:** Do not hardcode `data/raw/...` with slashes only.
-
----
-
-### Exercise 10 — Env Default
-
-**Difficulty:** Easy  
-**Concepts:** `os.environ.get`  
-
-**Problem:** Print `os.environ.get("NOT_A_REAL_KEY", "missing")`.
-
-**Expected Output:**
-```
-missing
-```
-
----
-
-# LEVEL 3 — COMBINE CONCEPTS
-
-### Exercise 11 — JSON Round-Trip String
-
-**Difficulty:** Medium  
-**Concepts:** `json.dumps` / `loads`  
-
-**Problem:** Convert `{"course": "Python", "level": 1}` to a JSON string and back. Print the `course` value after loading.
-
-**Expected Output:**
-```
-Python
-```
-
----
-
-### Exercise 12 — JSON File Save/Load
-
-**Difficulty:** Medium  
-**Concepts:** `json.dump` / `load`, files  
-
-**Problem:** Save `{"name": "Ada", "score": 95}` to `student.json`, load it, print `score`.
-
-**Expected Output:**
-```
-95
-```
-
----
-
-### Exercise 13 — CSV Write/Read
-
-**Difficulty:** Medium  
-**Concepts:** `csv.DictWriter` / `DictReader`  
-
-**Problem:** Write `scores.csv` with header `name,score` and rows Ada/90, Bob/80. Read and print each `name:score`.
-
-**Expected Output:**
-```
-Ada:90
-Bob:80
-```
-
-**Hint:** `newline=""` when opening for csv.
-
----
-
-### Exercise 14 — List Directory Count
-
-**Difficulty:** Medium  
-**Concepts:** `os.listdir`, files  
-
-**Problem:** Create folder `demo9` with two text files. Print how many items `os.listdir("demo9")` returns.
-
-**Expected Output:**
-```
-2
-```
-
----
-
-### Exercise 15 — Summary Dict + JSON
-
-**Difficulty:** Medium  
-**Concepts:** statistics + datetime + json  
-
-**Problem:** For scores `[70, 80, 90]`, build dict with `mean` and `date` (today `YYYY-MM-DD`). Print `json.dumps` result containing both keys.
-
-**Hint:** Use `statistics.mean` and `datetime.date.today()`.
-
----
-
-### Exercise 16 — Parse Date
-
-**Difficulty:** Medium  
-**Concepts:** `strptime`  
-
-**Problem:** Parse `"2026-12-25"` with `"%Y-%m-%d"` and print the month number.
-
-**Expected Output:**
-```
-12
-```
-
----
-
-# LEVEL 4 — PROBLEM SOLVING
-
-### Exercise 17 — Random Team Picker Function
-
-**Difficulty:** Medium  
-**Concepts:** functions + random  
-
-**Problem:** Write `pick_team(names, k)` returning `random.sample(names, k)`.  
-Demo with 5 names and `k=2`, print length of result.
-
-**Expected Output:**
-```
-2
-```
-
----
-
-### Exercise 18 — CLI Arg Echo
-
-**Difficulty:** Medium  
-**Concepts:** `sys.argv`  
-
-**Problem:** Write a script that prints `No argument` if only script name is present, else prints the first CLI argument.
-
-**Example:**
-```
-python echo_arg.py hello
-```
-→ `hello`
-
-**Hint:** `len(sys.argv)`
-
----
-
-### Exercise 19 — CSV Average
-
-**Difficulty:** Challenging  
-**Concepts:** csv + casting + statistics  
-
-**Problem:** Using the CSV from Exercise 13 (or recreate), compute average score and print as float.
-
-**Expected Output:**
-```
-85.0
-```
-
----
-
-### Exercise 20 — Mini Config Tool
-
-**Difficulty:** Challenging  
-**Concepts:** json + os + functions  
-
-**Problem:**
-
-1. Write `save_config(path, data)` and `load_config(path)` using JSON.  
-2. Save `{"env": "dev", "debug": True}` to `config.json`.  
-3. Load and print `env`.
-
-**Expected Output:**
-```
-dev
-```
-
----
-
-# Instructor Solution Guide
-
+### C4. [C] AI bug: hardcoded slash
+An AI wrote:
 ```python
-import math
-import random
-import statistics
-import datetime
-import os
-import sys
-import json
-import csv
-
-# Exercise 1
-print(math.sqrt(144))
-
-# Exercise 2
-print(random.randint(1, 6))
-
-# Exercise 3
-print(random.choice(["python", "java", "go"]))
-
-# Exercise 4
-print(datetime.date.today().strftime("%Y-%m-%d"))
-
-# Exercise 5
-print(statistics.mean([80, 90, 100]))
-
-# Exercise 6
-print(math.ceil(3.2))
-print(math.floor(3.2))
-
-# Exercise 7
-random.seed(1)
-print(random.randint(1, 100))
-
-# Exercise 8
-print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
-
-# Exercise 9
-print(os.path.join("data", "raw", "input.csv"))
-
-# Exercise 10
-print(os.environ.get("NOT_A_REAL_KEY", "missing"))
-
-# Exercise 11
-text = json.dumps({"course": "Python", "level": 1})
-data = json.loads(text)
-print(data["course"])
-
-# Exercise 12
-with open("student.json", "w", encoding="utf-8") as f:
-    json.dump({"name": "Ada", "score": 95}, f)
-with open("student.json", "r", encoding="utf-8") as f:
-    print(json.load(f)["score"])
-
-# Exercise 13
-with open("scores.csv", "w", encoding="utf-8", newline="") as f:
-    writer = csv.DictWriter(f, fieldnames=["name", "score"])
-    writer.writeheader()
-    writer.writerow({"name": "Ada", "score": "90"})
-    writer.writerow({"name": "Bob", "score": "80"})
-with open("scores.csv", "r", encoding="utf-8", newline="") as f:
-    for row in csv.DictReader(f):
-        print(f"{row['name']}:{row['score']}")
-
-# Exercise 14
-os.makedirs("demo9", exist_ok=True)
-open(os.path.join("demo9", "a.txt"), "w", encoding="utf-8").write("a")
-open(os.path.join("demo9", "b.txt"), "w", encoding="utf-8").write("b")
-print(len(os.listdir("demo9")))
-
-# Exercise 15
-payload = {
-    "mean": statistics.mean([70, 80, 90]),
-    "date": datetime.date.today().strftime("%Y-%m-%d"),
-}
-print(json.dumps(payload))
-
-# Exercise 16
-dt = datetime.datetime.strptime("2026-12-25", "%Y-%m-%d")
-print(dt.month)
-
-# Exercise 17
-def pick_team(names, k):
-    return random.sample(names, k)
-
-print(len(pick_team(["Ada", "Bob", "Cam", "Dee", "Eve"], 2)))
-
-# Exercise 18
-if len(sys.argv) < 2:
-    print("No argument")
-else:
-    print(sys.argv[1])
-
-# Exercise 19
-scores = []
-with open("scores.csv", "r", encoding="utf-8", newline="") as f:
-    for row in csv.DictReader(f):
-        scores.append(float(row["score"]))
-print(statistics.mean(scores))
-
-# Exercise 20
-def save_config(path, data):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
-
-def load_config(path):
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-save_config("config.json", {"env": "dev", "debug": True})
-print(load_config("config.json")["env"])
+path = "data\\file.txt"
 ```
+Rewrite with `os.path.join` and explain why in a comment.
+
+---
+
+## D. json / csv
+
+### D1. [E] dumps / loads
+Convert `{"name": "Ada", "age": 36}` to a JSON string and back. Print the name.
+
+### D2. [M] dump / load file
+Save that dict to `person.json` with `json.dump`, reload with `json.load`, print the dict.  
+Clean up the file afterward if you want.
+
+### D3. [M] dumps vs dump
+Write a comment: when do you use `dumps` vs `dump`?
+
+### D4. [M] CSV write/read
+Write two rows (`Ada,90` and `Bob,75`) with `csv.DictWriter`, then read with `DictReader`  
+and print each name with `int(score)`.
+
+### D5. [C] AI bug: CSV types
+An AI printed `row["score"] + 1` without casting. Show the bug idea, then fix with `int(...)`.
+
+---
+
+## E. Combined / real-world
+
+### E1. [M] summarize_scores
+Write a function that returns a dict with `count`, `mean`, `max`, and `generated_at` (date string).  
+Print it as JSON.
+
+### E2. [M] stamp
+Write `stamp(message)` that returns `"[YYYY-MM-DD HH:MM:SS] message"`.
+
+### E3. [M] random_team
+Write `random_team(names, size)` using `random.sample`. Test with 5 names and size 3.
+
+### E4. [M] load_config
+Save a small JSON config file, write `load_config(path)` using `json.load`, print one field.
+
+### E5. [C] Mini score logger
+Append one CSV row with today’s date, a student name, and a score.  
+Then read all rows and print the mean score with `statistics.mean`.
+
+### E6. [C] Prompt metadata (AI era)
+Create a dict like:
+```python
+{"task": "summarize", "prompt": "Explain lists", "created_at": "..."}
+```
+Save it as JSON and reload it.
+
+---
+
+## F. Short written answers (as comments)
+
+### F1. Standard library vs pip package?
+Answer:
+
+### F2. Why use `os.path.join`?
+Answer:
+
+### F3. Why use `random.seed` in demos/tests?
+Answer:
+
+### F4. Why must CSV scores often be cast with `int()`?
+Answer:
+
+---
+
+## Done?
+
+Re-read any weak section in `module_notes.md`, rerun `module.py`, then take `module_quiz.xml`.
+
+**Keep only these lesson files in this folder:**
+- `module_notes.md`
+- `module.py`
+- `module_exercises.md`
+- `module_quiz.xml`

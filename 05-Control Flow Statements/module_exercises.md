@@ -1,621 +1,228 @@
 # Module 5 — Practice Exercises: Control Flow Statements
 
-**Instructions**
+**For students**
 
-- Attempt each exercise before opening the Instructor Solution Guide.
-- Use Modules 1–5 concepts.
-- For input-based tasks, test in the terminal.
+1. Read `module_notes.md`  
+2. Run `module.py` and understand each print  
+3. Solve exercises below in order  
+4. Predict output before running  
+5. If you use AI, explain every line yourself  
+
+**Difficulty:** [E] Easy · [M] Medium · [C] Challenge  
+
+Use Modules 1–5. Prefer tracing on paper for loops.
 
 ---
 
-# LEVEL 1 — FUNDAMENTALS
+## A. Decisions: if / elif / else
 
-### Exercise 1 — Sign of a Number
-
-**Difficulty:** Easy  
-**Concepts:** if-elif-else  
-
-**Problem:**  
+### A1. [E] Sign of a number
 Ask for an integer. Print `Positive`, `Negative`, or `Zero`.
 
-**Example Input:**
-```
--3
-```
+Example input: `-3` → `Negative`
 
-**Expected Output:**
-```
-Negative
-```
-
-**Hint:** Check `> 0`, then `< 0`, else zero.
-
----
-
-### Exercise 2 — Even or Odd
-
-**Difficulty:** Easy  
-**Concepts:** if-else, `%`  
-
-**Problem:**  
+### A2. [E] Even or odd
 Ask for an integer. Print `Even` or `Odd`.
 
-**Example Input:**
-```
-8
-```
-
-**Expected Output:**
-```
-Even
-```
-
-**Hint:** `number % 2 == 0`.
-
----
-
-### Exercise 3 — Age Category
-
-**Difficulty:** Easy  
-**Concepts:** if-elif-else  
-
-**Problem:**  
+### A3. [E] Age category
 Ask for age. Print:
-
 - `Child` if age < 12  
 - `Teenager` if 12 ≤ age ≤ 18  
 - `Adult` if age > 18  
 
-**Example Input:**
-```
-15
-```
+### A4. [M] Grade ladder
+Ask for marks (0–100). Print `Excellent` (≥90), `Good` (≥75), `Average` (≥50), or `Fail`.
 
-**Expected Output:**
-```
-Teenager
-```
+### A5. [M] Mini login
+Ask for username and password. Correct: `admin` / `1234`.  
+Print `Access granted` or `Access denied`.
 
-**Hint:** Use `elif` carefully so boundaries do not overlap wrongly.
+### A6. [M] Nested withdrawal
+```python
+account_active = True
+balance = 80
+```
+Using nested `if`, print `Withdrawal allowed`, `Insufficient balance`, or `Account inactive`  
+(try changing the values).
+
+### A7. [C] AI bug: wrong elif order
+An AI wrote:
+```python
+marks = 82
+if marks >= 50:
+    print("Average")
+elif marks >= 75:
+    print("Good")
+elif marks >= 90:
+    print("Excellent")
+else:
+    print("Fail")
+```
+Predict the output. Fix the order so 82 prints `Good`.
 
 ---
 
-### Exercise 4 — for 1 to 10
+## B. range and for
 
-**Difficulty:** Easy  
-**Concepts:** for, range  
+### B1. [E] Print 1 to 10
+Using `for` and `range`, print 1 through 10, one per line.
 
-**Problem:**  
-Print numbers from 1 to 10, each on its own line, using a `for` loop.
+### B2. [E] Even numbers
+Print even numbers from 2 to 20 using `range` with a step.
 
-**Example Input:** (none)
+### B3. [E] Characters
+Print each character of `"Python"` on its own line.
 
-**Expected Output:**
-```
-1
-2
-...
-10
-```
+### B4. [M] Exclusive stop
+Predict, then print:
 
-**Hint:** `range(1, 11)`.
-
----
-
-### Exercise 5 — while Countdown
-
-**Difficulty:** Easy  
-**Concepts:** while  
-
-**Problem:**  
-Using `while`, print numbers from 10 down to 1.
-
-**Example Input:** (none)
-
-**Expected Output:**
-```
-10
-9
-...
-1
+```python
+print(list(range(1, 5)))
+print(list(range(1, 10)))
 ```
 
-**Hint:** Start `i = 10`, loop while `i >= 1`, then `i -= 1`.
+Write a comment: why stop is exclusive.
 
----
+### B5. [M] Multiplication table
+Ask for `n`. Print the table of `n` from 1 to 10 using f-strings  
+(e.g. `5 x 3 = 15`).
 
-# LEVEL 2 — APPLY THE CONCEPT
-
-### Exercise 6 — Divisible by 3 and 5
-
-**Difficulty:** Easy  
-**Concepts:** if, `and`, `%`  
-
-**Problem:**  
-Ask for a number. Print `Yes` if divisible by both 3 and 5, else `No`.
-
-**Example Input:**
-```
-15
-```
-
-**Expected Output:**
-```
-Yes
-```
-
-**Hint:** `(n % 3 == 0) and (n % 5 == 0)`.
-
----
-
-### Exercise 7 — Marks Band
-
-**Difficulty:** Medium  
-**Concepts:** if-elif-else  
-
-**Problem:**  
-Ask for marks. Print:
-
-- `Fail` if < 40  
-- `Pass` if 40–60  
-- `Good` if 61–80  
-- `Excellent` if > 80  
-
-**Example Input:**
-```
-75
-```
-
-**Expected Output:**
-```
-Good
-```
-
-**Hint:** Order conditions from highest band or use careful ranges.
-
----
-
-### Exercise 8 — Sum 1 to 10
-
-**Difficulty:** Easy  
-**Concepts:** for, accumulator  
-
-**Problem:**  
-Using a `for` loop, compute and print the sum of the first 10 natural numbers.
-
-**Example Input:** (none)
-
-**Expected Output:**
-```
-55
-```
-
-**Hint:** `total = 0`, then `total += i`.
-
----
-
-### Exercise 9 — Evens 1 to 50
-
-**Difficulty:** Easy  
-**Concepts:** for, range step or if  
-
-**Problem:**  
-Print all even numbers from 1 to 50 (inclusive), one per line.
-
-**Example Input:** (none)
-
-**Expected Output:** (starts with)
-```
-2
-4
-6
-```
-(ends with `50`)
-
-**Hint:** `range(2, 51, 2)` is simplest.
-
----
-
-### Exercise 10 — Reverse String with for
-
-**Difficulty:** Medium  
-**Concepts:** for over string, accumulator string  
-
-**Problem:**  
-Ask for a string. Build its reverse using a `for` loop (do not use `[::-1]` for this exercise) and print it.
-
-**Example Input:**
-```
-hello
-```
-
-**Expected Output:**
-```
-olleh
-```
-
-**Hint:** Start `rev = ""`, then `rev = char + rev` each time.
-
----
-
-# LEVEL 3 — COMBINE CONCEPTS
-
-### Exercise 11 — break at 6
-
-**Difficulty:** Easy  
-**Concepts:** for, break  
-
-**Problem:**  
-Print numbers from 1 to 10, but stop completely when the number is 6 (6 should not print).
-
-**Example Input:** (none)
-
-**Expected Output:**
-```
-1
-2
-3
-4
-5
-```
-
-**Hint:** `if i == 6: break` before printing, or print then break carefully — match expected output (1–5 only).
-
----
-
-### Exercise 12 — continue Multiples of 3
-
-**Difficulty:** Easy  
-**Concepts:** for, continue  
-
-**Problem:**  
-Print 1 to 10 but skip multiples of 3.
-
-**Example Input:** (none)
-
-**Expected Output:**
-```
-1
-2
-4
-5
-7
-8
-10
-```
-
-**Hint:** `if i % 3 == 0: continue`.
-
----
-
-### Exercise 13 — Sentinel while
-
-**Difficulty:** Medium  
-**Concepts:** while, break, input  
-
-**Problem:**  
-Keep asking the user for a number. Print each number. Stop when the user enters a negative number (do not print the negative).
-
-**Example Input:**
-```
-4
-9
--1
-```
-
-**Expected Output:**
-```
-4
-9
-```
-
-**Hint:** `while True:` + `if number < 0: break`.
-
----
-
-### Exercise 14 — pass Placeholder
-
-**Difficulty:** Easy  
-**Concepts:** for, pass  
-
-**Problem:**  
-Write a `for` loop that runs 5 times with only `pass` in the body. Then print `Loop finished`.
-
-**Example Input:** (none)
-
-**Expected Output:**
-```
-Loop finished
-```
-
-**Hint:** Body can be only `pass`.
-
----
-
-### Exercise 15 — Factorial
-
-**Difficulty:** Medium  
-**Concepts:** for, accumulator product  
-
-**Problem:**  
-Ask for a non-negative integer `n`. Print `n!` (factorial). Assume `0! = 1`.
-
-**Example Input:**
-```
-5
-```
-
-**Expected Output:**
-```
-120
-```
-
-**Hint:** `result = 1`; multiply by each value in `range(1, n + 1)`.
-
----
-
-### Exercise 16 — Vowel Counter
-
-**Difficulty:** Medium  
-**Concepts:** for, if, strings, membership  
-
-**Problem:**  
-Ask for a string. Count vowels `a e i o u` (case-insensitive) and print the count.
-
-**Example Input:**
-```
-Education
-```
-
-**Expected Output:**
-```
-5
-```
-
-**Hint:** Loop `text.lower()`; `if char in "aeiou"`.
-
----
-
-# LEVEL 4 — PROBLEM SOLVING
-
-### Exercise 17 — Multiplication Table
-
-**Difficulty:** Medium  
-**Concepts:** for, f-strings  
-
-**Problem:**  
-Ask for an integer `n`. Print its multiplication table from 1 to 10 as `n x i = product`.
-
-**Example Input:**
-```
-5
-```
-
-**Expected Output:**
-```
-5 x 1 = 5
-5 x 2 = 10
-...
-5 x 10 = 50
-```
-
-**Hint:** `for i in range(1, 11):`.
-
----
-
-### Exercise 18 — Prime Check
-
-**Difficulty:** Challenging  
-**Concepts:** for, if, break/flag  
-
-**Problem:**  
-Ask for an integer `n > 1`. Print `Prime` or `Not prime`.
-
-**Example Input:**
-```
-7
-```
-
-**Expected Output:**
-```
-Prime
-```
-
-**Hint:** Check divisibility from 2 to `n-1` (or to `n//2`). If any divides evenly → not prime.
-
----
-
-### Exercise 19 — Fibonacci (10 terms)
-
-**Difficulty:** Challenging  
-**Concepts:** for, variables swap/update  
-
-**Problem:**  
-Print the first 10 Fibonacci numbers starting with 0 and 1, separated-separated on one line:
-
-`0 1 1 2 3 5 8 13 21 34`
-
-**Example Input:** (none)
-
-**Expected Output:**
-```
-0 1 1 2 3 5 8 13 21 34
-```
-
-**Hint:** Keep `a, b = 0, 1`; each step print `a`, then `a, b = b, a + b`.
-
----
-
-### Exercise 20 — Star Pyramid
-
-**Difficulty:** Challenging  
-**Concepts:** nested loops or string `*`  
-
-**Problem:**  
-Ask for height `h`. Print a left-aligned pyramid of `*` with `h` rows.
-
-**Example Input:**
-```
-4
-```
-
-**Expected Output:**
+### B6. [M] Star triangle
+Print:
 ```
 *
 **
 ***
 ****
+*****
 ```
-
-**Hint:** `print("*" * i)` or nested loops.
+using a `for` loop (and string `*`).
 
 ---
 
-# Instructor Solution Guide
+## C. Accumulators and counters
 
+### C1. [E] Sum 1 to 10
+Use a loop to compute and print the sum of 1 through 10.
+
+Expected: `55`
+
+### C2. [E] Count evens
+Count how many even numbers are in 1…10. Print the count.
+
+Expected: `5`
+
+### C3. [M] Even sum
+Sum only the even numbers from 1 to 5. Print the total.
+
+Expected: `6`
+
+### C4. [M] Factorial
+Compute `5!` with a loop (`1 * 2 * 3 * 4 * 5`). Print it.
+
+Expected: `120`
+
+### C5. [M] Vowel counter
+Count vowels in `"Education"` (case-insensitive). Print the count.
+
+### C6. [C] Factor list
+Ask for a positive integer `n`. Print all factors of `n`  
+(numbers from 1 to `n` that divide `n` evenly).
+
+---
+
+## D. while, break, continue, pass
+
+### D1. [E] while countdown
+Using `while`, print 10 down to 1.
+
+### D2. [E] while 1 to 5
+Using `while`, print 1 through 5.
+
+### D3. [M] break practice
 ```python
-# Exercise 1
-num = int(input("Enter a number: "))
-if num > 0:
-    print("Positive")
-elif num < 0:
-    print("Negative")
-else:
-    print("Zero")
-
-# Exercise 2
-num = int(input("Enter a number: "))
-if num % 2 == 0:
-    print("Even")
-else:
-    print("Odd")
-
-# Exercise 3
-age = int(input("Age: "))
-if age < 12:
-    print("Child")
-elif age <= 18:
-    print("Teenager")
-else:
-    print("Adult")
-
-# Exercise 4
 for i in range(1, 11):
-    print(i)
-
-# Exercise 5
-i = 10
-while i >= 1:
-    print(i)
-    i -= 1
-
-# Exercise 6
-n = int(input("Number: "))
-if n % 3 == 0 and n % 5 == 0:
-    print("Yes")
-else:
-    print("No")
-
-# Exercise 7
-marks = int(input("Marks: "))
-if marks < 40:
-    print("Fail")
-elif marks <= 60:
-    print("Pass")
-elif marks <= 80:
-    print("Good")
-else:
-    print("Excellent")
-
-# Exercise 8
-total = 0
-for i in range(1, 11):
-    total += i
-print(total)
-
-# Exercise 9
-for i in range(2, 51, 2):
-    print(i)
-
-# Exercise 10
-text = input("Text: ")
-rev = ""
-for char in text:
-    rev = char + rev
-print(rev)
-
-# Exercise 11
-for i in range(1, 11):
-    if i == 6:
+    if i == 5:
         break
     print(i)
-
-# Exercise 12
-for i in range(1, 11):
-    if i % 3 == 0:
-        continue
-    print(i)
-
-# Exercise 13
-while True:
-    number = int(input("Number: "))
-    if number < 0:
-        break
-    print(number)
-
-# Exercise 14
-for i in range(5):
-    pass
-print("Loop finished")
-
-# Exercise 15
-n = int(input("n: "))
-result = 1
-for i in range(1, n + 1):
-    result *= i
-print(result)
-
-# Exercise 16
-text = input("Text: ")
-count = 0
-for char in text.lower():
-    if char in "aeiou":
-        count += 1
-print(count)
-
-# Exercise 17
-n = int(input("n: "))
-for i in range(1, 11):
-    print(f"{n} x {i} = {n * i}")
-
-# Exercise 18
-n = int(input("n: "))
-is_prime = True
-if n <= 1:
-    is_prime = False
-else:
-    for i in range(2, n):
-        if n % i == 0:
-            is_prime = False
-            break
-if is_prime:
-    print("Prime")
-else:
-    print("Not prime")
-
-# Exercise 19
-a, b = 0, 1
-for i in range(10):
-    if i == 9:
-        print(a)
-    else:
-        print(a, end=" ")
-    a, b = b, a + b
-
-# Exercise 20
-h = int(input("Height: "))
-for i in range(1, h + 1):
-    print("*" * i)
 ```
+Predict the output. Then change it to break at 7.
 
-**Note on Exercise 19:** `append` / `join` lightly use list+string tools; an alternate beginner version prints with `end=" "`.
+### D4. [M] continue practice
+Print numbers 1…10 but skip 5 using `continue`.
+
+### D5. [M] Skip vowels
+Loop over `"education"`. Skip vowels with `continue`. Print consonants only.
+
+### D6. [M] Password attempts
+```python
+secret = "admin123"
+attempts = ["wrong", "nope", "admin123", "later"]
+```
+Loop over attempts. On success print `Access granted.` and `break`.  
+Otherwise print `Incorrect attempt: ...`
+
+### D7. [C] AI bug: infinite while
+An AI wrote:
+```python
+i = 1
+while i <= 5:
+    print(i)
+```
+Explain why this is dangerous. Fix it.
+
+---
+
+## E. Combine Modules 1–5 (real-world style)
+
+### E1. [M] Clean + decide
+Ask for a role string. Clean with `strip().lower()`.  
+If it equals `"admin"` print `Admin panel`, else print `User panel`.
+
+### E2. [M] Email gate
+Ask for an email. After `strip().lower()`, if it contains both `@` and `.`  
+print `Valid format`, else `Invalid format`.
+
+### E3. [M] Skip empty prompts (AI era)
+```python
+prompts = ["  hello  ", "", "  ", "summarize"]
+```
+Loop, strip each item, `continue` if empty, otherwise print `Ready: ...`
+
+### E4. [M] CPU alert
+Ask for `cpu_percent` (int). If `> 90` print `Alert`, elif `>= 70` print `Warm`, else print `Normal`.
+
+### E5. [C] Number analyzer
+Ask for an integer. Print whether it is Positive/Negative/Zero, Even/Odd,  
+and list its factors (if non-zero).
+
+### E6. [C] Cart with category discount
+Ask for three item prices (floats). Sum with `+=` in a loop over a small list,  
+or three inputs.  
+If total ≥ 200 apply 10% off (`*= 0.9`).  
+Print final total with 2 decimals.
+
+---
+
+## F. Short written answers (as comments)
+
+### F1. When should you use `elif` instead of separate `if`s?
+Answer:
+
+### F2. Why does `range(1, 5)` not include 5?
+Answer:
+
+### F3. What makes a `while` loop infinite?
+Answer:
+
+### F4. Difference between `break` and `continue`?
+Answer:
+
+### F5. Why initialize `total = 0` before a summing loop?
+Answer:
+
+---
+
+## Done?
+
+Re-read any weak section in `module_notes.md`, rerun `module.py`, then take `module_quiz.xml`.

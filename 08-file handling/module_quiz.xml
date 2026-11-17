@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Module 8: File Handling in Python (AI-Era / Beginner) -->
+<!-- App format: <text>, optional <code language="python">, <option correct="true"> -->
+<!-- Correct answers balanced across option positions -->
+
+  <question>
+    <text>Why do programs use files?</text>
+    <option>Variables never store values</option>
+    <option correct="true">Files keep data after the program ends</option>
+    <option>Python cannot print text</option>
+    <option>Files replace all functions</option>
+  </question>
+
+  <question>
+    <text>What does mode "w" do if the file already exists?</text>
+    <option>Appends new text at the end</option>
+    <option>Raises FileNotFoundError</option>
+    <option correct="true">Overwrites / erases existing content</option>
+    <option>Creates a binary copy only</option>
+  </question>
+
+  <question>
+    <text>What does mode "a" do?</text>
+    <option>Always deletes the file first</option>
+    <option>Reads one byte at a time only</option>
+    <option>Fails if the file exists</option>
+    <option correct="true">Adds new content at the end without wiping old content</option>
+  </question>
+
+  <question>
+    <text>Why do AI/backend apps care about file handling?</text>
+    <option correct="true">Logs, datasets, exports, and saved prompts need to persist on disk</option>
+    <option>AI never reads or writes files</option>
+    <option>Files only exist in Excel</option>
+    <option>Python forbids saving text</option>
+  </question>
+
+  <question>
+    <text>Why prefer with open(...)?</text>
+    <option>It makes files open forever</option>
+    <option correct="true">It closes the file automatically and is safer</option>
+    <option>It disables encoding</option>
+    <option>It only works with binary files</option>
+  </question>
+
+  <question format="python">
+    <text>What does this mainly do?</text>
+    <code language="python">with open("note.txt", "w", encoding="utf-8") as f:
+    f.write("Hello\n")</code>
+    <option>Reads the whole file</option>
+    <option>Deletes note.txt</option>
+    <option correct="true">Creates/overwrites note.txt with Hello</option>
+    <option>Appends Hello without a newline</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">text = "Line 1\n"
+print(repr(text))</code>
+    <option>Line 1</option>
+    <option correct="true">'Line 1\n'</option>
+    <option>Line 1\n</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("Line 1\n".strip())</code>
+    <option>Line 1\n</option>
+    <option>Error</option>
+    <option>  Line 1  </option>
+    <option correct="true">Line 1</option>
+  </question>
+
+  <question>
+    <text>What happens if you open a missing file with mode "r"?</text>
+    <option correct="true">FileNotFoundError</option>
+    <option>The file is created empty</option>
+    <option>None is returned</option>
+    <option>FileExistsError</option>
+  </question>
+
+  <question>
+    <text>What happens if you open an existing file with mode "x"?</text>
+    <option>It appends quietly</option>
+    <option correct="true">FileExistsError</option>
+    <option>It overwrites quietly</option>
+    <option>FileNotFoundError</option>
+  </question>
+
+  <question>
+    <text>Which method reads the entire file into one string?</text>
+    <option>readline()</option>
+    <option>writelines()</option>
+    <option correct="true">read()</option>
+    <option>exists()</option>
+  </question>
+
+  <question>
+    <text>Which call returns a list of lines?</text>
+    <option>read()</option>
+    <option>Error always</option>
+    <option>strip()</option>
+    <option correct="true">readlines()</option>
+  </question>
+
+  <question>
+    <text>Does writelines() automatically add newlines?</text>
+    <option correct="true">No — you must include \n yourself if you need them</option>
+    <option>Yes — always</option>
+    <option>Only in append mode</option>
+    <option>Only for CSV files</option>
+  </question>
+
+  <question format="python">
+    <text>What is the best description of this pattern?</text>
+    <code language="python">with open("app.log", "a", encoding="utf-8") as f:
+    f.write("Backup done\n")</code>
+    <option>Overwrite the whole log</option>
+    <option correct="true">Append a log line safely</option>
+    <option>Delete the log</option>
+    <option>Read binary data</option>
+  </question>
+
+  <question format="python">
+    <text>What does this function return?</text>
+    <code language="python">def load_text(path):
+    with open(path, "r", encoding="utf-8") as file:
+        return file.read()</code>
+    <option>None always</option>
+    <option>A list of bytes</option>
+    <option correct="true">The full text content of the file</option>
+    <option>True/False</option>
+  </question>
+
+  <question format="python">
+    <text>What is printed?</text>
+    <code language="python">import os
+print(os.path.exists("definitely_missing_12345.txt"))</code>
+    <option>True</option>
+    <option>Error</option>
+    <option>None</option>
+    <option correct="true">False</option>
+  </question>
+
+  <question>
+    <text>Which mode is for binary writing?</text>
+    <option correct="true">"wb"</option>
+    <option>"w"</option>
+    <option>"a"</option>
+    <option>"rt"</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">data = bytes([10, 20, 30])
+print(data)</code>
+    <option>[10, 20, 30]</option>
+    <option correct="true">b'\n\x14\x1e'</option>
+    <option>10 20 30</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">payload = bytes([10, 20, 30])
+print(list(payload))</code>
+    <option>b'\n\x14\x1e'</option>
+    <option>Error</option>
+    <option correct="true">[10, 20, 30]</option>
+    <option>(10, 20, 30)</option>
+  </question>
+
+  <question format="python">
+    <text>After this code, what is in students.csv conceptually?</text>
+    <code language="python">with open("students.csv", "w", encoding="utf-8") as f:
+    f.write("name,score\n")
+    f.write("Ada,90\n")</code>
+    <option>Only Ada,90 with no header</option>
+    <option correct="true">A header line and one student row</option>
+    <option>Binary image data</option>
+    <option>An empty file</option>
+  </question>
+
+  <question format="python">
+    <text>What does line.strip().split(",") do for 'Ada,90\n'?</text>
+    <code language="python">print("Ada,90\n".strip().split(","))</code>
+    <option>['Ada,90\n']</option>
+    <option>Error</option>
+    <option>['Ada', '90\n']</option>
+    <option correct="true">['Ada', '90']</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">records = []
+for line in ["Ada,90\n", "Bob,75\n"]:
+    name, score = line.strip().split(",")
+    records.append({"name": name, "score": int(score)})
+print(records[1]["score"])</code>
+    <option correct="true">75</option>
+    <option>90</option>
+    <option>"75"</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def count_lines(text_block):
+    return len(text_block.splitlines())
+print(count_lines("a\nb\nc\n"))</code>
+    <option>4</option>
+    <option correct="true">3</option>
+    <option>2</option>
+    <option>0</option>
+  </question>
+
+  <question>
+    <text>Which is a common AI-generated file-handling bug?</text>
+    <option>Using encoding="utf-8"</option>
+    <option>Using with open(...)</option>
+    <option correct="true">Using "w" on a log file and wiping old history</option>
+    <option>Checking os.path.exists</option>
+  </question>
+
+  <question format="python">
+    <text>What is wrong with this log code?</text>
+    <code language="python">with open("app.log", "w", encoding="utf-8") as f:
+    f.write("New event\n")</code>
+    <option>Nothing — "w" is perfect for logs</option>
+    <option correct="true">"w" overwrites previous log history</option>
+    <option>write cannot add newlines</option>
+    <option>encoding is illegal</option>
+  </question>
+
+  <question format="python">
+    <text>What does this helper do?</text>
+    <code language="python">def save_prompt(path, prompt):
+    clean = prompt.strip()
+    with open(path, "w", encoding="utf-8") as file:
+        file.write(clean + "\n")</code>
+    <option>Appends every old prompt forever</option>
+    <option>Reads binary model weights</option>
+    <option correct="true">Cleans a prompt and saves it as text</option>
+    <option>Deletes the path</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("  Summarize this.  ".strip())</code>
+    <option>  Summarize this.  </option>
+    <option>Error</option>
+    <option>Summarize this.  </option>
+    <option correct="true">Summarize this.</option>
+  </question>
+
+  <question>
+    <text>Which import is commonly used for exists/remove checks?</text>
+    <option correct="true">import os</option>
+    <option>import print</option>
+    <option>import file</option>
+    <option>import open</option>
+  </question>
+
+  <question>
+    <text>What does os.remove(path) do?</text>
+    <option>Reads the file</option>
+    <option correct="true">Deletes the file</option>
+    <option>Creates the file</option>
+    <option>Appends a newline</option>
+  </question>
+
+  <question format="python">
+    <text>What is the safest beginner pattern for reading text?</text>
+    <code language="python"># choose the best pattern</code>
+    <option>open(path, "w").read()</option>
+    <option>open(path).write("x")</option>
+    <option correct="true">with open(path, "r", encoding="utf-8") as f: data = f.read()</option>
+    <option>open(path, "x").readlines()</option>
+  </question>
+
+  <question>
+    <text>When is iterating for line in file especially useful?</text>
+    <option>Only for binary images</option>
+    <option>Never — always use read()</option>
+    <option>Only when using mode "x"</option>
+    <option correct="true">When files may be large and you want one line at a time</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">lines = ["A\n", "B\n"]
+print("".join(lines).strip().splitlines())</code>
+    <option correct="true">['A', 'B']</option>
+    <option>['A\n', 'B\n']</option>
+    <option>A B</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def log_message(message):
+    return message + "\n"
+print(repr(log_message("ok")))</code>
+    <option>ok</option>
+    <option correct="true">'ok\n'</option>
+    <option>'ok'</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Why set encoding="utf-8" for text files?</text>
+    <option>It makes files binary</option>
+    <option>It disables reading</option>
+    <option correct="true">It handles a wide range of text characters reliably</option>
+    <option>It is required only for integers</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">row = "Ada,90"
+name, score = row.split(",")
+print(name)
+print(int(score) + 1)</code>
+    <option>Ada then 90</option>
+    <option>Error</option>
+    <option>Ada,90 then 91</option>
+    <option correct="true">Ada then 91</option>
+  </question>
+
+  <question>
+    <text>Which statement about mode "x" is correct?</text>
+    <option correct="true">It creates a file only if it does not already exist</option>
+    <option>It always overwrites</option>
+    <option>It is the same as "a"</option>
+    <option>It can only open images</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def safe_exists(path_exists):
+    if path_exists:
+        return "Found"
+    return "Missing"
+print(safe_exists(False))</code>
+    <option>Found</option>
+    <option correct="true">Missing</option>
+    <option>False</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Memory (variables) vs files — which is true?</text>
+    <option>Both always survive forever</option>
+    <option>Files disappear when the program ends; variables remain</option>
+    <option correct="true">Variables are temporary; files can persist after the program ends</option>
+    <option>Neither can store text</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">text = "A\nB\nC\n"
+count = 0
+for line in text.splitlines(True):
+    count += 1
+print(count)</code>
+    <option>2</option>
+    <option>Error</option>
+    <option>4</option>
+    <option correct="true">3</option>
+  </question>
+
+  <question>
+    <text>Which checklist item matters most before trusting AI file code?</text>
+    <option>Whether variable names look fancy</option>
+    <option correct="true">Whether the mode, with statement, and encoding are correct</option>
+    <option>Whether comments are missing</option>
+    <option>Whether the file extension is .py</option>
+  </question>
+
+</quiz>

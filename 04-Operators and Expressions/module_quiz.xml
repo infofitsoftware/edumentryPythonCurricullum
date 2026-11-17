@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Module 4: Operators and Expressions (AI-Era / Beginner) -->
+<!-- App format: <text>, optional <code language="python">, <option correct="true"> -->
+<!-- Correct answers balanced across option positions -->
+
+  <question>
+    <text>What is an expression in Python?</text>
+    <option>Only a variable name</option>
+    <option correct="true">A combination of values and operators that produces a result</option>
+    <option>A type of loop</option>
+    <option>A file extension</option>
+  </question>
+
+  <question>
+    <text>What does the = operator do?</text>
+    <option correct="true">Assigns a value to a variable</option>
+    <option>Compares two values for equality</option>
+    <option>Checks identity (same object)</option>
+    <option>Performs addition</option>
+  </question>
+
+  <question>
+    <text>What does the == operator do?</text>
+    <option>Assigns a value</option>
+    <option>Creates a new variable</option>
+    <option correct="true">Compares two values for equality</option>
+    <option>Always returns None</option>
+  </question>
+
+  <question>
+    <text>Why do AI/backend apps care about operators?</text>
+    <option>AI never uses True/False</option>
+    <option>Python cannot compare numbers</option>
+    <option>Operators only exist in Excel</option>
+    <option correct="true">Validation, thresholds, and business rules are built from comparisons and logic</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(10 + 5)</code>
+    <option correct="true">15</option>
+    <option>105</option>
+    <option>10+5</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(15 // 4)</code>
+    <option>3.75</option>
+    <option correct="true">3</option>
+    <option>4</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(20 % 3)</code>
+    <option>6</option>
+    <option>0</option>
+    <option correct="true">2</option>
+    <option>3</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(2 ** 4)</code>
+    <option>6</option>
+    <option>8</option>
+    <option>24</option>
+    <option correct="true">16</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(10 / 4)</code>
+    <option>2</option>
+    <option correct="true">2.5</option>
+    <option>3</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(2 + 3 * 4)</code>
+    <option>20</option>
+    <option>24</option>
+    <option correct="true">14</option>
+    <option>11</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print((2 + 3) * 4)</code>
+    <option correct="true">20</option>
+    <option>14</option>
+    <option>9</option>
+    <option>24</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(10 > 5)</code>
+    <option>10</option>
+    <option correct="true">True</option>
+    <option>False</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(7 &lt; 3)</code>
+    <option>True</option>
+    <option>7</option>
+    <option correct="true">False</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(15 == 15)</code>
+    <option correct="true">True</option>
+    <option>False</option>
+    <option>15</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(8 &gt;= 8)</code>
+    <option>False</option>
+    <option correct="true">True</option>
+    <option>8</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(9 &lt;= 4)</code>
+    <option>True</option>
+    <option>9</option>
+    <option>Error</option>
+    <option correct="true">False</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print((10 &gt; 5) and (8 &lt; 12))</code>
+    <option correct="true">True</option>
+    <option>False</option>
+    <option>None</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print((7 == 3) or (15 &gt; 10))</code>
+    <option>False</option>
+    <option correct="true">True</option>
+    <option>Error</option>
+    <option>None</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(not (20 == 20))</code>
+    <option>True</option>
+    <option>20</option>
+    <option correct="true">False</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is printed (three lines)?</text>
+    <code language="python">x = 5
+x += 3
+print(x)
+x *= 2
+print(x)
+x -= 4
+print(x)</code>
+    <option>5 then 10 then 6</option>
+    <option>8 then 10 then 6</option>
+    <option>8 then 16 then 20</option>
+    <option correct="true">8 then 16 then 12</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("@" in "a@b.com")</code>
+    <option correct="true">True</option>
+    <option>False</option>
+    <option>@</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">data = None
+print(data is None)</code>
+    <option>False</option>
+    <option correct="true">True</option>
+    <option>None</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print("admin" == "Admin")</code>
+    <option>True</option>
+    <option>admin</option>
+    <option correct="true">False</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is printed (two lines)?</text>
+    <code language="python">items = 17
+box_size = 5
+print(items // box_size)
+print(items % box_size)</code>
+    <option>2 then 3</option>
+    <option correct="true">3 then 2</option>
+    <option>3.4 then 2</option>
+    <option>5 then 2</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">items = 17
+box_size = 5
+print(items // box_size, items % box_size)</code>
+    <option>2 3</option>
+    <option>17 5</option>
+    <option correct="true">3 2</option>
+    <option>3.4 2</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">value = 30
+print((value % 3 == 0) and (value % 5 == 0))</code>
+    <option correct="true">True</option>
+    <option>False</option>
+    <option>0</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">value = 10
+print((value % 3 == 0) and (value % 5 == 0))</code>
+    <option>True</option>
+    <option correct="true">False</option>
+    <option>0</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">typed = "  Admin  "
+print(typed.strip().lower() == "admin")</code>
+    <option>False</option>
+    <option>Admin</option>
+    <option correct="true">True</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+print(a is b)
+print(a is c)
+print(a == c)</code>
+    <option correct="true">True then False then True</option>
+    <option>True then True then True</option>
+    <option>False then False then True</option>
+    <option>True then False then False</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(14 % 2)</code>
+    <option>1</option>
+    <option correct="true">0</option>
+    <option>7</option>
+    <option>2</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(True or False and False)</code>
+    <option>False</option>
+    <option>Error</option>
+    <option correct="true">True</option>
+    <option>None</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print((True or False) and False)</code>
+    <option correct="true">False</option>
+    <option>True</option>
+    <option>Error</option>
+    <option>None</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">age = int("20")
+print(age &gt;= 18)</code>
+    <option>False</option>
+    <option correct="true">True</option>
+    <option>20</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">tokens_used = 1200
+budget = 1000
+print(tokens_used &gt; budget)</code>
+    <option>False</option>
+    <option>200</option>
+    <option correct="true">True</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Which check is preferred for None?</text>
+    <option>value == None</option>
+    <option>value equals None</option>
+    <option>value = None</option>
+    <option correct="true">value is None</option>
+  </question>
+
+  <question>
+    <text>Which expression correctly checks both username and password?</text>
+    <option correct="true">(user == "admin") and (pwd == "1234")</option>
+    <option>(user = "admin") and (pwd = "1234")</option>
+    <option>user == "admin" or pwd == "1234" only when both must match</option>
+    <option>user is "admin" and pwd is "1234"</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">total = 0
+total += 100
+total += 50
+total += 50
+total *= 0.9
+print(total)</code>
+    <option>200</option>
+    <option correct="true">180.0</option>
+    <option>180</option>
+    <option>20</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">username = "  Admin "
+print(username == "admin")</code>
+    <option correct="true">False</option>
+    <option>True</option>
+    <option>Admin</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">email = "student@example.com"
+print(("@" in email) and ("." in email))</code>
+    <option>False</option>
+    <option>@.</option>
+    <option correct="true">True</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">print(2 ** 3 ** 2)</code>
+    <option>64</option>
+    <option>12</option>
+    <option>Error</option>
+    <option correct="true">512</option>
+  </question>
+
+</quiz>

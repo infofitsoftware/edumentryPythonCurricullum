@@ -1,112 +1,98 @@
 """
 ================================================================================
-MODULE 4 — OPERATORS AND EXPRESSIONS (Reference Program)
+MODULE 4 — Operators and Expressions
+Student lesson file (beginner-friendly, AI-era examples)
 ================================================================================
-Run:  python module.py
+How to use this file:
+  1. Read one section comment
+  2. Run:  python module.py
+  3. Change values and rerun
+  4. Then open module_exercises.md
 
-Prerequisites:
-  Module 1 — print, input, arithmetic intro
-  Module 2 — variables, types, casting, None, bool
-  Module 3 — strings (indexing, methods, in for strings)
-
-This file is a REFERENCE — not an assignment.
+Previous: Module 3 (strings)
+Next:     Module 5 (control flow)
 ================================================================================
 """
 
-# ==================================================
-# 1. WHAT IS AN OPERATOR? WHAT IS AN EXPRESSION?
-# ==================================================
-# Operator  = a symbol that performs an action (+, ==, and, ...)
-# Operand   = the value(s) the operator works on
-# Expression = combination that produces a result
+print("=== Module 4: Operators and Expressions ===")
 
-score = 10 + 5          # expression using +
-print("Score:", score)  # 15
-
+# --------------------------------------------------
+# 1) Operator, operand, expression
+# --------------------------------------------------
+score = 10 + 5
+print("Score:", score)                 # 15
 is_passing = score >= 15
-print("Passing?:", is_passing)  # True
+print("Passing?:", is_passing)         # True
 
-# ==================================================
-# 2. ARITHMETIC OPERATORS
-# ==================================================
-# Revisit Module 1 with more precision and real uses.
-
+# --------------------------------------------------
+# 2) Arithmetic operators
+# --------------------------------------------------
 price = 10
 quantity = 3
+print("Add:", price + quantity)        # 13
+print("Sub:", price - quantity)        # 7
+print("Mul:", price * quantity)        # 30
+print("Div:", price / quantity)        # 3.333... float
+print("Floor:", price // quantity)     # 3
+print("Mod:", price % quantity)        # 1
+print("Power:", 2 ** 3)                # 8
 
-print("Addition:", price + quantity)       # 13
-print("Subtraction:", price - quantity)    # 7
-print("Multiplication:", price * quantity) # 30
-print("Division:", price / quantity)       # 3.333...  (always float in Python 3)
-print("Floor Division:", price // quantity)  # 3
-print("Modulus:", price % quantity)        # 1  (remainder)
-print("Exponent:", 2 ** 3)                 # 8
-
-# Practical: even / odd check uses modulus
+# Even / odd uses modulus
 number = 14
-print("Remainder when divided by 2:", number % 2)  # 0 → even
+print("14 % 2:", number % 2)           # 0 → even
+print("15 % 2:", 15 % 2)               # 1 → odd
 
-# Practical: pagination / packing leftover items
+# Boxes and leftovers (pagination / packing idea)
 items = 17
 box_size = 5
 full_boxes = items // box_size
 leftover = items % box_size
-print("Full boxes:", full_boxes, "| Leftover:", leftover)
+print("Full boxes:", full_boxes)       # 3
+print("Leftover:", leftover)           # 2
 
-# ==================================================
-# 3. OPERATOR PRECEDENCE (BEGINNER VIEW)
-# ==================================================
-# Rough order (high → low): ** then * / // % then + - then comparisons then not/and/or
-# When unsure: use parentheses.
+# --------------------------------------------------
+# 3) Precedence — when unsure, use parentheses
+# --------------------------------------------------
+print(2 + 3 * 4)                       # 14
+print((2 + 3) * 4)                     # 20
+print(2 ** 3 ** 2)                     # 512 → 2 ** (3 ** 2)
+print((2 ** 3) ** 2)                   # 64
 
-print(2 + 3 * 4)        # 14  (multiply first)
-print((2 + 3) * 4)      # 20  (parentheses first)
-print(2 ** 3 ** 2)      # 512 (exponentiation is right-associative: 2 ** (3 ** 2))
-print((2 ** 3) ** 2)    # 64
-
-# ==================================================
-# 4. COMPARISON (RELATIONAL) OPERATORS
-# ==================================================
-# Always return bool: True or False
-
+# --------------------------------------------------
+# 4) Comparison operators → always bool
+# --------------------------------------------------
 student_age = 20
-voting_age = 18
+print(student_age > 18)                # True
+print(student_age < 18)                # False
+print(student_age == 20)               # True
+print(student_age != 18)               # True
+print(student_age >= 18)               # True
+print(student_age <= 17)               # False
 
-print(student_age > voting_age)    # True
-print(student_age < voting_age)    # False
-print(student_age == 20)           # True  (equal to)
-print(student_age != 18)           # True  (not equal)
-print(student_age >= 18)           # True
-print(student_age <= 17)           # False
+# = assigns, == compares  (AI bug magnet)
+account_balance = 100
+print(account_balance == 100)          # True
 
-# Common mistake: = assigns, == compares
-account_balance = 100              # assignment
-print(account_balance == 100)      # comparison → True
+# Strings: case matters (Module 3)
+print("admin" == "Admin")              # False
+print("apple" < "banana")              # True (dictionary order)
 
-# String comparisons (Module 3) — case sensitive
-print("admin" == "Admin")          # False
-print("apple" < "banana")          # True (dictionary / lexicographic order)
-
-# ==================================================
-# 5. LOGICAL OPERATORS — and, or, not
-# ==================================================
-# Combine True/False results. Essential for validation rules.
-
+# --------------------------------------------------
+# 5) Logical operators — and / or / not
+# --------------------------------------------------
 has_ticket = True
 has_id = False
+print(has_ticket and has_id)           # False
+print(has_ticket or has_id)            # True
+print(not has_id)                      # True
 
-print(has_ticket and has_id)   # False — both must be True
-print(has_ticket or has_id)    # True  — at least one True
-print(not has_id)              # True  — reverses False → True
+print(True and True)                   # True
+print(True and False)                  # False
+print(False or True)                   # True
+print(False or False)                  # False
+print(not True)                        # False
 
-# Truth table quick demo
-print(True and True)     # True
-print(True and False)    # False
-print(False or True)     # True
-print(False or False)    # False
-print(not True)          # False
-
-# Practical: login check (values only — decision structure in Module 5)
+# Login-style rule (expression only — if comes in Module 5)
 username = "admin"
 password = "1234"
 entered_user = "admin"
@@ -114,129 +100,137 @@ entered_pass = "1234"
 credentials_ok = (entered_user == username) and (entered_pass == password)
 print("Credentials OK?:", credentials_ok)
 
-# Practical: divisible by both 3 and 5
+# Divisible by both 3 and 5
 value = 30
 divisible_by_both = (value % 3 == 0) and (value % 5 == 0)
 print("Divisible by 3 and 5?:", divisible_by_both)
 
-# ==================================================
-# 6. TRUTHY / FALSY WITH LOGICAL OPERATORS (BRIEF)
-# ==================================================
-# From Module 2: 0, "", None are falsy. Non-empty strings / non-zero numbers are truthy.
-# and / or return one of the operands (advanced detail) — beginners: focus on True/False results
-# when both sides are already comparisons.
+value = 10
+print("10 by 3 and 5?:", (value % 3 == 0) and (value % 5 == 0))  # False
 
-print(bool(0))
-print(bool(5))
-print(bool(""))
-print(bool("hi"))
+# --------------------------------------------------
+# 6) Truthy / falsy reminder (Module 2)
+# --------------------------------------------------
+print(bool(0))                         # False
+print(bool(5))                         # True
+print(bool(""))                        # False
+print(bool("hi"))                      # True
+print(bool(None))                      # False
 
-# ==================================================
-# 7. ASSIGNMENT OPERATORS
-# ==================================================
-# Update a variable using its current value.
-
+# --------------------------------------------------
+# 7) Assignment operators
+# --------------------------------------------------
 cart_total = 10
-cart_total += 5      # cart_total = cart_total + 5
-print(cart_total)    # 15
-
-cart_total *= 2      # 30
-print(cart_total)
-
-cart_total -= 4      # 26
-print(cart_total)
-
-cart_total /= 2      # 13.0  (/= always can produce float)
-print(cart_total)
+cart_total += 5
+print("After += 5:", cart_total)       # 15
+cart_total *= 2
+print("After *= 2:", cart_total)       # 30
+cart_total -= 4
+print("After -= 4:", cart_total)       # 26
+cart_total /= 2
+print("After /= 2:", cart_total)       # 13.0
 
 points = 17
-points //= 5         # 3
-print(points)
+points //= 5
+print("17 //= 5 →", points)            # 3
+
 points = 17
-points %= 5          # 2
-print(points)
+points %= 5
+print("17 %= 5 →", points)             # 2
+
 base = 2
-base **= 3           # 8
-print(base)
+base **= 3
+print("2 **= 3 →", base)               # 8
 
-# ==================================================
-# 8. MEMBERSHIP OPERATORS — in / not in
-# ==================================================
-# Module 3 used these with strings. Same idea for other sequences later.
+# Trace chain (same as notes)
+x = 5
+x += 3
+print("x after +=3:", x)               # 8
+x *= 2
+print("x after *=2:", x)               # 16
+x -= 4
+print("x after -=4:", x)               # 12
 
+# --------------------------------------------------
+# 8) Membership — in / not in
+# --------------------------------------------------
 email_address = "student@example.com"
-print("@" in email_address)          # True
-print("gmail" not in email_address)  # True
+print("@" in email_address)            # True
+print("gmail" not in email_address)    # True
+print("py" in "Python")                # False — case sensitive
 
-# Preview with a simple list (collections fully covered in Module 6)
+# Light list preview (full collections in Module 6)
 allowed_roles = ["admin", "editor", "viewer"]
-print("editor" in allowed_roles)     # True
-print("guest" not in allowed_roles)  # True
+print("editor" in allowed_roles)       # True
+print("guest" not in allowed_roles)    # True
 
-# ==================================================
-# 9. IDENTITY OPERATORS — is / is not
-# ==================================================
-# is  → True if both names refer to the SAME object in memory
-# ==  → True if values are equal (may be different objects)
-
-# Most important beginner use: None checks (Module 2 style)
+# --------------------------------------------------
+# 9) Identity — is / is not (especially None)
+# --------------------------------------------------
 result = None
-print(result is None)        # True  (preferred)
-print(result is not None)    # False
+print(result is None)                  # True (preferred)
+print(result is not None)              # False
 
-# Classic is vs == demonstration with lists (preview of Module 6)
 list_a = [1, 2, 3]
-list_b = list_a              # same object
-list_c = [1, 2, 3]           # equal values, different object
+list_b = list_a                        # same object
+list_c = [1, 2, 3]                     # equal values, different object
+print("a is b:", list_a is list_b)     # True
+print("a is c:", list_a is list_c)     # False
+print("a == c:", list_a == list_c)     # True
 
-print(list_a is list_b)      # True
-print(list_a is list_c)      # False
-print(list_a == list_c)      # True  (same content)
+# AI smell: do not use `is` for ordinary value equality
+# Prefer: score == 100
+# Avoid:  score is 100
 
-# Caution: do NOT use `is` to compare ordinary numbers or strings for equality.
-# Use == for values. Use `is` mainly for None (and advanced identity cases).
-
-# ==================================================
-# 10. COMBINED EXPRESSIONS (Modules 1–4)
-# ==================================================
-product_price = 499.5
-item_count = 2
-discount_ok = True
-subtotal = product_price * item_count
-if discount_ok:
-    payable = subtotal * 0.9
-else:
-    payable = subtotal
-print(f"Payable: {payable:.2f}")
-
-# Input + cast + comparison (non-interactive demo)
+# --------------------------------------------------
+# 10) Combine Modules 1–4 (clean → compare → decide later)
+# --------------------------------------------------
 typed_age = "20"
 age = int(typed_age)
 can_vote = age >= 18
 print("Can vote?:", can_vote)
 
-# String clean + comparison (Module 3 + Module 4)
 typed_name = "  Admin "
 is_admin = typed_name.strip().lower() == "admin"
 print("Is admin?:", is_admin)
 
-# ==================================================
-# 11. COMMON MISTAKES (commented demos)
-# ==================================================
-# Mistake 1: using = instead of ==
-# if age = 18:          # SyntaxError — assignment in condition (Python 3)
+product_price = 499.5
+item_count = 2
+subtotal = product_price * item_count
+print("Subtotal:", subtotal)           # 999.0
+print("With 10% off:", subtotal * 0.9) # 899.1
+print("Over 500?:", subtotal > 500)    # True
 
-# Mistake 2: chaining confusion beginners invent
-# print(5 < x < 3) is valid Python (smart chaining) but learn pairwise first
+# AI / automation style thresholds
+tokens_used = 1200
+budget = 1000
+print("Over budget?:", tokens_used > budget)
 
-# Mistake 3: confusing / and //
-# print(5 / 2)   → 2.5
-# print(5 // 2)  → 2
+cpu_percent = 92
+print("CPU alert?:", cpu_percent > 90)
 
-# Mistake 4: confusing is and ==
-# Use == for values; is for identity / None
+# Email gate expression
+raw_email = "  Student@Example.COM  "
+email = raw_email.strip().lower()
+looks_valid = ("@" in email) and ("." in email)
+print("Clean email:", email)
+print("Looks valid?:", looks_valid)
 
-# Mistake 5: operator precedence without parentheses
-# Write (a and b) or c when intent must be clear
+# --------------------------------------------------
+# 11) Common AI / beginner bugs (shown safely)
+# --------------------------------------------------
+# Bug: forgot to cast input text before comparing as a number
+# String compare can lie: "9" > "18" is True as text, but 9 > 18 is False
+age_text = "9"
+print("Wrong compare (text):", age_text > "18")   # True — lexicographic trap
+print("Right compare (int):", int(age_text) > 18) # False — correct numeric check
 
-print("\n--- Module 4 operators reference complete ---")
+# Bug: = vs ==  (assignment vs comparison) — comparison version:
+flag = 10
+print("Compared with == :", flag == 10)
+
+# Bug: / vs //
+print("5 / 2  →", 5 / 2)               # 2.5
+print("5 // 2 →", 5 // 2)              # 2
+
+print("\n--- Module 4 complete. Open module_exercises.md and practice. ---")

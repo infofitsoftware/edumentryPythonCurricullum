@@ -1,67 +1,47 @@
 # Module 4 — Operators and Expressions
 
-**Course:** Utrains Python Fundamentals  
-**Audience:** Beginners  
-**Prerequisites:** Module 1 (print/input/arithmetic), Module 2 (types/bool/None), Module 3 (strings, `in` for text)  
-**Next:** Module 5 — Control Flow (where operators power `if` / loops)
+**For students (beginners)**  
+**Prerequisites:** Module 1 (`print`, `input`, arithmetic), Module 2 (variables, types, casting, `bool`, `None`), Module 3 (strings, `in` for text)  
+**Next:** Module 5 — Control Flow  
+
+Read this slowly. Run the examples in `module.py`. Then do `module_exercises.md`.
 
 ---
 
-# Slide 1 — Title
+## 1. What you will learn today
 
-## Operators and Expressions
+By the end of this lesson you should be able to:
 
-**Big idea:**  
-Programs make **decisions** and **calculations** by combining values with operators.
-
-```
-values + operators  →  expression  →  result
-```
-
-**Ask the class:**  
-Where have you already used operators? (`+`, `/`, `==` inside f-strings? Module 1 math?)
-
----
-
-# Slide 2 — Learning Objectives
-
-By the end of this module, students will be able to:
-
-1. Use all **arithmetic** operators correctly (`/`, `//`, `%`, `**`)
-2. Build **comparison** expressions that return `True` / `False`
-3. Combine conditions with **`and` / `or` / `not`**
-4. Update variables with **assignment operators** (`+=`, `*=`, …)
-5. Use **`in` / `not in`** for membership checks
-6. Explain **`is` vs `==`**, and use **`is None`** correctly
-7. Respect basic **operator precedence** (and use parentheses)
-8. Combine operators with input, casting, and strings from prior modules
+1. Explain **operator**, **operand**, and **expression**  
+2. Use arithmetic operators correctly (`/`, `//`, `%`, `**`)  
+3. Build **comparison** expressions that return `True` / `False`  
+4. Combine conditions with **`and` / `or` / `not`**  
+5. Update variables with **assignment operators** (`+=`, `*=`, …)  
+6. Use **`in` / `not in`** for membership checks  
+7. Explain **`is` vs `==`**, and use **`is None`** correctly  
+8. Respect basic **operator precedence** (and use parentheses)  
+9. Spot AI mistakes around `=` vs `==`, `/` vs `//`, and messy logic  
 
 ---
 
-# Slide 3 — WHY Operators Exist
+## 2. Why operators matter (AI era)
 
-### Everyday → Python
+Operators are how programs **calculate** and **decide**.
 
-| Real life | Operator idea |
-|-----------|----------------|
-| Cart total = price × qty | `*` |
-| “Age at least 18?” | `>=` |
-| “Correct user AND password?” | `and` |
-| Add 5 points to score | `+=` |
-| “Is `@` in the email?” | `in` |
+| Place | Operator job |
+|-------|--------------|
+| FastAPI / forms | age ≥ 18? password match? |
+| Billing / carts | price × qty, discounts, totals |
+| Data filters | salary > 50000 and city == "Delhi" |
+| AI / LLM apps | token budget, score thresholds, flag checks |
+| Automation | disk > 90%? retries left > 0? |
 
-Without operators, programs cannot calculate or decide.
-
-**Career links (light):**
-
-- Backend: auth rules, validation  
-- Data: filters (`salary > 50000`)  
-- Automation: thresholds, retries  
-- DevOps: “disk > 90%?” style checks  
+**Golden rule:**  
+If AI writes a condition for you, check **`=` vs `==`**, **`/` vs `//`**, and whether **`and` / `or`** match the real rule. Those three hide most bugs.
 
 ---
 
-# Slide 4 — WHAT: Operator, Operand, Expression
+## 3. Operator, operand, expression
 
 ```python
 total = 10 + 5
@@ -74,35 +54,43 @@ total = 10 + 5
 | Expression | `10 + 5` |
 | Result | `15` stored in `total` |
 
-**Analogy:**  
-Operator = verb (add, compare, combine).  
-Operands = nouns.  
-Expression = full sentence that has an answer.
+Think of it like a sentence:
+
+- **Operands** = the nouns (the values)  
+- **Operator** = the verb (add, compare, combine)  
+- **Expression** = the full sentence that has an answer  
+
+```python
+score = 10 + 5
+is_passing = score >= 15
+print(is_passing)   # True
+```
 
 ---
 
-# Slide 5 — Arithmetic Operators (Revisit + Deepen)
+## 4. Arithmetic operators
+
+You met these in Module 1. Now learn them with precision.
 
 ```python
-a, b = 10, 3
+a = 10
+b = 3
 print(a + b)   # 13
 print(a - b)   # 7
 print(a * b)   # 30
-print(a / b)   # 3.333... float
-print(a // b)  # 3 floor
-print(a % b)   # 1 remainder
-print(2 ** 3)  # 8
+print(a / b)   # 3.333...  (float in Python 3)
+print(a // b)  # 3         (floor division)
+print(a % b)   # 1         (remainder)
+print(2 ** 3)  # 8         (power)
 ```
 
-**Emphasize:**
+**Must remember:**
 
-- `/` → always float in Python 3  
-- `//` → whole parts (floor division)  
-- `%` → remainder (even/odd, leftovers)
+- `/` → always a **float** in Python 3 (`10 / 2` is `5.0`)  
+- `//` → whole parts only (floor division)  
+- `%` → leftover after division  
 
----
-
-# Slide 6 — Trace: Boxes and Leftovers
+### Trace: boxes and leftovers
 
 ```python
 items = 17
@@ -111,39 +99,52 @@ print(items // box_size)  # 3
 print(items % box_size)   # 2
 ```
 
-**Trace:**
-
 17 = 5×3 + 2  
 
-- full boxes → `//` → 3  
-- leftover → `%` → 2  
+- full boxes → `//` → **3**  
+- leftover → `%` → **2**  
 
-**Ask:** Is 14 even? How do you know with `%`?
+Even / odd check:
+
+```python
+print(14 % 2)  # 0 → even
+print(15 % 2)  # 1 → odd
+```
 
 ---
 
-# Slide 7 — Precedence (Beginner Rules)
+## 5. Operator precedence (beginner rules)
 
 ```python
 print(2 + 3 * 4)    # 14
 print((2 + 3) * 4)  # 20
 ```
 
-**Rule of thumb:**
+**Rule of thumb (high → low):**
 
-1. `(...)` first  
+1. `(...)` parentheses first  
 2. `**`  
 3. `* / // %`  
 4. `+ -`  
-5. comparisons  
-6. `not` → `and` → `or`
+5. comparisons (`==`, `<`, …)  
+6. `not` → `and` → `or`  
 
-**Teaching tip:**  
-When unsure, **use parentheses**. Clarity beats cleverness.
+**When unsure, use parentheses.**  
+Clarity beats cleverness — especially when reading AI-generated code.
+
+```python
+print(2 ** 3 ** 2)    # 512  → 2 ** (3 ** 2)
+print((2 ** 3) ** 2)  # 64
+```
+
+You do not need to memorize every edge case today.  
+You **do** need the habit: parenthesize anything that must be obvious.
 
 ---
 
-# Slide 8 — Comparison Operators
+## 6. Comparison operators
+
+Comparisons always return a **`bool`**: `True` or `False`.
 
 ```python
 age = 20
@@ -161,57 +162,43 @@ print(age <= 17)  # False
 | `>` `<` | greater / less |
 | `>=` `<=` | greater/less or equal |
 
-**Returns:** always a `bool`.
-
----
-
-# Slide 9 — The #1 Mistake: `=` vs `==`
+### The #1 beginner (and AI) trap: `=` vs `==`
 
 ```python
 score = 100      # ASSIGN a value
 score == 100     # COMPARE values → True
 ```
 
-**Analogy:**  
+Analogy:
 
 - `=` → put this label on that box  
-- `==` → ask “are these the same?”
+- `==` → ask “are these the same?”  
 
-**Strings (Module 3):**
-
-```python
-print("admin" == "Admin")  # False — case matters
-```
-
----
-
-# Slide 10 — Trace Comparisons
+Strings are case-sensitive (Module 3):
 
 ```python
-x = 10
-y = 5
-print(x > y)
-print(y != 5)
-print(8 >= 8)
+print("admin" == "Admin")  # False
 ```
+
+Trace:
 
 | Expression | Result | Why |
 |------------|--------|-----|
-| `x > y` | True | 10 > 5 |
-| `y != 5` | False | 5 is equal to 5 |
+| `10 > 5` | True | 10 is greater |
+| `5 != 5` | False | they are equal |
 | `8 >= 8` | True | equal counts for `>=` |
-
-**Mini challenge:** Predict `9 <= 4`.
 
 ---
 
-# Slide 11 — Logical Operators — WHY
+## 7. Logical operators: `and`, `or`, `not`
 
-Traffic light / gate check analogy:
+Use these to combine True/False results.
 
-- **and** → both gates must open  
-- **or** → at least one gate opens  
-- **not** → reverse the answer  
+Gate analogy:
+
+- **`and`** → both gates must open  
+- **`or`** → at least one gate opens  
+- **`not`** → reverse the answer  
 
 ```python
 has_ticket = True
@@ -221,9 +208,7 @@ print(has_ticket or has_id)   # True
 print(not has_id)             # True
 ```
 
----
-
-# Slide 12 — Truth Tables (Keep Short)
+### Tiny truth table
 
 | A | B | A and B | A or B |
 |---|---|---------|--------|
@@ -235,32 +220,38 @@ print(not has_id)             # True
 `not True` → `False`  
 `not False` → `True`
 
-**Practical login idea:**
+### Practical patterns
+
+Login idea (values only — `if` comes in Module 5):
 
 ```python
-ok = (user == "admin") and (pwd == "1234")
+user_ok = (entered_user == "admin") and (entered_pass == "1234")
 ```
 
----
-
-# Slide 13 — Combined Conditions
+Divisible by both 3 and 5:
 
 ```python
 value = 30
 print((value % 3 == 0) and (value % 5 == 0))  # True
 ```
 
-**Trace:**
+Trace for `value = 30`:
 
 1. `30 % 3 == 0` → True  
 2. `30 % 5 == 0` → True  
-3. True and True → True  
+3. True and True → **True**  
 
-**Ask:** For `value = 10`, what happens?
+For `value = 10`:
+
+1. `10 % 3 == 0` → False  
+2. `10 % 5 == 0` → True  
+3. False and True → **False**  
 
 ---
 
-# Slide 14 — Assignment Operators
+## 8. Assignment operators
+
+These update a variable using its current value.
 
 ```python
 x = 5
@@ -269,16 +260,19 @@ x *= 2   # 16
 x -= 4   # 12
 ```
 
-Also: `/=` `//=` `%=` `**=`
+Also useful: `/=` `//=` `%=` `**=`
 
-**Why they exist:**  
-Shorter, clearer updates — counters, totals, carts.
+```python
+cart = 10
+cart += 5     # 15
+cart *= 2     # 30
+print(cart)
+```
 
-**Connection:** Module 5 loops will use `count += 1` constantly.
+Why they exist: shorter, clearer updates for counters, totals, carts.  
+Module 5 loops will use `count += 1` constantly.
 
----
-
-# Slide 15 — Trace Assignment Chain
+Trace:
 
 ```python
 x = 5
@@ -290,202 +284,184 @@ x -= 4
 print(x)   # 12
 ```
 
-**Student activity:**  
-Start `x = 10`, apply `x //= 3`, then `x %= 2`. Final `x`?
-
 ---
 
-# Slide 16 — Membership: `in` / `not in`
+## 9. Membership: `in` / `not in`
+
+You already used this with strings in Module 3.
 
 ```python
-email = "a@b.com"
-print("@" in email)
-print("x" not in email)
+email = "student@example.com"
+print("@" in email)         # True
+print("gmail" not in email) # True
 ```
 
-Works with strings now; same idea later for lists (Module 6).
+Same idea later for lists (Module 6 preview):
 
 ```python
 roles = ["admin", "editor"]
-print("editor" in roles)
+print("editor" in roles)    # True
 ```
 
-**Real use:** validate characters, roles, allowed file extensions (with Module 3 methods).
+Real use: validate characters, roles, allowed extensions.
 
 ---
 
-# Slide 17 — Identity: `is` / `is not`
+## 10. Identity: `is` / `is not`
+
+**Most important beginner use:** check for `None`.
 
 ```python
 result = None
-print(result is None)      # preferred check
-print(result is not None)
+print(result is None)       # True  (preferred)
+print(result is not None)   # False
 ```
 
-**`is` vs `==`:**
+### `is` vs `==`
+
+- `==` → same **value**?  
+- `is` → same **object in memory**?  
 
 ```python
 a = [1, 2, 3]
-b = a
-c = [1, 2, 3]
-print(a is b)   # True  — same object
-print(a is c)   # False — different objects
-print(a == c)   # True  — same values
+b = a            # same object
+c = [1, 2, 3]    # equal values, different object
+
+print(a is b)    # True
+print(a is c)    # False
+print(a == c)    # True
 ```
 
-**Rule for beginners:**  
+Picture:
+
+```
+a ──► [1, 2, 3] ◄── b     same box → is True, == True
+c ──► [1, 2, 3]           other box → is False, == True
+```
+
+**Beginner rule:**
 
 - Compare values with `==`  
 - Check `None` with `is None`  
-- Do not use `is` for ordinary number/string equality
+- Do **not** use `is` for ordinary number/string equality  
+
+AI sometimes writes `if x is 5:` — that is a smell. Prefer `x == 5`.
 
 ---
 
-# Slide 18 — Diagram: is vs ==
+## 11. Expressions with prior modules
 
-```
-list_a ──► [1, 2, 3] ◄── list_b     (same box)  → is True, == True
-
-list_c ──► [1, 2, 3]                 (other box) → is False, == True
-```
-
-**Instructor talking point:**  
-Equal twins (`==`) vs the exact same person (`is`).
-
----
-
-# Slide 19 — Expressions with Prior Modules
-
-```python
-age = int("20")
-print(age >= 18)
-
-name = "  Admin ".strip().lower()
-print(name == "admin")
-```
-
-**Pattern:**
+The daily pattern in real programs:
 
 ```
 input → cast/clean → operator expression → True/False or number
 ```
 
-This pattern powers almost every form validation.
-
----
-
-# Slide 20 — Common Beginner Mistakes
-
-1. `=` instead of `==`  
-2. Confusing `/` and `//`  
-3. Forgetting parentheses in mixed logic  
-4. Using `is` instead of `==` for values  
-5. Case-sensitive string comparisons (`"Admin" == "admin"`)  
-6. Expecting `and` / `or` to work like English “and/or” without bools  
-
----
-
-# Slide 21 — Professional Connection
-
-| Domain | Operator use |
-|--------|----------------|
-| Auth | `user == ... and password == ...` |
-| Billing | `+=`, `*`, discounts |
-| Data filters | `age >= 18 and city == "Delhi"` |
-| Monitoring | `cpu_percent > 90` |
-| Text cleaning | `"@" in email` |
-
-Module 5 will wrap these expressions in `if` / loops.
-
----
-
-# Slide 22 — Concept Recap
-
-- Arithmetic: `+ - * / // % **`  
-- Comparison → `bool`  
-- Logical: `and or not`  
-- Assignment updates: `+=` …  
-- Membership: `in`  
-- Identity: `is` (especially `None`)  
-- Precedence + parentheses  
-
----
-
-# Slide 23 — Syntax Cheat Sheet
-
 ```python
-a + b, a - b, a * b, a / b, a // b, a % b, a ** b
-a == b, a != b, a > b, a < b, a >= b, a <= b
-cond1 and cond2
-cond1 or cond2
-not cond
-x += 1
-"@" in email
-value is None
+age = int("20")
+print(age >= 18)   # True
+
+name = "  Admin ".strip().lower()
+print(name == "admin")   # True
 ```
 
----
-
-# Slide 24 — Mistakes Checklist
-
-- [ ] Did I use `==` for comparison?  
-- [ ] Did I cast `input()` before comparing numbers?  
-- [ ] Did I normalize strings before `==`?  
-- [ ] Did I use parentheses for clear logic?  
-- [ ] Did I use `is None` rather than `== None`?  
+This is form validation in one line of thinking.  
+Module 5 will wrap these expressions in `if`.
 
 ---
 
-# Slide 25 — “Can You Explain This?”
+## 12. Real-world preview (still beginner level)
+
+### Auth rule (expression only)
+
+```python
+entered_user = "admin"
+entered_pass = "1234"
+ok = (entered_user == "admin") and (entered_pass == "1234")
+print(ok)   # True
+```
+
+### Cart total + discount math
+
+```python
+price = 499.5
+qty = 2
+subtotal = price * qty
+print(subtotal)           # 999.0
+print(subtotal * 0.9)     # 899.1  (10% off)
+print(subtotal > 500)     # True — threshold check
+```
+
+### AI / automation style thresholds
+
+```python
+tokens_used = 1200
+budget = 1000
+over_budget = tokens_used > budget
+print(over_budget)        # True
+
+cpu_percent = 92
+alert = cpu_percent > 90
+print(alert)              # True
+```
+
+You are not building FastAPI or an LLM app today.  
+You are learning the exact comparison and logic skills those systems need.
+
+---
+
+## 13. Common mistakes checklist
+
+1. Using `=` when you meant `==`  
+2. Confusing `/` (float) with `//` (floor)  
+3. Forgetting parentheses in mixed `and` / `or` logic  
+4. Using `is` instead of `==` for normal values  
+5. Case-sensitive string compares (`"Admin" == "admin"` is False)  
+6. Comparing numbers from `input()` without `int()` / `float()`  
+7. Shipping AI conditions without checking whether **both** sides of `and` are really required  
+
+---
+
+## 14. How to study this lesson
+
+1. Read one section  
+2. Run the matching part in `module.py`  
+3. Predict output before looking  
+4. Do `module_exercises.md` in order  
+5. Take `module_quiz.xml`  
+
+If you use AI for help:
+
+- Ask it to explain **why**  
+- Re-type the fix yourself  
+- Run and verify  
+
+---
+
+## 15. Mini self-check (before the quiz)
+
+Can you answer these out loud?
 
 1. Difference between `/` and `//`?  
 2. Difference between `=` and `==`?  
 3. When is `and` True?  
 4. Difference between `is` and `==`?  
 5. Why is `"Admin" == "admin"` False?  
+6. What is `17 // 5` and `17 % 5`?  
+
+If any answer is unclear, re-read that section and rerun `module.py`.
 
 ---
 
-# Slide 26 — Mini Live Challenges
+## 16. What “confident” means after Module 4
 
-1. Predict: `(7 == 3) or (15 > 10)`  
-2. Predict final `x`: `x=5; x+=3; x*=2; x-=4`  
-3. Write expression: number divisible by 3 **and** 5  
-4. Clean `"  ADMIN "` and check equality to `"admin"`  
+You can:
 
----
+- trace arithmetic, comparison, and logical expressions  
+- spot `=` vs `==` bugs (including in AI drafts)  
+- build validation expressions with `and` / `or` / `not`  
+- update running totals with `+=`  
+- choose `in` vs `==` vs `is` appropriately  
+- connect operators to forms, billing, filters, and AI thresholds  
 
-# Slide 27 — What You Should Now Be Able To Do
-
-- Trace arithmetic / comparison / logical expressions  
-- Spot `=` vs `==` bugs  
-- Build validation expressions  
-- Update running totals with `+=`  
-- Choose `in` vs `==` vs `is` appropriately  
-
----
-
-# Slide 28 — Next Module
-
-**Module 5 — Control Flow**
-
-You will place today's expressions inside:
-
-```python
-if age >= 18:
-    ...
-```
-
-Operators decide; control flow acts.
-
----
-
-# Slide 29 — Lab Directions
-
-1. Run and study `module.py`  
-2. Complete `module_exercises.md` Levels 1–4  
-3. Take quiz from `module_quiz.json`  
-
----
-
-*End of Module 4 teaching slides*
+Next lesson (Module 5) covers **control flow** — placing today's expressions inside `if` / loops so the program can act on decisions.

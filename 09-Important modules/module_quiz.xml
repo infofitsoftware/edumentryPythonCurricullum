@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Module 9: Important Modules (AI-Era / Beginner) -->
+<!-- App format: <text>, optional <code language="python">, <option correct="true"> -->
+<!-- Correct answers balanced across option positions -->
+
+  <question>
+    <text>What is a Python module?</text>
+    <option>Only a pip package</option>
+    <option correct="true">A Python file of reusable code you can import</option>
+    <option>A type of loop</option>
+    <option>A file extension for images</option>
+  </question>
+
+  <question>
+    <text>What is the standard library?</text>
+    <option>Only code you write yourself</option>
+    <option>Packages that always need pip install</option>
+    <option correct="true">Modules included with Python</option>
+    <option>Only web frameworks</option>
+  </question>
+
+  <question>
+    <text>Why do AI/backend apps care about modules like json and datetime?</text>
+    <option>APIs never use structured data</option>
+    <option>Python cannot store timestamps</option>
+    <option>Modules are illegal in production</option>
+    <option correct="true">Real systems need payloads, timestamps, paths, and config without reinventing them</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import math
+print(math.sqrt(144))</code>
+    <option correct="true">12.0</option>
+    <option>12</option>
+    <option>144</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import math
+print(math.ceil(3.2))</code>
+    <option>3</option>
+    <option correct="true">4</option>
+    <option>3.2</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import math
+print(math.floor(3.8))</code>
+    <option>4</option>
+    <option>3.8</option>
+    <option correct="true">3</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import math
+print(math.factorial(5))</code>
+    <option>15</option>
+    <option>25</option>
+    <option>Error</option>
+    <option correct="true">120</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import statistics
+print(statistics.mean([80, 90, 100]))</code>
+    <option correct="true">90</option>
+    <option>270</option>
+    <option>80</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import statistics
+print(statistics.median([1, 3, 2]))</code>
+    <option>1</option>
+    <option correct="true">2</option>
+    <option>3</option>
+    <option>6</option>
+  </question>
+
+  <question>
+    <text>Why use random.seed in demos/tests?</text>
+    <option>To make random forever illegal</option>
+    <option>To install random from pip</option>
+    <option correct="true">To make random results reproducible</option>
+    <option>To delete the random module</option>
+  </question>
+
+  <question format="python">
+    <text>What does this return conceptually?</text>
+    <code language="python">import random
+random.seed(1)
+print(1 &lt;= random.randint(1, 6) &lt;= 6)</code>
+    <option>False</option>
+    <option>Error</option>
+    <option>None</option>
+    <option correct="true">True</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import datetime
+print(datetime.datetime.strptime("2026-07-23", "%Y-%m-%d").date())</code>
+    <option correct="true">2026-07-23</option>
+    <option>23-07-2026</option>
+    <option>2026/07/23</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output format idea?</text>
+    <code language="python">import datetime
+print(datetime.date(2026, 1, 5).strftime("%Y-%m-%d"))</code>
+    <option>01-05-2026</option>
+    <option correct="true">2026-01-05</option>
+    <option>2026-5-1</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import os
+print(os.path.join("data", "file.txt").replace("\\", "/"))</code>
+    <option>datafile.txt</option>
+    <option>Error</option>
+    <option correct="true">data/file.txt</option>
+    <option>file.txt/data</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import os
+os.environ["APP_ENV"] = "dev"
+print(os.environ.get("APP_ENV"))
+print(os.environ.get("MISSING", "default"))</code>
+    <option>dev then MISSING</option>
+    <option>Error</option>
+    <option>None then default</option>
+    <option correct="true">dev then default</option>
+  </question>
+
+  <question>
+    <text>What is sys.argv mainly for?</text>
+    <option correct="true">Command-line arguments passed to the script</option>
+    <option>Installing pip packages</option>
+    <option>Creating JSON files</option>
+    <option>Sorting lists only</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import json
+text = json.dumps({"name": "Ada"})
+data = json.loads(text)
+print(data["name"])</code>
+    <option>{"name": "Ada"}</option>
+    <option correct="true">Ada</option>
+    <option>name</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>What is the difference between json.dumps and json.dump?</text>
+    <option>They are identical</option>
+    <option>dumps writes files; dump creates strings</option>
+    <option correct="true">dumps works with strings; dump writes to a file</option>
+    <option>dump only works with CSV</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import json
+person = {"skills": ["python", "math"]}
+text = json.dumps(person)
+back = json.loads(text)
+print(back["skills"][0])</code>
+    <option>math</option>
+    <option>skills</option>
+    <option>Error</option>
+    <option correct="true">python</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">row = {"score": "90"}
+print(int(row["score"]) + 1)</code>
+    <option correct="true">91</option>
+    <option>901</option>
+    <option>"901"</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What happens conceptually?</text>
+    <code language="python">row = {"score": "90"}
+print(row["score"] + 1)</code>
+    <option>91</option>
+    <option correct="true">TypeError (str + int)</option>
+    <option>901</option>
+    <option>None</option>
+  </question>
+
+  <question>
+    <text>Why use newline="" with csv writers/readers on Windows?</text>
+    <option>It disables CSV completely</option>
+    <option>It is required for JSON</option>
+    <option correct="true">It helps avoid extra blank lines in CSV files</option>
+    <option>It converts CSV to binary</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import json
+summary = {"mean": 90, "count": 3}
+print("mean" in json.loads(json.dumps(summary)))</code>
+    <option>False</option>
+    <option>Error</option>
+    <option>90</option>
+    <option correct="true">True</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">from math import sqrt as square_root
+print(square_root(49))</code>
+    <option correct="true">7.0</option>
+    <option>49</option>
+    <option>7</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Which import style is usually clearest for beginners?</text>
+    <option>from math import *</option>
+    <option correct="true">import math then math.sqrt(...)</option>
+    <option>Never import anything</option>
+    <option>Only import pandas first</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import random
+print(random.choice(["a", "b", "c"]) in ["a", "b", "c"])</code>
+    <option>False</option>
+    <option>Error</option>
+    <option correct="true">True</option>
+    <option>None</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def stamp(message):
+    return f"[2026-01-01 10:00:00] {message}"
+print(stamp("ok"))</code>
+    <option>ok</option>
+    <option>Error</option>
+    <option>2026-01-01</option>
+    <option correct="true">[2026-01-01 10:00:00] ok</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import statistics
+values = [80, 90, 70, 100]
+print(statistics.mean(values))</code>
+    <option correct="true">85</option>
+    <option>340</option>
+    <option>90</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Which is a common AI-generated modules bug?</text>
+    <option>Using math.sqrt</option>
+    <option correct="true">Importing a pip package that was never installed</option>
+    <option>Writing comments</option>
+    <option>Using encoding="utf-8"</option>
+  </question>
+
+  <question>
+    <text>Which pair is standard library (no pip needed)?</text>
+    <option>requests and pandas</option>
+    <option>fastapi and numpy</option>
+    <option correct="true">json and csv</option>
+    <option>boto3 and django</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import json
+print(json.loads('{"a": 1}')["a"] + 2)</code>
+    <option>12</option>
+    <option>Error</option>
+    <option>"12"</option>
+    <option correct="true">3</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import os
+print(os.path.exists("definitely_missing_module9_xyz.txt"))</code>
+    <option correct="true">False</option>
+    <option>True</option>
+    <option>None</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">names = ["Ada", "Bob", "Cam"]
+import random
+random.seed(0)
+pick = random.sample(names, 2)
+print(len(pick) == 2 and pick[0] in names)</code>
+    <option>False</option>
+    <option correct="true">True</option>
+    <option>Error</option>
+    <option>None</option>
+  </question>
+
+  <question>
+    <text>What should you do before importing requests in a beginner project?</text>
+    <option>Nothing; it is always built-in</option>
+    <option>Rename it to json</option>
+    <option correct="true">Install it with pip if you truly need it (it is third-party)</option>
+    <option>Delete the standard library</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import datetime
+print(datetime.datetime(2026, 7, 23).strftime("%Y"))</code>
+    <option>23</option>
+    <option>7</option>
+    <option>Error</option>
+    <option correct="true">2026</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import json
+data = {"task": "summarize", "prompt": "Explain lists"}
+print(json.loads(json.dumps(data))["task"])</code>
+    <option correct="true">summarize</option>
+    <option>Explain lists</option>
+    <option>task</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Why keep secrets in environment variables instead of source code?</text>
+    <option>Environment variables cannot store text</option>
+    <option correct="true">It helps avoid hardcoding passwords/API keys in files you share</option>
+    <option>Python forbids strings</option>
+    <option>JSON cannot store objects</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import math
+print(math.pow(2, 3))</code>
+    <option>6</option>
+    <option>5</option>
+    <option correct="true">8.0</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">import csv
+from io import StringIO
+text = "name,score\nAda,90\n"
+reader = csv.DictReader(StringIO(text))
+row = next(reader)
+print(row["name"], int(row["score"]))</code>
+    <option>Ada 901</option>
+    <option>Error</option>
+    <option>name score</option>
+    <option correct="true">Ada 90</option>
+  </question>
+
+  <question>
+    <text>After Module 9, what is a good next learning mindset?</text>
+    <option correct="true">Master standard-library basics first, then add pip tools by career path</option>
+    <option>Install every package immediately</option>
+    <option>Avoid json forever</option>
+    <option>Never use import</option>
+  </question>
+
+</quiz>

@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Module 7: Functions in Python (AI-Era / Beginner) -->
+<!-- App format: <text>, optional <code language="python">, <option correct="true"> -->
+<!-- Correct answers balanced across option positions -->
+
+  <question>
+    <text>What is a function in Python?</text>
+    <option>A type of loop only</option>
+    <option correct="true">A named reusable block of code</option>
+    <option>A file extension</option>
+    <option>A kind of list</option>
+  </question>
+
+  <question>
+    <text>What is the difference between a parameter and an argument?</text>
+    <option>They are the same thing</option>
+    <option>Argument is in the definition; parameter is the value passed</option>
+    <option correct="true">Parameter is in the definition; argument is the value passed when calling</option>
+    <option>Parameters only work with lambda</option>
+  </question>
+
+  <question>
+    <text>Why do AI/backend apps care about functions?</text>
+    <option>Programs should copy-paste logic everywhere</option>
+    <option>Python forbids reuse</option>
+    <option>Functions only exist in Excel</option>
+    <option correct="true">Real systems package validation, prompts, and business rules into named reusable pieces</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def greet():
+    print("Hi")
+greet()</code>
+    <option correct="true">Hi</option>
+    <option>greet</option>
+    <option>None</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def add(a, b):
+    return a + b
+print(add(3, 5))</code>
+    <option>35</option>
+    <option correct="true">8</option>
+    <option>a + b</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def square(n):
+    print(n * n)
+value = square(4)
+print(value)</code>
+    <option>16 then 16</option>
+    <option>None then 16</option>
+    <option correct="true">16 then None</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def square(n):
+    return n * n
+value = square(4)
+print(value)</code>
+    <option>None</option>
+    <option>Error</option>
+    <option>4</option>
+    <option correct="true">16</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def demo():
+    return "first"
+    print("second")
+print(demo())</code>
+    <option correct="true">first</option>
+    <option>second</option>
+    <option>first then second</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def do_nothing():
+    pass
+print(do_nothing())</code>
+    <option>pass</option>
+    <option correct="true">None</option>
+    <option>0</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def min_max(values):
+    return min(values), max(values)
+lo, hi = min_max([3, 9, 1])
+print(lo, hi)</code>
+    <option>3 9</option>
+    <option>9 1</option>
+    <option correct="true">1 9</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def greet(name="Guest"):
+    print(f"Hello, {name}!")
+greet()</code>
+    <option>Hello, name!</option>
+    <option>Error</option>
+    <option>Hello, !</option>
+    <option correct="true">Hello, Guest!</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def power(base, exponent=2):
+    return base ** exponent
+print(power(5))
+print(power(5, 3))</code>
+    <option correct="true">25 then 125</option>
+    <option>5 then 15</option>
+    <option>25 then 25</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def describe(animal, name):
+    print(f"{name} is a {animal}.")
+describe(name="Kitty", animal="cat")</code>
+    <option>cat is a Kitty.</option>
+    <option correct="true">Kitty is a cat.</option>
+    <option>name is a animal.</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def add_numbers(*args):
+    return sum(args)
+print(add_numbers(1, 2, 3, 4))</code>
+    <option>24</option>
+    <option>(1, 2, 3, 4)</option>
+    <option correct="true">10</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Inside a function, what type is *args?</text>
+    <option>list</option>
+    <option>dict</option>
+    <option>Error always</option>
+    <option correct="true">tuple</option>
+  </question>
+
+  <question>
+    <text>Inside a function, what type is **kwargs?</text>
+    <option correct="true">dict</option>
+    <option>tuple</option>
+    <option>list</option>
+    <option>set</option>
+  </question>
+
+  <question format="python">
+    <text>What is printed (two lines)?</text>
+    <code language="python">counter = 0
+def bump():
+    counter = 10
+    print(counter)
+bump()
+print(counter)</code>
+    <option>10 then 10</option>
+    <option correct="true">10 then 0</option>
+    <option>0 then 10</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def even_only(numbers):
+    result = []
+    for n in numbers:
+        if n % 2 == 0:
+            result.append(n)
+    return result
+print(even_only([1, 2, 3, 4]))</code>
+    <option>[1, 2, 3, 4]</option>
+    <option>[1, 3]</option>
+    <option correct="true">[2, 4]</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+print(factorial(5))</code>
+    <option>15</option>
+    <option>Error</option>
+    <option>5</option>
+    <option correct="true">120</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def is_palindrome(text):
+    cleaned = text.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
+print(is_palindrome("Race car"))</code>
+    <option correct="true">True</option>
+    <option>False</option>
+    <option>Race car</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">cube = lambda x: x ** 3
+print(cube(3))</code>
+    <option>9</option>
+    <option correct="true">27</option>
+    <option>6</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def fibonacci(n):
+    if n &lt;= 1:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+print(fibonacci(6))</code>
+    <option>6</option>
+    <option>13</option>
+    <option correct="true">8</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is printed (two lines)?</text>
+    <code language="python">def add_item(item, bag=[]):
+    bag.append(item)
+    return bag
+print(add_item("a"))
+print(add_item("b"))</code>
+    <option>['a'] then ['b']</option>
+    <option>Error</option>
+    <option>['a'] then ['a']</option>
+    <option correct="true">['a'] then ['a', 'b']</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def add_item(item, bag=None):
+    if bag is None:
+        bag = []
+    bag.append(item)
+    return bag
+print(add_item("a"))
+print(add_item("b"))</code>
+    <option correct="true">['a'] then ['b']</option>
+    <option>['a'] then ['a', 'b']</option>
+    <option>['b'] then ['a']</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def clean_email(raw):
+    return raw.strip().lower()
+print(clean_email("  A@B.COM  "))</code>
+    <option>  A@B.COM  </option>
+    <option correct="true">a@b.com</option>
+    <option>A@B.COM</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def is_admin(role):
+    return role.strip().lower() == "admin"
+print(is_admin("  Admin  "))</code>
+    <option>False</option>
+    <option>Admin</option>
+    <option correct="true">True</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def build_prompt(task, text):
+    return f"Task: {task}\nText: {text.strip()}"
+print(build_prompt("sum", "  hi  "))</code>
+    <option>Task: sum Text: hi</option>
+    <option>Error</option>
+    <option>sum hi</option>
+    <option correct="true">Task: sum
+Text: hi</option>
+  </question>
+
+  <question>
+    <text>What happens if you write greet without parentheses?</text>
+    <option correct="true">It refers to the function object; it does not call it</option>
+    <option>It calls the function</option>
+    <option>It always raises TypeError</option>
+    <option>It deletes the function</option>
+  </question>
+
+  <question>
+    <text>Which statement about default arguments is correct?</text>
+    <option>Defaults must come before required parameters</option>
+    <option>Defaults are illegal in Python</option>
+    <option correct="true">Parameters with defaults must come after those without defaults</option>
+    <option>Defaults only work with *args</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def char_frequency(text):
+    freq = {}
+    for char in text:
+        freq[char] = freq.get(char, 0) + 1
+    return freq
+print(char_frequency("banana")["a"])</code>
+    <option>1</option>
+    <option>2</option>
+    <option>Error</option>
+    <option correct="true">3</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">pairs = [("Ada", 90), ("Bob", 75)]
+print(sorted(pairs, key=lambda item: item[1])[0][0])</code>
+    <option correct="true">Bob</option>
+    <option>Ada</option>
+    <option>75</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def ready_prompts(prompts):
+    ready = []
+    for p in prompts:
+        clean = p.strip()
+        if clean != "":
+            ready.append(clean)
+    return ready
+print(ready_prompts(["  hi  ", "", "go"]))</code>
+    <option>['  hi  ', 'go']</option>
+    <option correct="true">['hi', 'go']</option>
+    <option>['hi', '', 'go']</option>
+    <option>Error</option>
+  </question>
+
+  <question>
+    <text>Which is a common AI-generated function bug?</text>
+    <option>Using snake_case names</option>
+    <option>Writing a docstring</option>
+    <option correct="true">Using print inside a helper when the caller needed a returned value</option>
+    <option>Calling the function with parentheses</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def average(numbers):
+    if len(numbers) == 0:
+        return None
+    return sum(numbers) / len(numbers)
+print(average([2, 4, 6]))</code>
+    <option>12</option>
+    <option>Error</option>
+    <option>3</option>
+    <option correct="true">4.0</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def celsius_to_fahrenheit(celsius):
+    """Convert Celsius to Fahrenheit."""
+    return (celsius * 9 / 5) + 32
+print(celsius_to_fahrenheit(0))</code>
+    <option correct="true">32.0</option>
+    <option>0</option>
+    <option>212.0</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def make_profile(name, age, city="Unknown"):
+    return {"name": name, "age": age, "city": city}
+print(make_profile("Sam", 20)["city"])</code>
+    <option>Sam</option>
+    <option correct="true">Unknown</option>
+    <option>20</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What happens?</text>
+    <code language="python">def add(a, b):
+    return a + b
+print(add(3))</code>
+    <option>3</option>
+    <option>None</option>
+    <option correct="true">TypeError</option>
+    <option>0</option>
+  </question>
+
+  <question>
+    <text>When should you prefer def over lambda?</text>
+    <option>Never; lambda is always better</option>
+    <option>Only for math</option>
+    <option>Only inside quizzes</option>
+    <option correct="true">For real multi-step or named logic that needs clarity</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def largest(numbers):
+    return max(numbers)
+print(largest([4, 9, 1, 7]))</code>
+    <option correct="true">9</option>
+    <option>4</option>
+    <option>7</option>
+    <option>Error</option>
+  </question>
+
+  <question format="python">
+    <text>What is the output?</text>
+    <code language="python">def describe_person(**kwargs):
+    return list(kwargs.keys())
+print(describe_person(name="Ada", age=36))</code>
+    <option>['Ada', 36]</option>
+    <option>Error</option>
+    <option>('name', 'age')</option>
+    <option correct="true">['name', 'age']</option>
+  </question>
+
+</quiz>
